@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Coding Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../sidebar.css">
+    <link rel="stylesheet" href="http://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+
+<body>
+    <div class="main-container d-flex">
+        <div class="sidebar" id="side_nav">
+            <div class="header-box px-2 pt-3 pb-4 d-flex justify-content-between">
+                <h1 class="fs-4"><span class="bg-white text-dark rounded shadow px-2">KS</span> <span
+                        class="text-white fw-light"> Coding Portal</span></h1>
+                <button class="btn d-md-none d-block close-btn px-1 py-0 text-white"><i
+                        class="fal fa-stream"></i></button>
+            </div>
+            <ul class="list-unstyled px-2 fw-light">
+                <li><a href=".././Home.html" class="text-decoration-none px-3 py-2 d-block"><i
+                            class="fal fa-home"></i>&nbsp;Home</a></li>
+                <li class="active">
+                    <a href=".././Tutorial.html" class="text-decoration-none px-3 py-2 d-block"><i class="fal fa-list"></i>&nbsp;Tutorial</a>
+                    <div class="collapse show" id="orders-collapse">
+                        <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link active" id="introduction-tab" data-bs-toggle="tab" data-bs-target="#introduction" type="button" role="tab" aria-controls="introduction" aria-selected="true">Introduction</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="babel-tab" data-bs-toggle="tab" data-bs-target="#babel" type="button" role="tab" aria-controls="babel" aria-selected="false">Babel & History of JS</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="setup-tab" data-bs-toggle="tab" data-bs-target="#setup" type="button" role="tab" aria-controls="setup" aria-selected="false">Setup and Installation</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="workflow-tab" data-bs-toggle="tab" data-bs-target="#workflow" type="button" role="tab" aria-controls="workflow" aria-selected="false">Workflow of React</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="jsx-tab" data-bs-toggle="tab" data-bs-target="#jsx" type="button" role="tab" aria-controls="jsx" aria-selected="false">JSX What and Why</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="component-tab" data-bs-toggle="tab" data-bs-target="#component" type="button" role="tab" aria-controls="component" aria-selected="false">React Components</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="props-tab" data-bs-toggle="tab" data-bs-target="#props" type="button" role="tab" aria-controls="props" aria-selected="false">Props in React</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="proptype-tab" data-bs-toggle="tab" data-bs-target="#proptype" type="button" role="tab" aria-controls="proptype" aria-selected="false">PropTypes Package</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="arrowfn-tab" data-bs-toggle="tab" data-bs-target="#arrowfn" type="button" role="tab" aria-controls="arrowfn" aria-selected="false">Arrow Function</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="exports-tab" data-bs-toggle="tab" data-bs-target="#exports" type="button" role="tab" aria-controls="exports" aria-selected="false">Default & Named Export</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="classComponent-tab" data-bs-toggle="tab" data-bs-target="#classComponent" type="button" role="tab" aria-controls="classComponent" aria-selected="false">Class Component</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="classConstructor-tab" data-bs-toggle="tab" data-bs-target="#classConstructor" type="button" role="tab" aria-controls="classConstructor" aria-selected="false">Class Constructor</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="state-tab" data-bs-toggle="tab" data-bs-target="#state" type="button" role="tab" aria-controls="state" aria-selected="false">State</a>
+                          </li>
+                          <!-- <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="setup-tab" data-bs-toggle="tab" data-bs-target="#setup" type="button" role="tab" aria-controls="setup" aria-selected="false">Setup and Installation</a>
+                          </li> -->
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="./../Qna.html" class="text-decoration-none px-3 py-2 d-block"><i
+                            class="fal fa-envelope-open-text"></i>&nbsp;QnA</a></li>
+                <li><a href=".././HotTopics.html" class="text-decoration-none px-3 py-2 d-block"><i
+                            class="fal fa-users"></i>&nbsp;Hot Topics</a></li>
+                <li><a href=".././ProgramPractice.html" class="text-decoration-none px-3 py-2 d-block"><i
+                            class="fal fa-envelope-open-text"></i>&nbsp;Program Practice</a></li>
+            </ul>
+            <hr class="h-color mx-3">
+            <ul class="list-unstyled px-2 fw-light">
+                <li><a href=".././CustomWork.html" class="text-decoration-none px-3 py-2 d-block"><i
+                            class="fal fa-bell"></i> Custom Work</a></li>
+                <li><a href=".././About.html" class="text-decoration-none px-3 py-2 d-block"><i class="fal fa-bars"></i>
+                        About Me</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between d-md-none d-block">
+                        <button class="btn px-1 py-0 open-btn me-2"><i class="fal fa-stream"></i></button>
+                        <a href=".././Home.html" class="navbar-brand fs-4"><span
+                                class="bg-dark rounded px-2 py-0 text-white">KS</span> Coding Portal</a>
+
+                    </div>
+                    <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-label="Toggle navigation">
+                        <i class="fal fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a href=".././Home.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href=".././Tutorial.html" class="nav-link active">Tutorial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href=".././Qna.html" class="nav-link">QnA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href=".././HotTopics.html" class="nav-link">Hot Topics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href=".././ProgramPractice.html" class="nav-link">Program Practice</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href=".././About.html" class="nav-link">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="dashboard-content px-3 pt-4">            
+               <div class="tab-content px-4">
+                    <div class="tab-pane active" id="introduction" role="tabpanel" aria-labelledby="introduction-tab">
+                        <h1 class="fw-light py-2 text-danger">Introduction To React JS</h1>
+                        <h5 class="">Introduction</h5>
+                        <ul class="">
+                            <li>React is a JavaScript library for building user interfaces.</li>
+                            <li>React is used to build single-page applications.</li>
+                            <li>React allows us to create reusable UI components.</li>
+                            <li>React is a free open source library.</li>
+                        </ul>
+                        <h5>What is React</h5>
+                        <ul class="">
+                            <li>React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex Uls from small and isolated pieces of code called "components"
+                            <li>React, sometimes referred to as a frontend JavaScript framework, is a JavaScript library created by Facebook. React is a tool for building UI components.</li>
+                            <li>React community also provides advanced concept like state management, routing, etc., on top of the React library.</li>
+                        </ul>
+                        <h5>How does React Work?</h5>
+                        <ul>
+                            <li>React creates a VIRTUAL DOM in memory.</li>
+                            <li>Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulations before making the changes in the browser DOM.</li>
+                        </ul>
+                        <h5>React.JS History</h5>
+                        <ul>
+                            <li>React.JS was first used in 2011 for Facebook's Newsfeed feature.</li>
+                            <li>Initial Release to the Public (VO.3.O) was in July 2013.</li>
+                            <li>Current version of React.JS is VI 8.1 .O (April 2022).</li>
+                            <li>Current version of "create-react-app" is v5.O.I (April 2022).</li>
+                            <li><code>create-react-app</code> includes built tools such as webpack, Babel, and ESLint.</li>
+                            <li>Facebook Software Engineer, "Jordan Walke", created it.</li>
+                        </ul>
+                        <h5>Applications</h5>
+                        <h6>Few popular websites powered by React library are listed below :— </h6>
+                        <ul>
+                            <li><b>Facebook</b>, popular social media application</li>
+                            <li><b>Instagram</b>, popular photo sharing application</li>
+                            <li><b>Netflix</b>, popular media stnpming application</li>
+                            <li><b>Code Academy</b>, popular online training application</li>
+                            <li><b>Redditt</b>, popular content sharing application</li>
+                        </ul>
+                        <h5>Why Should We Use React?</h5>
+                        <ul>
+                            <li>React has a large community on github.</li>
+                            <li>Component Based Architecture.</li>
+                            <li>Dom updates are handled very easily and effectively.</li>
+                            <li>Declarative approach.</li>
+                        </ul>
+                        <h5>Declarative approach</h5>
+                        <ul>
+                            <li>You tell the browser exactly what to do, instead of telling it what you need. The React declarative approach abstracts that for us.
+                                With declarative code, we tell JavaScript what we want to be done, and let JavaScript take care of performing the steps.</li>
+                        </ul>
+                        <h5>Pre-Requisites</h5>
+                        <ul>
+                            <li>HTML</li>
+                            <li>Css</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2 disabled">Previous Chapter</button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('babel-tab')" >Next Chapter</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="babel" role="tabpanel" aria-labelledby="babel-tab">
+                        <h1 class="fw-light py-2 text-danger">What Is Babel & History of JS</h1>
+                        <h5>History Of JavaScript, ES5 & ES6</h5>
+                        <ul>
+                            <li>JavaScript was invented by Brendan Eich in 1995 in Netscape.</li>
+                            <li>The history is, Brendan Eich created Mocha which became LiveScript, and later JavaScript.</li>
+                            <li>Netscape presented JavaScript to ECMA International, which develops standards and it was renamed to ECMAScript.</li>
+                        </ul>
+                        <h5>ECMA INTERNATIONAL</h5>
+                        <ul>
+                            <li>ECMA stands for "European Computer Manufacturers Association".</li>
+                        </ul>
+                        <h5>What does ECMA International do?</h5>
+                        <ul>
+                            <li>ECMA International is a non-profit organization that develops standards in computer hardware, communications, and programming languages.</li>
+                            <li>ECMAScript is the official name of the JavaScript language.</li>
+                        </ul>
+                        <h5>What Is Babel In React ?</h5>
+                        <ul>
+                            <li>Babel is a JavaScript compiler.</li>
+                            <li>It is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.</li>
+                            <li>When we create an app by using "create-react-app", then babel automatically included in our react app.</li>
+                            <li>Babel can convert JSX syntax.</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('introduction-tab')">Previous Chapter</button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('setup-tab')" >Next Chapter</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="setup" role="tabpanel" aria-labelledby="babel-tab">
+                        <h1 class="fw-light py-2 text-danger">React Setup and Installation</h1>
+                        <h5>VS Code Useful Extensions</h5>
+                        <ul>
+                            <li>babel javascript</li>
+                            <li>javascript es6 code snippets</li>
+                            <li>vscode icons</li>
+                            <li>Bracket Highlighter</li>
+                            <li>auto rename tag</li>
+                            <li>es7 react redux</li>
+                        </ul>
+                        <h5>Use Emmet in Vs Code </h5>
+                        <p>Settings -> Search Emmet -> Scroll and Goto Emmet: Include Language -> Add Item -> javascript : javascriptreact</p>
+                        <h5>To Beautify the code in Vs code</h5>
+                        <p>Shift + Alt + F</p>
+                        <h5>What is the need of npm in node JS?</h5>
+                        <p>NPM manages all the packages and modules for Node. js and consists of command line client npm. It gets installed into the system with installation of Node. js. The required packages and modules
+                            Node project are installed using NPM.
+                        </p>
+                        <h5>Basic Commands</h5>
+                        <h6>Installing React From VS Code Terminal</h6>
+                        <p><code>npm install —g create-react-app</code></p>
+                        <h6>Check the version of "create-react-app"</h6>
+                        <p><code>create-react-app —version</code></p>
+                        <h6>Creating React App</h6>
+                        <p><code>create-react-app "App_Name"</code></p>
+                        <h6>Starting React App On Server</h6>
+                        <p><code>npm start</code></p>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('babel-tab')" >Previous Chapter</button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('workflow-tab')" >Next Chapter</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="workflow" role="tabpanel" aria-labelledby="workflow-tab">
+                        <h1 class="fw-light py-2 text-danger">Understanding Workflow of React App</h1>
+                        <h5>React Render HTML</h5>
+                        <p>React renders HTML to the web page by using a function called ReactDOM.render().</p>
+                        <h5>The Render Function</h5>
+                        <p>The purpose of the function is to display the specified HTML
+                           code inside the specified HTML element.</p>
+                        <h5>But render Where ?</h5>
+                        <p>There is another folder in the root directory of your React
+                            project, named "public". In this folder, there is an
+                            index.html file.
+                            You'll notice a single &lt;div&gt; with id "root" in the body of this
+                            file. This is where our React application will be rendered.</p>
+                        <img class="img_screenshot" src="../../Images/React/5.png" alt="worlflow_image">
+                        <p>Index.js is the Entry Point of a React Application which takes data from App.js and then renders the component in the single root div of index.html file.</p>
+                        <img class="img_screenshot" src="../../Images/React/5_1.png" alt="workflow_image">
+                        <p>Like the App Component we can render a numerous component defined seperately in different files. </p>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('setup-tab')" >Previous Chapter</button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('jsx-tab')" >Next Chapter</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="jsx" role="tabpanel" aria-labelledby="jsx-tab">
+                        <h1 class="fw-light py-2 text-danger">WHAT IS JSX? WHY WE USE JSX IN REACT APP?</h1>
+                        <h5>What is JSX?</h5>
+                        <ul>
+                            <li>JSX stands for JavaScript XML.</li>
+                            <li>JSX is an extension of JavaScript Language.</li>
+                            <li>JSX allows us to write HTML in React.</li>
+                            <li>JSX makes it easier to write and add HTML in React.</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/React/6.png" alt="">
+                        <h5>Working With JSX In React</h5>
+                        <ul>
+                            <li>JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement() and/or appendChiId() methods.</li>
+                            <li>JSX converts HTML tags into react elements.</li>
+                            <li> You are not required to use JSX, but JSX makes it easier to write React applications.</li>
+                            <li>JSX is an extension of the JavaScript language based on ES6, and is translated into regular JavaScript at runtime</li>
+                        </ul>
+                        <h5>Expressions in JSX</h5>
+                        <ul>
+                            <li>With JSX you can write expressions inside curly braces {}.</li>
+                            <li>The expression can be a React variable, or property, or object or any other valid JavaScript expression. JSX will
+                            execute the expression and return the result.</li>
+                        </ul>
+                        <h5>One Top Level Element</h5>
+                        <ul>
+                            <li>The HTML code must be wrapped in ONE top level So if you like to write two paragraphs, you must put them inside a parent element, like a "div" element.</li>
+                            <li>JSX will throw an error if the HTML is not correct, or if the HTML misses a parent element.</li>
+                            <li>Alternatively, you can use a "fragment' to wrap multiple lines. This will prevent unnecessarily adding extra nodes to the DOM.</li>
+                            <li>A fragment looks like an empty HTML tag: &lt;&gt; &lt;/&gt; </li>
+                        </ul>
+                        <h5>Elements Must be Closed</h5>
+                        <ul>
+                            <li>JSX follows XML rules, and therefore HTML elements must be properly closed.</li>
+                            <li>Close empty elements with /> </ul>
+                            <li>JSX will throw an error if the HTML is notproperly closed.</li>
+                        </ul>
+                        <h5>Attribute class = className</h5>
+                        <ul>
+                            <li>The class attribute is a much used attribute in HTML, but since JSX is rendered as JavaScript, and the class keyword is a reserved word in JavaScript, you are not allowed to use it in JSX.</li>
+                            <li>Use attribute className instead.</li>
+                            <li>JSX solved this by using className instead. When JSX is rendered it translates className attributes into class attributes.</li>
+                            <li>for attribute is replace with htmlFor.</li>
+                        </ul>
+                        <h5>Conditions - if statements</h5>
+                        <ul>
+                            <li>React supports if statements, but not inside JSX.</li>
+                            <li>To be able to use conditional statements in JSX, you should put the if statements outside of the JSX, or you could use a ternary expression instead.</li>
+                            <li>Use ternary expressions instead.</li>
+                        </ul>                        
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('workflow-tab')" >Previous Chapter</button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('component-tab')" >Next Chapter</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="component" role="tabpanel" aria-labelledby="component-tab">
+                        <h1 class="fw-light py-2 text-danger"> What Are Components ?</h1>
+                        <h5>React Components</h5>
+                        <ul>
+                            <li>Components are independent and reusable pieces of code.
+                                They serve the same purpose as JavaScript functions, but
+                                work in isolation and return HTML.
+                                Components come in two types,
+                                <ol>
+                                    <li>Class Components</li>
+                                    <li>Function Components</li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <h5>Functional Components</h5>
+                        <ul>
+                            <li>Components are like functions that return HTML elements.</li>
+                            <li>In older React code bases, you may find Class components primarily used.</li>
+                            <li>It is now suggested to use Function components, which were added in React 16.8.</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('jsx-tab')" >Previous Chapter</button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('props-tab')" >Next Chapter</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="props" role="tabpanel" aria-labelledby="props-tab">
+                        <h1 class="fw-light py-2 text-danger">PROPS In React</h1>
+                        <h5>Props</h5>
+                        <ul>
+                            <li>Props stands for properties.</li>
+                            <li>Props are arguments passed into React components.</li>
+                            <li>Props are passed to components via HTML attributes.</li>
+                            <li>React Props are like function arguments in JavaScript and attributes in HTML.</li>
+                            <li>To send props.into a component, use the same syntax as HTML attributes.</li>
+                            <li>Props are also act like an object.</li>
+                            <li>If you have a variable to send, and not a string. you just put the variable name inside curly brackets.</li>
+                            <li><b>Note:</b> React Props are read-only (immutable) You will get an error if you try to change their value.</li>
+                            <li>Html elements like h1 or button can be used as Children Props. It can be accessed inside html through props.children</li>
+                        </ul>
+                        <h5>Pass Data</h5>
+                        <p>Props are also how you pass data from one component to
+                            another, as parameters. <br>
+                            1st Component(House) -> (name) -> 2nd Component(Person)</p>
+
+                        <h1 class="fw-light py-2 text-danger">Props with Class Component</h1>
+                        <img class="img_screenshot" src="../../Images/React/13.png" alt="Props">
+                        <p>With the help of props dynamic data can be passed to a single component.</p>
+                        <h5>PROPS WITH CLASS COMPONENT</h5>
+                        <ul>
+                            <li>There is a way of handling component properties is by using props.</li>
+                            <li>In a class-based components, props are accessible via this.props</li>
+                            <li>Send them into the component as attributes.</li>
+                        </ul>
+                        <h5>Components in Files</h5>
+                        <ul>
+                            <li>React is all about re-using code, and it can be smart to insert some of your components in separate files.</li>
+                            <li>To do that, create a new file with a .js file extension and put the code inside it.</li>
+                            <li>Note that the file must start by importing React (as before), and it has to end with the statement export default Component_Name;</li>
+                        </ul>
+                        <h5>PROPS In Class Component</h5>
+                        <ul>
+                            <li>If you have a variable to send, and not a string. you just put the variable name inside curly brackets.</li>
+                            <li>Note: React Props are read-only (immutable) You will get an error if you try to change their value.</li>
+                            <li>Props can be used as Children Props.</li>
+                            <li>Props are-also how you pass data from one component to another.</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('component-tab')" >Previous Chapter</button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('proptype-tab')" >Next Chapter</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="proptype" role="tabpanel" aria-labelledby="babel-tab">
+                        <h1 class="fw-light py-2 text-danger">PropTypes — Type Checking</h1>
+                        <h5>PropTypes Installation</h5>
+                        <ul>
+                            <li>To install and add the dependency for PropTypes use this command.<br>
+                                <code>npm install prop-types</code>
+                            </li>
+                            <li>Then add import<br>
+                               <code>import PropTypes from 'prop-types'</code>
+                            </li>
+                            <li>
+                               To apply type checking on the props for a component, you have-to-use built-in propTypes property which is included in 'prop-types' module.
+                            </li>
+                            <li>
+                               <b>EXAMPLE:</b><br>
+                               <code>
+                                ComponentName.propTypes = {<br>
+                                props_property: PropTypes.DataType, <br>
+                                props _ property: PropTypes.DataType, <br>
+                                }</code> <br>
+                                <b>Note:</b> When an invalid datatype is provided to a prop, a warning will be shown in the JavaScript console.
+                            </li>
+                        </ul>
+                        <h5>isRequired</h5>
+                        <p>isRequired means that props element defined is required to
+                            be passed from parent component. If you don't pass it,
+                            React will give you a warning message.</p>
+                        <h5>Default Prop Values In React JS</h5>
+                        <p>
+                            You can add default values for the props by using
+                            defaultProps built-in property in 'prop-types' module. <br>
+                            <code>
+                            ComponentName.defaultProps = { <br>
+                            props_property: 'Learning Never Ends' <br>
+                            }
+                            </code>
+                        </p>
+                        <h5>ReactJS PropTypes</h5>
+                        <ul>
+                            <li>React props, which stand for "properties", pass data from one component to another.</li>
+                            <li>If a component receives the wrong type of props, it can lead to bugs and unexpected errors in your app.</li>
+                            <li>Since JavaScript does not have a built-in type-checking solution, many developers use extensions such as Typescript.</li>
+                            <li>However, React has an internal mechanism for props validation called prop types.</li>
+                            <li>We pass different types of information, such as integers, strings, arrays, etc., as props to the components.</li>
+                            <li>We can either create default props or pass the props directly as attributes of the components.</li>
+                            <li>We pass props from outside a component and use them inside that component.</li>
+                            <li>But did we-have to check what kind of values we are getting inside our component via props.
+                            <li>Before React 15.5.0, proptypes are available in the React package, but in later versions of React, you need to add a dependency to your project.</li>
+                        </ul>
+                        <h5>Wide Range Of Validators</h5>
+                        <ul>
+                            <li>PropTypes.array</li>
+                            <li>PropTypes.bool</li>
+                            <li>PropTypes.func</li>
+                            <li>PropTypes.number</li>
+                            <li>PropTypes.object</li>
+                            <li>PropTypes.string</li>
+                            <li>PropTypes.symbol</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('props-tab')" >Previous Chapter</button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('arrowfn-tab')" >Next Chapter</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="arrowfn" role="tabpanel" aria-labelledby="arrowfn-tab">
+                        <h1 class="fw-light py-2 text-danger">Arrow Functions</h1>
+                        <h5>Arrow Functions Defination</h5>
+                        <ul>
+                            <li>Arrow functions allow us to write shorter function syntax</li>
+                            <li><code>function User() {<br>
+                                return ( <br>
+                                    &lt;h2&gt; Hey Anonymous &lt;/h2&gt; <br>
+                                ) <br>
+                                }</code>// Normal function <br> <br>
+                                <code>
+                                const User = () => &lt;h2&gt; Hey Anonymous &lt;/h2&gt;
+                                </code>  <br> 
+                                // Arrow Function <br> <br>
+                                </li>
+                            <li>
+                                It gets shorter! If the function has only one statement, and
+                                the statement returns a value, you can remove the
+                                brackets and the return keyword.
+                            </li>
+                            <li>
+                                We can also create arrow functions with parameters.
+                                Arrow functions were introduced in ES6.
+                            </li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('prototype-tab')" >Previous Chapter</button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('exports-tab')" >Next Chapter</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="exports" role="tabpanel" aria-labelledby="exports-tab">
+                        <h1 class="fw-light py-2 text-danger">Default & Named Exports</h1>
+                        <h5>Default Export Vs Named Export</h5>
+                        <ul>
+                            <li>ES6 provides us to import a module and use it in other files. </li>
+                            <li>ES6 provides two ways to export a module from a file : <b>
+                                named export and default export.</b>
+                            </li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/React/11.png" alt="exports">
+                        <p>If the doctor knows the name of child he can call by his name. If he dont he can call by any name he like.</p>
+                        <img class="img_screenshot" src="../../Images/React/11_1.png" alt="">
+                        <h5>Default Export: (export default)</h5>
+                        <ul>
+                            <li>One can have only one default export per file.</li>
+                            <li>When we import we have to specify a name.</li>
+                        </ul>
+                        <h5>Named Export: (export)</h5>
+                        <ul>
+                            <li>With named exports, one can have multiple named exports per file.</li>
+                            <li>Then import the specific exports they want surrounded in curly braces.</li>
+                            <li>The name of imported module has to be the same as the name of the exported module.</li>
+                        </ul>
+                        <h5>Code for Default Export</h5>
+                        <h6 class="text-primary">MyComponent.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                const MyComponent=()=>{ <br>
+                                    return ( <br>
+                                        &lt;&gt; <br>
+                                            &lt;h2&gt;Hello From MyComponent&lt;/h2&gt; <br>
+                                        &lt;/&gt; <br>
+                                    ) <br>
+                                } <br>                               
+                                export default MyComponent;
+                            </code>
+                        </div>
+                        <h6 class="text-primary">App.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import MyComponent from './MyComponent'; <br>
+                                function App() { <br>
+                                return ( <br>
+                                    &lt;&gt; <br>
+                                    &lt;MyComponent /&gt; <br>
+                                    &lt;/&gt; <br>
+                                ); <br>
+                                } <br>
+                                export default App;
+                            </code>
+                        </div>
+                        <h5>Code for Named Export</h5>
+                        <h6 class="text-primary">MyComponent.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                const MyComponent=()=>{ <br>
+                                    return ( <br>
+                                        &lt;&gt; <br>
+                                            &lt;h2&gt;Hello From MyComponent&lt;/h2&gt; <br>
+                                        &lt;/&gt; <br>
+                                    ) <br>
+                                }   <br> <br>                             
+                                const MyComponentOne=()=>{ <br>
+                                    return ( <br>
+                                        &lt;&gt; <br>
+                                            &lt;h2&gt;Hello From MyComponentOne&lt;/h2&gt; <br>
+                                        &lt;/&gt; <br>
+                                    ) <br>
+                                }   <br>                             
+                                export {MyComponent,MyComponentOne};
+                            </code>
+                        </div>
+                        <h6 class="text-primary">App.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import {MyComponent, MyComponentOne } from './MyComponent'; <br>
+                                function App() { <br>
+                                return ( <br>
+                                    &lt;&gt; <br>
+                                    &lt;MyComponent /&gt; <br>
+                                    &lt;MyComponentOne /&gt; <br>
+                                    &lt;/&gt; <br>
+                                ); <br>
+                                } <br>
+                                export default App;
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('arrowfn-tab')" >Previous Chapter</button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('classComponent-tab')" >Next Chapter</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="classComponent" role="tabpanel" aria-labelledby="classComponent-tab">
+                        <h1 class="fw-light py-2 text-danger">Class Component In React</h1>
+                        <h5>REACT COMPONENTS</h5>
+                        <ul>
+                            <li>Components are independent and reusable pieces of code.</li>
+                            <li>Components are the building blocks of any React App.</li>
+                            <li>Components are like functions that return HTML elements.</li>
+                        </ul>
+                        <h5>Types Of Components</h5>
+                        <ul>
+                            <li>Components come in two types : </li>
+                            <li>
+                                <ol>
+                                    <li>Class Component</li>
+                                    <li>Function Component</li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <h5>Class Component</h5>
+                        <ul>
+                            <li>These components are simple classes (made up of multiple functions that add functionality to the application).</li>
+                            <li>All class based components are child classes for the Component class of ReactJS (React.Component).</li>
+                            <li>The class must implement a render() member function which returns a React component to be rendered, similar to a return value of a functional component.</li>
+                            <li>Component name always starts with Capital Letter e-g:
+                                &lt;App/&gt; not &lt;app/&gt; <br>
+                                If you write tag in lowercase like &lt;div/&gt; then react treats this as a DOM tags but If you write tag in First letter uppercase like &lt;App/&gt; then it represents a react component.</li>
+                        </ul>
+                        <h5>Code for Class Component</h5>
+                        <h6 class="text-primary">App.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React from 'react'; <br> <br>
+                                class App extends React.Component{ <br>
+                                render(){ <br>
+                                    return( <br>
+                                    &lt;h2&gt;React Class Component Example&lt;/h2&gt; <br>
+                                    ) <br>
+                                } <br>
+                                } 
+                            </code>
+                        </div>
+                        <h5>Short-Cuts Of Creating Class & Functional Component</h5>
+                        <ul>
+                            <li>rcc - React Class Component</li>
+                            <li>rccp - React Class Component with Proptype</li>
+                            <li>rfc - React Function Component</li>
+                            <li>rfce - React Function Component With Export</li>
+                            <li>rfcp - React Function Component With Proptype</li>
+                            <li>rafc - React Arrow Function Component</li>
+                            <li>rafce - React Arrow Function Component With Export</li>
+                            <li>rafcp - React Arrow Function Component With PropType</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('exports-tab')" >Previous Chapter</button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('classConstructor-tab')" >Next Chapter</button>
+                        </div>
+                    </div>   
+                    <div class="tab-pane" id="classConstructor" role="tabpanel" aria-labelledby="classConstructor-tab">
+                        <h1 class="fw-light py-2 text-danger">Class Constructor</h1>
+                        <h5>Constructor</h5>
+                        <ul>
+                            <li>Constructor is a member of class.</li>
+                            <li>Constructor is used to initialize the object.</li>
+                            <li>Constructor automatically called when an object is created.Whereas in normal fuction we have to call it explicitly.</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/React/15.png" alt="">
+                        <p>Index.js entry point hai react application ka jisme hum class components jaise Student.js ko call kr skte hain. Jitni bar hum &lt;Student /&gt; ko call krenge utni baar Student ka constructor call hoga.</p>
+                        <img class="img_screenshot" src="../../Images/React/15_1.png" alt="">
+                        <p>Student.js(child) ne extend kiya hai React.Component(parent) ko isliye wo apne parent k constructor ko call kr skta hai using super keyword. parent ka constructor isliye jaruri hai kyunki basic functionality React.Component me hi likha hai.</p>
+                        <h5>Constructor in ReactJS</h5>
+                        <ul>
+                            <li>The constructor is a method used to initialize an object's state in a class.</li>
+                            <li>It automatically called during the creation of an object in a class.</li>
+                            <li>The concept of a constructor is the same in React.</li>
+                            <li>If you don't-initialize state and you don't bind methods, you don't need-to implement a constructor for your React component.</li>
+                            <li>When you implement the constructor for a React component, you need to call super(props) method before any other statement. <br>
+                                If you do not call super(props) method, this.props will be undefined in the constructor and can lead to bugs.</li>
+                        </ul>
+                        <h5>Code for Constructor</h5>
+                        <h6 class="text-primary">Student.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>                                
+                            import React, { Component } from 'react' <br>
+                            export default class Student extends Component { <br>
+                                constructor(){ <br>
+                                    super() <br>
+                                } //if we declare a constructor and did not specify super() inside it, it will lead to error. <br>
+                                render() { <br>
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        &lt;h1&gt;Hello World !!&lt;/h1&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                            }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('classComponent-tab')" >Previous Chapter</button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('state-tab')" >Next Chapter</button>
+                        </div>
+                    </div>  
+                    <div class="tab-pane" id="state" role="tabpanel" aria-labelledby="babel-tab">
+                        <h1 class="fw-light py-2 text-danger">React State</h1>
+                        <h5>What Is State in ReactJS?</h5>
+                        <ul>
+                            <li>The state is a built-in React object that is used to contain data or information about the component.</li>
+                            <li>The change in state can happen as a response to User action or system-generated events and these changes determine the behavior of the component and how it will render.</li>
+                            <li>Constructor is used to initialize the object's state.</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/React/16.png" alt="">
+                        <p>props are immutable matlab hum uska data change nhi kr skte but jaha hume data ko change krne k jarurat hai hum waha state ka use kr skte hain.</p>
+                        <img class="img_screenshot" src="../../Images/React/16_1.png" alt="">
+                        <p>props ka data kisi component se laya jata hai jabki state ka data component k andar hi bnaya jata hai aur manage kiya jata hai. <br>
+                            State ka data variables k form me store kiya jata hai component me. <br>
+                            State ka data jab bhi change/modify hoga component rerender hoga matlab component ka pura code phir se execute hoga.</p>
+                        <h5><span class="text-success">Program 1 : </span>We can change state inside our component so create a state to store a name like "Kumar Saurav". Also create a button and on clicking the button the state name property will change to something else like "Saurav Kumar".</h5>  
+                        <h6 class="text-primary">Employee.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                export default class Employee extends Component { <br>
+                                constructor(){ <br>
+                                    super(); <br>
+                                    this.state={ <br>
+                                        name:"Kumar Saurav" <br>
+                                    } <br>
+                                } <br>
+                                changeName(){ <br>
+                                    this.setState({ <br>
+                                        name:"Saurav Kumar" <br>
+                                    }); <br>
+                                } <br>
+                                render() { <br>
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        &lt;h2&gt;{this.state.name}&lt;/h2&gt; <br>
+                                        &lt;button onClick={()=>this.changeName()}&gt;Change Name&lt;/button&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                                }
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program 2 : </span>State previous data ko maintain bhi rkhta hai.Create a state to store the count and on clicking the button every time the count will increase to 1.</h5>  
+                        <h6 class="text-primary">Counter.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                export default class Counter extends Component { <br>
+                                    constructor(){ <br>
+                                        super() <br>
+                                        this.state={ <br>
+                                            count:1 <br>
+                                        } <br>
+                                    } <br>
+                                    IncreaseCount(){ <br>
+                                        this.setState({ <br>
+                                            count:this.state.count+1 <br>
+                                        }); <br>
+                                    } <br>
+                                render() { <br>
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        &lt;h2&gt;Count : {this.state.count}&lt;/h2&gt; <br>
+                                        &lt;button onClick={()=&gt;this.IncreaseCount()}>Increment&lt;/button&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                                }
+                            </code>
+                        </div>
+                        <h5>Important Points Regarding State</h5>
+                        <ul>
+                            <li>State is similar to props, but it is private and fully controlled by the component.</li>
+                            <li>We can create state only in class component.</li>
+                            <li>It is possible to update the state.</li>
+                            <li>A state can be modified based on user action or network change</li>
+                            <li>Every time the state of an object changes, React re-renders the component to the browser</li>
+                            <li>The state object is initialized in the constructor</li>
+                            <li>The state object can store multiple properties</li>
+                            <li>We can update state on a button click</li>
+                            <li><code> this.setState()</code> is used to change the value of the state object.</li>
+                            <li>We can set props data to state.</li>
+                        </ul>
+                        <h5>The setState() Method</h5>
+                        <ul>
+                            <li>State can be updated in response to event handlers, server responses or props changes, this is done using the setState() method.</li>
+                            <li>The setState() method enqueues all of the updates made to the component state and instructs React to re-render the component and its children with the updated state.</li>                                
+                            <li>Always use the setState() method to change the state object;since it wiIl ensure that the component knows it's been updated and calls the render() method.</li>
+                        </ul>
+                        <h5>There Are 2 Ways Of Initialize State</h5>
+                        <ol>
+                            <li>With Constructor</li>
+                            <li>Without Constructor</li>
+                        </ol>
+                        <img class="img_screenshot" src="../../Images/React/16_2.png" alt="">
+                        <img class="img_screenshot" src="../../Images/React/16_3.png" alt="">
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('classConstructor-tab')" >Previous Chapter</button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('babel-tab')" >Next Chapter</button>
+                        </div>
+                    </div>               
+                    <!-- <div class="tab-pane" id="setup" role="tabpanel" aria-labelledby="babel-tab">
+                        <h1 class="fw-light py-2 text-danger">React Setup and Installation</h1>
+                        <h5>History Of JavaScript, ES5 & ES6</h5>
+                        <ul>
+                            <li>JavaScript was invented by Brendan Eich in 1995 in Netscape.</li>
+                            <li>The history is, Brendan Eich created Mocha which became LiveScript, and later JavaScript.</li>
+                            <li>Netscape presented JavaScript to ECMA International, which develops standards and it was renamed to ECMAScript.</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('babel-tab')" >Previous Chapter</button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('babel-tab')" >Next Chapter</button>
+                        </div>
+                    </div> -->
+                </div>           
+            </div>
+
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                    <p class="col-md-2 mb-0 text-muted">© 2023 Company, Inc</p>
+                    <ul class="nav col-md-10 justify-content-end">
+                        <li class="nav-item"><a href=".././Home.html" class="nav-link px-2 text-muted">Home</a></li>
+                        <li class="nav-item"><a href=".././Tutorial.html" class="nav-link px-2 text-muted">Tutorial</a>
+                        </li>
+                        <li class="nav-item"><a href=".././Qna.html" class="nav-link px-2 text-muted">QnA</a></li>
+                        <li class="nav-item"><a href=".././HotTopics.html" class="nav-link px-2 text-muted">Hot Topics</a>
+                        </li>
+                        <li class="nav-item"><a href=".././ProgramPractice.html" class="nav-link px-2 text-muted">Program
+                                Practice</a></li>
+                        <li class="nav-item"><a href=".././About.html" class="nav-link px-2 text-muted">About</a></li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="../../index.js"></script>
+</body>
+
+</html>

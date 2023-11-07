@@ -1,0 +1,27 @@
+Image
+<img class="img_screenshot" src="../../Images/React/11.png" alt="">
+
+bullets
+<ul>
+    <li>ES6 provides us to import a module and use it in other files. </li>
+    <li>ES6 provides two ways to export a module from a file : <b>
+        named export and default export.</b>
+    </li>
+</ul>
+
+Code
+<h5>Code for Default Export</h5>
+<h6 class="text-primary">MyComponent.js</h6>
+<div class="codeBox border border-2 rounded my-2 px-2">
+    <code>
+        const MyComponent=()=>{ <br>
+            return ( <br>
+                &lt;&gt; <br>
+                    &lt;h2&gt;Hello From MyComponent&lt;/h2&gt; <br>
+                &lt;/&gt; <br>
+            ) <br>
+        } <br>                               
+        export default MyComponent;
+    </code>
+</div>
+
