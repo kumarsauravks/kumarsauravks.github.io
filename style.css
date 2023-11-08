@@ -43,6 +43,9 @@ hr.h-color{
     #side_nav.active{
         margin-left: 0;
     }
+    .img_screenshot{
+        width: 100% !important;
+    }
 }
 /* ---------------------------------------------------- */
 #myTab{    
