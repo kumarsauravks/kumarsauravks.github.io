@@ -25,7 +25,7 @@
                 <li><a href=".././Home.html" class="text-decoration-none px-3 py-2 d-block"><i
                             class="fa fa-home"></i>&nbsp;Home</a></li>
                 <li class="active">
-                    <a href=".././Tutorial.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-list"></i>&nbsp;Tutorial</a>
+                    <a href=".././Tutorial.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-list"></i>&nbsp; React Tutorial</a>
                     <div class="collapse show" id="orders-collapse">
                         <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
                           <li class="nav-item w-100" role="presentation">
@@ -66,6 +66,42 @@
                           </li>
                           <li class="nav-item w-100" role="presentation">
                             <a class="nav-link" id="state-tab" data-bs-toggle="tab" data-bs-target="#state" type="button" role="tab" aria-controls="state" aria-selected="false">State</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="destructure-tab" data-bs-toggle="tab" data-bs-target="#destructure" type="button" role="tab" aria-controls="destructure" aria-selected="false">Destucturing</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="event-tab" data-bs-toggle="tab" data-bs-target="#event" type="button" role="tab" aria-controls="event" aria-selected="false">Event Handlers</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="bindingEvent-tab" data-bs-toggle="tab" data-bs-target="#bindingEvent" type="button" role="tab" aria-controls="bindingEvent" aria-selected="false">Binding Event Handlers</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="lifecycle-tab" data-bs-toggle="tab" data-bs-target="#lifecycle" type="button" role="tab" aria-controls="lifecycle" aria-selected="false">Component Lifecycle</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="lifecycleMethod-tab" data-bs-toggle="tab" data-bs-target="#lifecycleMethod" type="button" role="tab" aria-controls="lifecycleMethod" aria-selected="false">Lifecycle Methods</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="mounting-tab" data-bs-toggle="tab" data-bs-target="#mounting" type="button" role="tab" aria-controls="mounting" aria-selected="false">Mounting Phase</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="updating-tab" data-bs-toggle="tab" data-bs-target="#updating" type="button" role="tab" aria-controls="updating" aria-selected="false">Updating Phase</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="unmounting-tab" data-bs-toggle="tab" data-bs-target="#unmounting" type="button" role="tab" aria-controls="unmounting" aria-selected="false">Unmounting Phase</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="methodAsProps-tab" data-bs-toggle="tab" data-bs-target="#methodAsProps" type="button" role="tab" aria-controls="methodAsProps" aria-selected="false">Method As Props</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="conditionalRendering-tab" data-bs-toggle="tab" data-bs-target="#conditionalRendering" type="button" role="tab" aria-controls="conditionalRendering" aria-selected="false">Conditional Rendering</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="listRendering-tab" data-bs-toggle="tab" data-bs-target="#listRendering" type="button" role="tab" aria-controls="listRendering" aria-selected="false">List Rendering</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="listKeys-tab" data-bs-toggle="tab" data-bs-target="#listKeys" type="button" role="tab" aria-controls="listKeys" aria-selected="false">List Keys</a>
                           </li>
                           <!-- <li class="nav-item w-100" role="presentation">
                             <a class="nav-link" id="setup-tab" data-bs-toggle="tab" data-bs-target="#setup" type="button" role="tab" aria-controls="setup" aria-selected="false">Setup and Installation</a>
@@ -784,9 +820,1041 @@
                         <img class="img_screenshot" src="../../Images/React/16_3.png" alt="">
                         <div>
                             <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('classConstructor-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('destructure-tab')" >Next </button>
+                        </div>
+                    </div>  
+                    <div class="tab-pane" id="destructure" role="tabpanel" aria-labelledby="babel-tab">
+                        <h1 class="fw-light py-2 text-danger">Destucturing in React</h1>
+                        <h5>What is Destructuring?</h5>
+                        <ul>
+                            <li>Destructuring is a characteristic of JavaScript, It is used to take out sections of data from an array or objects, We can assign them to new own variables created by the developer.</li>
+                            <li>In destructuring, It does not change an array or any object, it makes a copy of the desired object or array elementby-assigning them in its own new variables, later we can use this new variable in React (class or functional) components.</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/React/17.png" alt="">
+                        <p>Old way</p>
+                        <img class="img_screenshot" src="../../Images/React/17_1.png" alt="">
+                        <p>New way of destructuring</p>
+                        <h5>Advantages of Destructuring</h5>
+                        <ul>
+                            <li>It makes developer's life easy, by assigning their own variables.</li>
+                            <li>It improves the sustainability, readability of code.</li>
+                            <li>It helps to cut the amount of code used in an application.</li>
+                            <li>It trims the number of steps taken to access data properties.</li>
+                            <li>It provides-components with the exact data properties.</li>
+                            <li>It saves time from iterate over an array of objects multiple times.</li>
+                        </ul>
+                        <h5>Program : Destructuring props(Way #1)</h5>
+                        <h6 class="text-primary">Index.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                &lt;Customer name="Kumar Saurav" age={27} /&gt;
+                            </code>
+                        </div>
+                        <h6 class="text-primary">Customer.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                function Customer({name,age}) { <br>
+                                    return ( <br>
+                                      &lt;div&gt; <br>
+                                        &lt;h1&gt;{name}&lt;/h1&gt; <br>
+                                        &lt;h2&gt;{age}&lt;/h2&gt; <br>
+                                      &lt;/div&gt; <br>
+                                    ) <br>
+                                  }
+                            </code>
+                        </div>
+                        <h5>Program : Destructuring props(Way #2)</h5>
+                        <h6 class="text-primary">index.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                &lt;Customer name="Kumar Saurav" age={27} /&gt;
+                            </code>
+                        </div>
+                        <h6 class="text-primary">Customer.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                function Customer(props) { <br>
+                                    const {name,age}=props; <br>
+                                    return ( <br>
+                                      &lt;div&gt; <br>
+                                        &lt;h1&gt;{name}&lt;/h1&gt; <br>
+                                        &lt;h2&gt;{age}&lt;/h2&gt; <br>
+                                      &lt;/div&gt; <br>
+                                    ) <br>
+                                  }
+                            </code>
+                        </div>
+                        <h5>Program : Destructuring State</h5>
+                        <h6 class="text-primary">Customer.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                export default class Customer extends Component { <br>
+                                    constructor(){ <br>
+                                        super() <br>
+                                        this.state={ <br>
+                                            name:"Kumar Saurav", <br>
+                                            age:27 <br>
+                                        } <br>
+                                    } <br>
+                                render() { <br>
+                                    const {name,age}=this.state; <br>
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        &lt;h1&gt;{name}&lt;/h1&gt; <br>
+                                        &lt;h2&gt;{age}&lt;/h2&gt; <br>
+                                      &lt;/div&gt; <br>
+                                    ) <br>
+                                }
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('state-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('event-tab')" >Next </button>
+                        </div>
+                    </div>  
+                    <div class="tab-pane" id="event" role="tabpanel" aria-labelledby="event-tab">
+                        <h1 class="fw-light py-2 text-danger">Event and Event Handlers</h1>
+                        <img class="img_screenshot" src="../../Images/React/18.png" alt="">
+                        <p>Button me click kiye to event hai, kuch code execute hoga wo hai event handler and ye pura process hai event handling.</p>
+                        <h5>What is an Event ?</h5>
+                        <ul>
+                            <li>Events are actions or occurrences that happen in the system you are programming, which the system tells you about so your code can react to them.</li>
+                            <li>Most often user of a website generates events.</li>
+                        </ul>
+                        <h5>React Events</h5>
+                        <ul>
+                            <li>Just like HTML DOM events, React can perform actions based on user events.</li>
+                            <li>React has the same events as HTML: click, change, mouseover etc.</li>
+                        </ul>
+                        <h5>Adding Events</h5>
+                        <ul>
+                            <li>React events are written in camelCase syntax: onCIick instead of onclick.</li>
+                            <li>React event handlers are written inside curly braces: onCIick={shoot} instead of onClick="shoot()".</li>
+                        </ul>
+                        <h5>Program 1 : Create a event handler on button click to show an alert message using functional component.</h5>
+                        <h6 class="text-primary">HandleClick.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React from 'react' <br>
+                                const ClickEvent = () => { <br>
+                                    function HandleClick(){ <br>
+                                        alert("Button Clicked") <br>
+                                    } <br>
+                                return ( <br>
+                                    &lt;div&gt; <br>
+                                    &lt;button onClick={HandleClick}&gt;Click Me&lt;/button&gt; <br>
+                                    &lt;/div&gt; <br>
+                                ) <br>
+                                } <br>
+                                export default ClickEvent
+                            </code>
+                        </div>
+                        <h5>Program 2 : Create a event handler on button click to show an alert message using class component.</h5>
+                        <h6 class="text-primary">HandleClick.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                export default class ClickEvent extends Component { <br>
+                                    HandleClick(){ <br>
+                                        alert("Button Clicked") <br>
+                                    } <br>
+                                render() { <br>
+                                    return ( <br>
+                                    &lt;div&gt;
+                                        &lt;button onClick={this.HandleClick}&gt;Click Me&lt;/button&gt;
+                                    &lt;/div&gt;
+                                    )
+                                }
+                                }
+                            </code>
+                        </div>
+                        <h5>Program 3 : Create a event handler on button click to show an alert message using functional component where name for the function will be passed from parameter.</h5>
+                        <h6 class="text-primary">HandleClick.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React from 'react' <br>
+                                const HandleClick=(user)=>{ <br>
+                                    alert(`Button Clicked by ${user}`) <br>
+                                } <br>
+                                const ClickEvent = () => {    <br> 
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        &lt;button onClick={()=>HandleClick('Saurav')}&gt;Click Me&lt;/button&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                                export default ClickEvent
+                            </code>
+                        </div>
+                        <h5>Program 4 : Create a event handler on button click to show an alert message using class component where name for the function will be passed from parameter.</h5>
+                        <h6 class="text-primary">HandleClick.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                export default class ClickEvent extends Component {    <br>
+                                render() { <br>
+                                    const HandleClick=(user)=>{ <br>
+                                        alert(`Button Clicked by ${user}`) <br>
+                                    } <br>
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        &lt;button onClick={()=>HandleClick('Saurav')}&gt;Click Me&lt;/button&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('destructure-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('bindingEvent-tab')" >Next </button>
+                        </div>
+                    </div>  
+                    <div class="tab-pane" id="bindingEvent" role="tabpanel" aria-labelledby="bindingEvent-tab">
+                        <h1 class="fw-light py-2 text-danger">Binding Event Handlers in React</h1>
+                        <h5>Binding Event Handlers</h5>
+                        <ul>
+                            <li>In ReactJS, we need to bind events so that the this keyword would not return an "undefined".</li>
+                        </ul>
+                        <h5>Binding Event Handler in the Constructor</h5>
+                        <ul>
+                            <li>In this approach, we are going to bind the event handler inside the constructor.</li>
+                            <li>This is also the approach that is mentioned in ReactJS documentation.</li>
+                            <li>This has performance benefits as the events aren't binding every time the method is called.</li>
+                        </ul>
+                        <h5>Program 1 : We need to bind this keyword to our custom function to access state. Create a button upon clicking on which state name property will be updated from 'Kumar' to 'Saurav'.</h5>
+                        <h6 class="text-primary">BindingEvent.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                export default class BindingEvent extends Component { <br>
+                                    constructor(){ <br>
+                                        super() <br>
+                                        this.HandleEvent=this.HandleEvent.bind(this); <br>
+                                        this.state={ <br>
+                                            name:'Kumar' <br>
+                                        } <br>
+                                    } <br>
+                                    HandleEvent(){ <br>
+                                        this.setState({ <br>
+                                            name:"Saurav" <br>
+                                        }) <br>
+                                    } <br>
+                                render() { <br>
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        &lt;h1&gt;{this.state.name}&lt;/h1&gt; <br>
+                                        &lt;button onClick={this.HandleEvent}&gt;Click Me&lt;/button&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                                }
+                            </code>
+                        </div>
+                        <h5>Binding Event Handler in Render Method</h5>
+                        <ul>
+                            <li>We can bind the handler when it is called in the render method using bind() method.</li>
+                            <li>&lt;button onCIick={this.clickHandIer.bind(this)}&gt;Click&lt;/button&gt;</li>
+                        </ul>
+                        <h5>Binding Event Handler using Arrow Function</h5>
+                        <ul>
+                            <li>This is probably the best way to bind the events and still pass in parameters to the event handlers easily.</li>
+                            <li>By using this way you don't need to bind "this" keyword.</li>
+                        </ul>
+                        <h5>Program 2 : Use the same program but instead of binding this use arrow function either in the defination or in the button click.</h5>
+                        <h6 class="text-primary">MyComponent.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                export default class BindingEvent extends Component { <br>
+                                    constructor(){ <br>
+                                        super() <br>
+                                        this.state={ <br>
+                                            name:'Kumar' <br>
+                                        }  <br>
+                                    } <br>
+                                    HandleEvent(){ <br>
+                                        this.setState({ <br>
+                                            name:"Saurav" <br>
+                                        }) <br>
+                                    } <br>
+                                render() { <br>
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        &lt;h1&gt;{this.state.name}&lt;/h1&gt; <br>
+                                        &lt;button onClick={()=>this.HandleEvent()}&gt;Click Me&lt;/button&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                                }
+                            </code>
+                        </div>
+                        <h5>What is binding event handlers in React?</h5>
+                        <ul>
+                            <li>Event Binding tells the browser that this function should be called whenever this event is triggered or in other words whenever the event is trigged the function which is bind with the event should be called.</li>
+                            <li>Bind creates a new function that will have this set to the first parameter passed to bind() .</li>
+                            <li>Binding Event Handlers is the concept used with Class Components.</li>
+                        </ul>                        
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('event-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('lifecycle-tab')" >Next </button>
+                        </div>
+                    </div>  
+                    <div class="tab-pane" id="lifecycle" role="tabpanel" aria-labelledby="lifecycle-tab">
+                        <h1 class="fw-light py-2 text-danger">Life Cycle Or Phases Of Components</h1>
+                        <img class="img_screenshot" src="../../Images/React/20.png" alt="">
+                        <img class="img_screenshot" src="../../Images/React/20_1.png" alt="">
+                        <img class="img_screenshot" src="../../Images/React/20_2.png" alt="">
+                        <img class="img_screenshot" src="../../Images/React/20_3.png" alt="">
+
+                        <h5>Phases / Lifecycle of Components</h5>
+                        <ul>
+                            <li>Each component in React has a lifecycle which you can monitor and manipulate during its three main phases.</li>
+                            <li>The three phases are: <br>
+                                Mounting <br>
+                                Updating <br>
+                                Unmounting
+                            </li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/React/20_4.png" alt="">
+                        <h5>React's Virtual DOM</h5>
+                        <ul>
+                            <li>Virtual DOM: React uses Virtual DOM which is like a lightweight copy of the actual DOM(a virtual representation of the DOM).</li>
+                            <li>So for every object that exists in the original DOM, there is an object for that in React Virtual DOM.</li>
+                            <li>It is same, but it does not have the power to directly change the layout of the document.</li>
+                            <li>Manipulating DOM is slow, but manipulating Virtual DOM is fast as nothing gets drawn on the screen.</li>
+                            <li>So each time there is a change in the state of our application, the virtual DOM gets updated first instead of the real DOM.</li>
+                        </ul>
+                        <h5>Important Note</h5>
+                        <ul>
+                            <li>These 3 phases or life cycle only applied to class components not on functional component.</li>
+                            <li>There is another way of applying life cycle on functional components are called hooks.</li>
+                        </ul>     
+                        <h5>Mounting</h5>
+                        <ul>
+                            <li>Mounting means putting elements into the DOM.</li>
+                            <li>In this phase, an instance of a component is being created and inserted into the DOM.</li>
+                        </ul>
+                        <h5>Updating</h5>
+                        <ul>
+                            <li>The next phase in the lifecycle is when a component is updated.</li>
+                            <li>A component is updated whenever there is a change in the component's state or props.</li>
+                        </ul>
+                        <h5>Unmounting</h5>
+                        <ul>
+                            <li>The next phase in the lifecycle is when a component is removed from the DOM, or unmounting as React likes to call it.</li>
+                        </ul>
+                        <h5>The Component Lifecycle</h5>
+                        <ul>
+                            <li>Each component has several "lifecycle methods" that you can override to run code at times in the process. </li>
+                        </ul>                  
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('lifecycleMethod-tab')" >Previous </button>
                             <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('babel-tab')" >Next </button>
                         </div>
-                    </div>               
+                    </div>  
+                    <div class="tab-pane" id="lifecycleMethod" role="tabpanel" aria-labelledby="lifecycleMethod-tab">
+                        <h1 class="fw-light py-2 text-danger">React Life Cycle Methods</h1>
+                        <h5>Mounting</h5>
+                        <ul>
+                            <li>Mounting means putting elements into the DOM.</li>
+                            <li>In this phase, an instance of a component is being created and inserted into the DOM.</li>
+                            <li>React has four built-in methods that gets called, in this order, when mounting a component: <br>
+                                <b>
+                                1. constructor <br>
+                                2. static getDerivedStateFromProps() <br>
+                                3. render() <br>
+                                4. componentDidMount() <br>
+                                </b>
+                            </li>
+                            <li>The render() method is required and will always be called, the others are optional and will be called if you define them.</li>
+                        </ul>
+                        <h5>Updating</h5>
+                        <ul>
+                            <li>The next phase in the lifecycle is when a component is updated.</li>
+                            <li>A component is updated whenever there is a change in the component's state or props.</li>
+                            <li>React has five built-in methods that gets called, in this order, when a component is updated: <br>
+                            <b>
+                            1. getDerivedStateFromProps()  <br>
+                            2. shouldComponentUpdate() <br>
+                            3. render() <br>
+                            4. getSnapshotBeforeUpdate() <br>
+                            5. componentDidUpdate() <br>
+                            </b>
+                            </li>
+                            <li>The render() method is required and will always be called, the others are optional and will be called if you define them.</li>
+                        </ul>
+                        <h5>Unmounting</h5>
+                        <ul>
+                            <li>The next phase in the lifecycle is when a component is removed from the DOM, or unmounting as React likes to call it.</li>
+                            <li>React has only one built-in method that gets called when a component is unmounted: <br>
+                                <b>
+                                1. componentWiIIUnmount()
+                                </b>
+                            </li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('lifecycle-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('mounting-tab')" >Next </button>
+                        </div>
+                    </div> 
+                    <div class="tab-pane" id="mounting" role="tabpanel" aria-labelledby="mounting-tab">
+                        <h1 class="fw-light py-2 text-danger">Mounting Phase In React Life Cycle</h1>
+                        <h5>Mounting Phase</h5>
+                        <ul>
+                            <li>Mounting means putting elements into the DOM.</li>
+                            <li>In this phase, an instance of a component is being created and inserted into the DOM.</li>
+                            <li>React has four built-in methods that gets called, in this order, when mounting a component: <br>
+                            <b>
+                            1. constructor <br>
+                            2. static getDerivedStateFromProps() <br>
+                            3. render() <br>
+                            4. componentDidMount() <br>
+                            </b>
+                            </li>
+                            <li>The render() method is required and will always be called, the others are optional and will be called if you define them.</li>
+                        </ul>
+                        <h5>Constructor(props)</h5>
+                        <ul>
+                            <li>It is a special function that executes when a new component is created.</li>
+                            <li>We can use constructor for 2 purposes. <br>
+                                <b>
+                                1. For initializing state. <br>
+                                2. For binding the event handlers.
+                                </b>
+                            </li>
+                            <li>You can not use HTTP requests (APIs) in the constructor.</li>
+                            <li>We have to call parent class constructor in our child class constructor by using super(props).</li>
+                            <li>When implementing the constructor for a React.Component subclass, we have to call super(props) on the first place in the constructor otherwise this.props will be undefined in the constructor, which can lead to bugs.</li>
+                        </ul>
+                        <h5>getDerivedStateFromProps()</h5>
+                        <ul>
+                            <li>It is used when the state of the component depends on changes in props over time.</li>
+                            <li>Lets say, you have a component but the initial state of the component depends on the props being passed to the component, in this scenario you can used this method to set the state.</li>
+                            <li>This is very rarely used method.</li>
+                            <li>It is invoked right before calling the render function, both on the initial mount and on subsequent updates.</li>
+                            <li>We cannot use this keyword inside this function, it means we cannot update the state by using this.setState method.</li>
+                            <li>It should return an object to update the state, or null to update nothing.</li>
+                            <li>Syntax getDerivedStateFromProps() : <br>
+                                static getDerivedStateFromProps(props, state){ <br>
+                                }
+                            </li>
+                        </ul>
+                        <h5>Render()</h5>
+                        <ul>
+                            <li>It is the only required (necessary) method in the class component, so all other methods are optional.</li>
+                            <li>In this method, we can read props & state and return JSX.</li>
+                            <li>In this method, we cannot change the state or interact with the DOM or make ajax calls.</li>
+                            <li>Children-components life cycle methods are also executed.</li>
+                        </ul>
+                        <h5>componentDidMount()</h5>
+                        <ul>
+                            <li>It is invoked immediately after a component is mounted (inserted into the DOM), after the render() method.</li>
+                            <li>Invoked immediately after a component have been rendered to the Dom.</li>
+                            <li>Invoked immediately after a component and all its children components have been rendered to the Dom.</li>
+                            <li>We can use HTTP requests, interaction with the DOM or make ajaxcalls in this method.</li>
+                            <li>This method is executed only once in a life cycle of component.</li>
+                            <li>This method is also used for integration with other JavaScript frameworks and other functions with delayed execution like setTimeout or setlnterval.</li>
+                            <li>Syntax: <br>
+                                componentDidMount( ) { <br>
+                                }
+                            </li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a component Mounting1.js to console log all the mounting phases. Also create a component Mounting2.js which act as child component to first to show clidren component life cycle methods also gets executed every time a parent class is called.</h5>
+                        <h6 class="text-primary">Mounting1.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                import Mounting2 from './Mounting2'; <br>
+                                export default class Mounting1 extends Component { <br>
+                                    constructor(props){ <br>
+                                        super(props) <br>
+                                        this.state={ <br>
+                                            name:"Kumar Saurav" <br>
+                                        } <br>
+                                        console.log("costructor() of Mounting1 invoked.") <br>
+                                    } <br>
+                                    static getDerivedStateFromProps(props,state){ <br>
+                                        console.log(props,state); <br>
+                                        console.log("getDerivedStateFromProps() of Mounting1 invoked.") <br>
+                                        return null; <br>
+                                    } <br>
+                                    componentDidMount(){ <br>
+                                        console.log("componentDidMount() of Mounting1 invoked.") <br>
+                                    } <br>
+                                render() { <br>
+                                    console.log("render() of Mounting1 invoked.") <br>
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        &lt;h1&gt;{this.state.name}&lt;/h1&gt; <br>
+                                        &lt;h2&gt;{this.props.city}&lt;/h2&gt; <br>
+                                        &lt;Mounting2 city="London" /&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                                }
+                            </code>
+                        </div>
+                        <h6 class="text-primary">Mounting2.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                export default class Mounting2 extends Component { <br>
+                                    constructor(props){ <br>
+                                        super(props) <br>
+                                        this.state={ <br>
+                                            name:"Kumar Gaurav" <br>
+                                        } <br>
+                                        console.log("costructor() of Mounting2 invoked.") <br>
+                                    } <br>
+                                    static getDerivedStateFromProps(props,state){ <br>
+                                        console.log(props,state); <br>
+                                        console.log("getDerivedStateFromProps() of Mounting2 invoked.") <br>
+                                        return null; <br>
+                                    } <br>
+                                    componentDidMount(){<br>
+                                        console.log("componentDidMount() of Mounting2 invoked.") <br>
+                                    } <br>
+                                render() { <br>
+                                    console.log("render() of Mounting2 invoked.") <br>
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        &lt;h1&gt;{this.state.name}&lt;/h1&gt; <br>
+                                        &lt;h2&gt;{this.props.city}&lt;/h2&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('lifecycleMethod-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('updating-tab')" >Next </button>
+                        </div>
+                    </div> 
+                    <div class="tab-pane" id="updating" role="tabpanel" aria-labelledby="updating-tab">
+                        <h1 class="fw-light py-2 text-danger">Updating Phase In React Life Cycle</h1>
+                        <h5>Updating Phase</h5>
+                        <ul>
+                            <li>The Updating phase in the lifecycle is when a component is updated.</li>
+                            <li>A component is updated whenever there is a change in the component's state or props.</li>
+                            <li>React has five built-in methods that gets called, in this order, when a component is updated: <br>
+                                <b>
+                                1. getDerivedStateFromProps() (Rarely Used) <br>
+                                2. shouldComponentUpdate() (Rarely Used)<br>
+                                3. render() (Mostly Used)<br>
+                                4. getSnapshotBeforeUpdate() (Rarely Used)<br>
+                                5. componentDidUpdate() (Mostly Used)
+                                </b>
+                            </li>
+                            <li>The render() method is required and will always be called, the others are optional and will be called if you define them.</li>
+                        </ul>
+                        <h5>getDerivedStateFromProps()</h5>
+                        <ul>
+                            <li>It is used when the state of the component depends on changes in props over time.</li>
+                            <li>Lets say, you have a component but the initial state of the component depends on the props being passed to the component, in this scenario you can used this method to set the state.</li>
+                            <li>This is very rarely used method.</li>
+                            <li>It is invoked right before calling the render function, both on the initial mount and on subsequent updates.</li>
+                            <li>We cannot use this keyword inside this function, it means we cannot update the state by using this.setState method.</li>
+                            <li>this keyword is used with instance method but getDerivedStateFromProps() is a static method.</li>
+                            <li>It should return an object to update the state, or null to update nothing.</li>
+                            <li>Syntax getDerivedStateFromProps() :<br>
+                                static getDerivedStateFromProps(props, state){ <br>
+                                }
+                            </li>
+                        </ul>
+                        <h5> <span class="text-success">Program:</span> Create a program to show that when a child component state is dependent on props then it can be only changed using the getDerivedStateFromProps lifecycle method.</h5>
+                        <h6 class="text-primary">Updating1.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                import Updating2 from './Updating2' <br>
+                                export default class Updating1 extends Component { <br>
+                                    constructor(props) { <br>
+                                    super(props) <br>
+                                    this.state = { <br>
+                                        name:"Kumar" <br>
+                                    } <br>
+                                    }  <br>
+                                    changeState=()=>{ <br>
+                                        console.log("Button Clicked") <br>
+                                        this.setState({ <br>
+                                            name:"Amit" <br>
+                                        }) <br>
+                                    } <br>
+                                render() {   <br>  
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        &lt;Updating2 name={this.state.name} /&gt; <br>
+                                        &lt;button onClick={this.changeState}&gt;Click Me&lt;/button&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                                }
+                            </code>
+                        </div>
+                        <h6 class="text-primary">Updating2.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                export default class Updating2 extends Component { <br>
+                                    constructor(props) { <br>
+                                    super(props) <br>                                    
+                                    this.state = { <br>
+                                        name1:this.props.name <br>
+                                    } <br>
+                                    } <br>
+                                    static getDerivedStateFromProps(props,state){ <br>
+                                        console.log("getDerivedStateFromProps called") <br>
+                                        if(props.name!==state.name1){ <br>
+                                            return {name1:props.name} <br>
+                                        } <br>
+                                        else{ <br>
+                                            return null; <br>
+                                        } <br>
+                                    } <br>                                    
+                                render() { <br>
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        &lt;h1&gt;{this.state.name1}&lt;/h1&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                                }
+                            </code>
+                        </div>
+                        <h5>shouldComponentUpdate()</h5>
+                        <ul>
+                            <li>Use shouldComponentUpdate() to let React Know if a component's OUtPUt is not affected by the current change in state or props.</li>
+                            <li>It means should React re-render or not ?</li>
+                            <li>shouldComponentUpdate() is called before render method.</li>
+                            <li>This method return true by default.</li>
+                            <li>Render() method will not be called if shouldComponentUpdate() returns false</li>
+                            <li>We cannot use HTTP requests (API calls) in this method and also we cannot call the setState() Method.</li>
+                            <li>This is Rarely used method according to React documentation.</li>
+                            <li>Syntax shouldComponentUpdate() : <br>
+                                shouldComponentUpdate ( nextProps, nextState ) { <br>
+                                }
+                            </li>
+                        </ul>
+                        <h5><span class="text-success">Program:</span>Create a program to show the functionality of shouldComponentUpdate that if we return false in it, the state value is changed but render() method is not called resulting in dom remain unchanged.</h5>
+                        <h6 class="text-primary">Person.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                export default class Person extends Component { <br>
+                                    constructor(props) { <br>
+                                    super(props) <br>
+                                        console.log("constructor called") <br>
+                                    this.state = { <br>
+                                        name:"Kumar" <br>
+                                    } <br>
+                                    } <br>
+                                    changeState=()=>{ <br>
+                                        console.log("Button Clicked") <br>
+                                        this.setState({ <br>
+                                            name:"Saurav" <br>
+                                        }) <br>
+                                    } <br>
+                                    static getDerivedStateFromProps(props,state){ <br>
+                                        console.log("getDerivedStateFromProps called"); <br>
+                                        console.log(props,state) <br>
+                                        return null <br>
+                                    } <br>
+                                    shouldComponentUpdate(nextProp,nextState){ <br>
+                                        console.log("shouldComponentUpdate called") <br>
+                                        console.log(nextProp,nextState); <br>
+                                        return true; <br>
+                                    } <br>
+                                    getSnapshotBeforeUpdate(prevProps, prevState){ <br>
+                                        console. log("getSnapshotBeforeUpdate Called" ) ; <br>
+                                        console. log( prevProps); <br>
+                                        console. log( prevState); <br>
+                                        return "Hello"  <br>
+                                    } <br>
+                                    componentDidUpdate(prevProps, prevState, snapshot) <br>
+                                    { <br>
+                                        console.log("componentDidUpdate Called"); <br>
+                                        console.log(prevProps); <br>
+                                        console.log(prevState); <br>
+                                        console.log(snapshot); <br>
+                                    } <br>                      
+                                render() { <br>
+                                    console.log("render called") <br>
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        &lt;h1&gt;{this.state.name}&lt;/h1&gt; <br>
+                                        &lt;h2&gt;{this.props.city}&lt;/h2&gt; <br>
+                                        &lt;button onClick={this.changeState}&gt;Change State&lt;/button&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                                }
+                            </code>
+                        </div>
+                        <h5>Render()</h5>
+                        <ul>
+                            <li>It is the only required (necessary) method in the class component, so all other methods are optional.</li>
+                            <li>In this method, we can read props & state and return JSX.</li>
+                            <li>In this method, we cannot change the state or interact with the DOM or make ajax calls.</li>
+                            <li>Children-components life cycle methods are also executed.</li>
+                        </ul>
+                        <h5>getSnapshotBeforeUpdate()</h5>
+                        <ul>
+                            <li>This method is called right before the Virtual DOM is about to make changes to the Actual DOM (before DOM is updated).</li>
+                            <li>It allows our components to capture the current values or some information from the DOM (eg: Scroll Position) before it is potentially changed.</li>
+                            <li>This method return NULL or return a value.</li>
+                            <li>Any returned value by this function will be passed as third parameter to last function componentDidUpdate().</li>
+                            <li>This is also rarely used method according to React documentation.</li>
+                            <li>Syntax getSnapshotBeforeUpdate() : <br>
+                                getSnapshotBeforeUpdate ( prevProps, prevState ) { <br>
+                                }
+                            </li>
+                        </ul>
+                        <h5>componentDidUpdate()</h5>
+                        <ul>
+                            <li>This method invoked right after updating occurs.</li>
+                            <li>This method is not called for the initial render.</li>
+                            <li>This method is called after the render is completed in the re-render cycles.</li>
+                            <li>This method is guaranteed to call only once in a life cycle.</li>
+                            <li>You can make-Ajax Calls in this method.</li>
+                            <li>This method will not be called if shouldComponentUpdate() returns false.</li>
+                            <li>Syntax componentDidUpdate() <br>
+                                componentDidUpdate ( prevProps, prevState, snapshot ) { <br>
+                                }
+                            </li>
+                        </ul>                        
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('mounting-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('unmounting-tab')" >Next </button>
+                        </div>
+                    </div>   
+                    <div class="tab-pane" id="unmounting" role="tabpanel" aria-labelledby="unmounting-tab">
+                        <h1 class="fw-light py-2 text-danger">UnMounting Phase In React Life Cycle</h1>
+                        <h5>Unmounting</h5>
+                        <ul>
+                            <li>The unmounting phase in the lifecycle is when a component is removed from the DOM, or unmounting as React likes to call it.</li>
+                            <li>React has only one built-in method that gets called when a component is unmounted: <br>
+                                componetWiIlUnmount()
+                            </li>
+                            <li>ComponentWiIIUnmount is the only method that executes in unmount phase.</li>
+                            <li>Just before the component gets removed from actual DOM, this method gets called.</li>
+                            <li>Along with removal of this component from DOM tree, all children of this component also gets removed automatically.</li>
+                            <li>The componentWilIUnmount() method allows us to execute the React code when the component gets destroyed or unmounted from the DOM (Document Object Model)</li>
+                            <li>This method is called during the Unmounting phase of the React Life-cycle i.e before the component gets unmounted.</li>
+                            <li>All the cleanups such as invalidating timers, canceling network requests, or cleaning up any subscriptions that were created in com onentDidMount() should be coded in the componentWillBnmount() method block.</li>
+                            <li>Cleanup activities helps in improving performances, memory leakages and maintain security.</li>
+                            <li>You should not call setState() in componentWiIlUnmount because the component WilI never be re-rendered.</li>
+                        </ul>
+                        <h5><span class="text-success">Program : </span>Create a program to show that componentWillUnmount will be called when a component is removed from DOM.</h5>
+                        <h6 class="text-primary">Parent.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react'  <br>
+                                import Child from './Child' <br>
+                                export default class Parent extends Component { <br>
+                                    constructor(props) { <br>
+                                    super(props) <br>
+                                    
+                                    this.state = { <br>
+                                        active:true <br>
+                                    } <br>
+                                    } <br>
+                                    changeState=()=>{ <br>
+                                        this.setState({ <br>
+                                            active:false <br>
+                                        }) <br>
+                                    } <br>
+                                render() { <br>
+                                    console.log("Parent render() called") <br>
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        {this.state.active?&lt;Child /&gt;:&lt;h2&gt;Child Component Deleted&lt;/h2&gt;} <br>
+                                        &lt;button onClick={this.changeState}&gt;Change State&lt;/button&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                                }
+                            </code>
+                        </div>
+                        <h6 class="text-primary">Child.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react'  <br>
+                                export default class Child extends Component {  <br>
+                                    componentWillUnmount(){  <br>
+                                        console.log("Child componentWillUnmount() method called")  <br>
+                                    }  <br>
+                                render() {  <br>
+                                    return (  <br>
+                                    &lt;div&gt;  <br>
+                                        &lt;h1&gt;Hello Brother&lt;/h1&gt;  <br>
+                                    &lt;/div&gt;  <br>
+                                    )  <br>
+                                }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('updating-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('methodAsProps-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="methodAsProps" role="tabpanel" aria-labelledby="methodAsProps-tab">
+                        <h1 class="fw-light py-2 text-danger">Passing Method As Props</h1>
+                        <img class="img_screenshot" src="../../Images/React/26.png" alt="">
+                        <p>We are trying to call parent method from child button click, by passing parent method as prop to the child component.</p>
+                        <h5><span class="text-success">Program :</span> Create a program to call parent method from child component.</h5>
+                        <h6 class="text-primary">ParentComponent.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                import ChildComponent from './ChildComponent' <br>
+                                export default class ParentComponent extends Component { <br>
+                                    ParentMethod=(childFN,childLN)=>{ <br>
+                                        alert("Parent method called by "+childFN+" "+childLN) <br>
+                                    } <br>
+                                render() { <br>
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        &lt;ChildComponent callMethod={this.ParentMethod} /&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                                }
+                            </code>
+                        </div>
+                        <h6 class="text-primary">ChildComponent.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                export default class ChildComponent extends Component { <br>
+                                render() { <br>
+                                    return (  <br>
+                                    &lt;div&gt; <br>
+                                        &lt;button onClick={()=>this.props.callMethod('Kumar','Saurav')} &gt;Click Me&lt;/button&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('unmounting-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('conditionalRendering-tab')" >Next </button>
+                        </div>                       
+                    </div>
+                    <div class="tab-pane" id="conditionalRendering" role="tabpanel" aria-labelledby="conditionalRendering-tab">
+                        <h1 class="fw-light py-2 text-danger">Conditional Rendering in React</h1>
+                        <h5>Conditional Rendering</h5>
+                        <ul>
+                            <li>When you are building react applications you may often need to show or hide some HTML based on a certain condition.</li>
+                            <li>Luckily conditional rendering in react works the same way conditions works in JavaScript.</li>
+                            <li>In React, you can conditionally render components.
+                                There are several ways to do this. <br>
+                                1. if else Statement <br>
+                                2. Logical Operator <br>
+                                3. Ternary-Operator
+                            </li>
+                        </ul>
+                        <h5>If Else Statement</h5>
+                        <ul>
+                            <li>We can use the if JavaScript statement to decide which component to render.</li>
+                        </ul>
+                        <h5><span class="text-success">Program:</span> Create two component Component1 and Component2 respectively, Use if else to return Component1 if the name variable equals "saurav" else return Component2.</h5>
+                        <h6 class="text-primary">Component1.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                export default class Component1 extends Component {
+                                render() { <br>
+                                    return ( <br>
+                                    &lt;div&gt; <br>
+                                        &lt;h2&gt;Hello Saurav, How are you?&lt;/h2&gt; <br>
+                                    &lt;/div&gt; <br>
+                                    ) <br>
+                                } <br>
+                                }
+                            </code>
+                        </div>
+                        <h6 class="text-primary">Component2.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                export default class Component2 extends Component { <br>
+                                  render() { <br>
+                                    return ( <br>
+                                      &lt;div&gt; <br>
+                                        &lt;h2&gt;Hello User, I dont know you. How are you???&lt;/h2&gt; <br>
+                                      &lt;/div&gt; <br>
+                                    ) <br>
+                                  } <br>
+                                }  
+                            </code>
+                        </div>
+                        <h6 class="text-primary">App.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import Component1 from './Component1'; <br>
+                                import Component2 from './Component2'; <br>
+                                function App() { <br>
+                                let name="amit"; <br>
+                                if(name=="saurav"){ <br>
+                                return &lt;Component1 /&gt; <br>
+                                } <br>
+                                else{ <br>
+                                return &lt;Component2 /&gt; <br>
+                                } <br>
+                                } <br>
+                                export default App; 
+                            </code>
+                        </div>
+                        <h5>Using Element Variable</h5>
+                        <h6 class="text-primary">App.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import Component1 from './Component1'; <br>
+                                import Component2 from './Component2'; <br>
+                                function App() { <br>
+                                let name="saurav"; <br>
+                                let data=""; <br>
+                                if(name=="saurav"){ <br>
+                                data = &lt;Component1 /&gt; <br>
+                                } <br>
+                                else{ <br>
+                                data = &lt;Component2 /&gt; <br>
+                                } <br>
+                                return( <br>
+                                &lt;&gt; <br>
+                                    {data} <br>
+                                &lt;/&gt; <br>
+                                ) <br>
+                                } <br>
+                                export default App;
+                            </code>
+                        </div>
+                        <h5>Logical Operator</h5>
+                        <ul>
+                            <li>Another way to conditionally render a React component is by using the && operator.</li>
+                            <li>If we want to render data for only true condition, else nothing then we use this && operator.</li>
+                            <li>Example : <code>{name=="saurav" && &lt;Component1 /&gt;}  </code> </li>
+                        </ul>
+                        <h5>Ternary Operator</h5>
+                        <ul>
+                            <li>Another way to conditionally render elements is by using a ternary operator.</li>
+                            <li> <code>{name=="saurav"?&lt;Component1 /&gt;:&lt;Component2 /&gt;} </code> </li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('methodAsProps-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('listRendering-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="listRendering" role="tabpanel" aria-labelledby="listRendering-tab">
+                        <h1 class="fw-light py-2 text-danger">List Rendering</h1>
+                        <h5>Rendering List</h5>
+                        <ul>
+                            <li>Lists are very useful when it comes to developing the Ul of any website.</li>
+                            <li>Lists are mainly used for displaying list of things in a website.</li>
+                            <li>E-g: list of products, list of names, list of courses etc.</li>
+                            <li>In React, you will render lists with some type of loop.</li>
+                            <li>The JavaScript map() array method is generally the preferred method.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a array of student and by using map() print the list of students.</h5>
+                        <h6 class="text-primary">Students.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React from 'react' <br>
+                                import Student from './Student' <br>
+                                const Students = () => { <br>
+                                    const students=[ <br>
+                                        {name:"Kumar" , age:27}, <br>
+                                        {name:"Amit" , age:25}, <br>
+                                        {name:"Anand" , age:24}, <br>
+                                        {name:"Aditi" , age:26} <br>
+                                    ] <br>
+                                return ( <br>
+                                    &lt;div&gt; <br>
+                                        {students.map((student)=>&lt;Student student={student} /&gt;)} <br>
+                                    &lt;/div&gt; <br>
+                                ) <br>
+                                } <br>
+                                export default Students
+                            </code>
+                        </div>
+                        <h6 class="text-primary">Student.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React, { Component } from 'react' <br>
+                                export default class Student extends Component { <br> 
+                                    render() { <br>
+                                        const {name,age}=this.props.student; <br>
+                                        return ( <br>
+                                        &lt;div&gt; <br>
+                                            &lt;h1&gt;{`Student name is : '${name}' and age is : '${age}'`}&lt;/h1&gt; <br>
+                                        &lt;/div&gt; <br>
+                                        ) <br>
+                                    } <br>
+                                }
+                            </code>
+                        </div>
+                        <h5>JavaScript map() array method</h5>
+                        <ul>
+                            <li>map() creates a new array from calling a function for every array element.</li>
+                            <li>map() calls a function once for each element in an array.</li>
+                            <li>map() does not execute the function for empty elements.</li>
+                            <li>map() does not change the original array.</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('conditionalRendering-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('listKeys-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="listKeys" role="tabpanel" aria-labelledby="listKeys-tab">
+                        <h1 class="fw-light py-2 text-danger">List and Keys</h1>
+                        <h5>List Without Keys In React</h5>
+                        <ul>
+                            <li>WARNING: Each child in an array or iterator should have a unique "key" prop.</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/React/29.png" alt="">
+                        <p>React uses keys internally to update specific items only whenever a change is detected but not the whole items again and again.</p>
+                        <h5><span class="text-success">Program :</span> Create a program to show a list of student names in bullets and also pass the key attribute so that no warning is displayed in the console.</h5>
+                        <h6 class="text-primary">Students.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                import React from 'react' <br>
+                                const Students = () => { <br>
+                                    const stuents=["Kumar","Amit","Anand","Aditi"] <br>
+                                    const student=stuents.map((name,index)=>&lt;li key={index}&gt;{name}&lt;/li&gt;) <br>
+                                return ( <br>
+                                    &lt;&gt; <br>
+                                        &lt;ul&gt; <br>
+                                            {student} <br>
+                                        &lt;/ul&gt; <br>
+                                    &lt;/&gt; <br>
+                                ) <br>
+                                } <br>
+                                export default Students <br>
+                            </code>
+                        </div>
+                        <h5>List And Keys In React</h5>
+                        <ul>
+                            <li>Keys allow React to keep track of elements.</li>
+                            <li>This way, if an item is updated or removed, only that item will be re-rendered instead of the entire list.</li>
+                            <li>Keys need to be unique to each sibling.</li>
+                            <li>Generally, the key should be a unique ID assigned to each item. As a last resort, you can use the array index as a key.</li>
+                            <li>A "key" is a special string attribute you need to include when creating lists of elements in React.</li>
+                            <li>Keys are used to React to identify which items in the list are changed, updated, or deleted.</li>
+                            <li>In other words, we can say that keys are used to give an identity to the elements in the lists.</li>
+                            <li>Keys help-React identify which items have changed, added or removed.</li>
+                            <li>Help in efficient update of the user interface.</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('listRendering-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('babel-tab')" >Next </button>
+                        </div>
+                    </div>
                     <!-- <div class="tab-pane" id="setup" role="tabpanel" aria-labelledby="babel-tab">
                         <h1 class="fw-light py-2 text-danger">React Setup and Installation</h1>
                         <h5>History Of JavaScript, ES5 & ES6</h5>
