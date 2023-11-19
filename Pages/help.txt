@@ -11,17 +11,10 @@ bullets
 
 Code
 <h5>Code for Default Export</h5>
-<h6 class="text-primary">MyComponent.js</h6>
-<div class="codeBox border border-2 rounded my-2 px-2">
-    <code>
-        const MyComponent=()=>{ <br>
-            return ( <br>
-                &lt;&gt; <br>
-                    &lt;h2&gt;Hello From MyComponent&lt;/h2&gt; <br>
-                &lt;/&gt; <br>
-            ) <br>
-        } <br>                               
-        export default MyComponent;
-    </code>
-</div>
+                        <h6 class="text-primary">MyComponent.js</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                
+                            </code>
+                        </div>
 
