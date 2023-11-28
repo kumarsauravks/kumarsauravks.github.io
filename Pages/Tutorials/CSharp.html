@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Coding Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="main-container d-flex">
+        <div class="sidebar" id="side_nav">
+            <div class="header-box px-2 pt-3 pb-4 d-flex justify-content-between">
+                <h1 class="fs-4"><span class="bg-white text-dark rounded shadow px-2">KS</span> <span
+                        class="text-white fw-light"> Coding Portal</span></h1>
+                <button class="btn d-md-none d-block close-btn px-1 py-0 text-white"><i
+                        class="fa fa-stream"></i></button>
+            </div>
+            <ul class="list-unstyled px-2 fw-light">
+                <li><a href=".././Home.html" class="text-decoration-none px-3 py-2 d-block"><i
+                            class="fa fa-home"></i>&nbsp;Home</a></li>
+                <li class="active">
+                    <a href=".././Tutorial.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-list"></i>&nbsp; C# Tutorial</a>
+                    <div class="collapse show" id="orders-collapse">
+                        <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link active" id="introduction-tab" data-bs-toggle="tab" data-bs-target="#introduction" type="button" role="tab" aria-controls="introduction" aria-selected="true">Introduction</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="clr-tab" data-bs-toggle="tab" data-bs-target="#clr" type="button" role="tab" aria-controls="clr" aria-selected="false">CLR</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="namespace-tab" data-bs-toggle="tab" data-bs-target="#namespace" type="button" role="tab" aria-controls="namespace" aria-selected="false">Namespace</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="reading-tab" data-bs-toggle="tab" data-bs-target="#reading" type="button" role="tab" aria-controls="reading" aria-selected="false">Reading Writing</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="dataTypes-tab" data-bs-toggle="tab" data-bs-target="#dataTypes" type="button" role="tab" aria-controls="dataTypes" aria-selected="false">Data Types</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="float-tab" data-bs-toggle="tab" data-bs-target="#float" type="button" role="tab" aria-controls="float" aria-selected="false">Float Double Decimal</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="string-tab" data-bs-toggle="tab" data-bs-target="#string" type="button" role="tab" aria-controls="string" aria-selected="false">String Char</a>
+                          </li> 
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="conversion-tab" data-bs-toggle="tab" data-bs-target="#conversion" type="button" role="tab" aria-controls="conversion" aria-selected="false">DataType Conversion</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="constant-tab" data-bs-toggle="tab" data-bs-target="#constant" type="button" role="tab" aria-controls="constant" aria-selected="false">Constants</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="datetime-tab" data-bs-toggle="tab" data-bs-target="#datetime" type="button" role="tab" aria-controls="datetime" aria-selected="false">DateTime Specifiers</a>
+                          </li>
+                          <!-- <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="setup-tab" data-bs-toggle="tab" data-bs-target="#setup" type="button" role="tab" aria-controls="setup" aria-selected="false">Setup and Installation</a>
+                          </li> -->
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="./../Qna.html" class="text-decoration-none px-3 py-2 d-block"><i
+                            class="fa fa-envelope-open-text"></i>&nbsp;QnA</a></li>
+                <li><a href=".././HotTopics.html" class="text-decoration-none px-3 py-2 d-block"><i
+                            class="fa fa-users"></i>&nbsp;Hot Topics</a></li>
+                <li><a href=".././ProgramPractice.html" class="text-decoration-none px-3 py-2 d-block"><i
+                            class="fa fa-envelope-open-text"></i>&nbsp;Program Practice</a></li>
+            </ul>
+            <hr class="h-color mx-3">
+            <ul class="list-unstyled px-2 fw-light">
+                <li><a href=".././CustomWork.html" class="text-decoration-none px-3 py-2 d-block"><i
+                            class="fa fa-bell"></i> Custom Work</a></li>
+                <li><a href=".././About.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-bars"></i>
+                        About Me</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between d-md-none d-block">
+                        <button class="btn px-1 py-0 open-btn me-2"><i class="fa fa-stream"></i></button>
+                        <a href=".././Home.html" class="navbar-brand fs-4"><span
+                                class="bg-dark rounded px-2 py-0 text-white">KS</span> Coding Portal</a>
+
+                    </div>
+                    <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a href=".././Home.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href=".././Tutorial.html" class="nav-link active">Tutorial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href=".././Qna.html" class="nav-link">QnA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href=".././HotTopics.html" class="nav-link">Hot Topics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href=".././ProgramPractice.html" class="nav-link">Program Practice</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href=".././About.html" class="nav-link">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="dashboard-content px-3 pt-4">            
+               <div class="tab-content px-4">
+                    <div class="tab-pane active" id="introduction" role="tabpanel" aria-labelledby="introduction-tab">
+                        <h1 class="fw-light py-2 text-danger">Introduction to C#</h1>
+                        <h5>C# Programming Language</h5>
+                        <ul>
+                            <li>Microsoft introduced a new language called C# (pronounced C Sharp).</li>
+                            <li>C# is designed to be a simple, modern, general-purpose, object-oriented programming language, borrowing key concepts from several other languages, most notably Java.</li>
+                            <li>C# was developed by Anders Hejlsberg and his team during the development of .Net Framework</li>
+                            <li>C# is a part of .NET Framework and currently in version 12.</li>
+                        </ul>
+                        <h5>We Can Use C# For Building Variety Of Applications.</h5>
+                        <ul>
+                            <li><b>WINDOWS APPLICATION:</b> using console application or Winform Application.</li>
+                            <li><b>MOBILE APPLICATIONS:</b> for phones such as Nokia Lumia (built-in support) but we can use a third party tool or library called "XAMARIN" to create mobile applications for ANDROID and IOS as well.</li>
+                            <li><b>WEB APPLICATON:</b> using ASP.NET web forms or ASP.NET MVC.</li>
+                            <li><b>GAMING APPLICATION:</b> Unity.</li>
+                        </ul>
+                        <h5>C# with .Net</h5>
+                        <ul>
+                            <li>C# could theoretically be compiled to machine code, but in real life,it is always used in combination with the .NET framework. Therefore, applications written in C#, requires the .NET framework to be installed on the computer for running the application. </li>
+                            <li>While the .NET framework makes it possible to use a wide rangeof languages, C# is sometimes referred to as THE .NET language, perhaps because it was designed together with the framework.</li>
+                            <li>Language interoperability is the ability of code to interact with code that is written by using a different programming language.</li>
+                        </ul>
+                        <h5>WHAT IS .NET FRAMEWORK</h5>
+                        <ul>
+                            <li>.NET is a programming framework created by Microsoft that developers can use to create applications more easily.</li>
+                            <li>A framework is just a bunch of code that the programmer can call without having to write it explicitly.</li>
+                            <li>It provides a controlled programming environment where software can be developed, installed and executed on Windows-based operating systems.</li>
+                            <li>It is basically a collection of libraries.</li>
+                            <li>It is a programming platform that is used for developing Windows, Web-based, and mobile software.</li>
+                            <li>It has a number Of pre-coded solutions that manage the execution of programs written specifically for the framework.</li>
+                            <li>A programmer can develop applications using one of the languages supported by .NET.</li>
+                            <li>Microsoft introduced C# as a new programming language address the problems posed by traditional languages.</li>
+                        </ul>
+                        <h5>MICROSOFT C# WAS DEVELOPED TO:</h5>
+                        <ul>
+                            <li>Create a very simple and yet powerful tool for building interoperable and robust applirations.</li>
+                            <li>Create a complete object-oriented architecture.</li>
+                            <li>Support powerful component-oriented development.</li>
+                            <li>Allow access to many features previously available only in C++ while retaining the ease-of-use of a rapid application development tool such as Visual Basic.</li>
+                            <li>Provide familiarity to programmers coming from C or C++ background.</li>
+                            <li>Allow to write applications that target both desktop and mobile devices.</li>
+                            <li>C# has features common to most object-oriented languages.</li>
+                            <li>It has language-specific features, such as: <br>
+                                Type safety checking <br>Generics <br>Indexers 
+                            </li>
+                            <li>These features make the C# as a preferred language to create a wide variety of applications.</li>
+                            <li>C# is a programming language designed for building a wide range of applications that run on the .NET Framework.</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2 disabled">Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('clr-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="clr" role="tabpanel" aria-labelledby="clr-tab">
+                        <h1 class="fw-light py-2 text-danger">Common Language Runtime (CLR) In Dotnet Framework</h1>
+                        <h5>The CLR : </h5>
+                        <ul>
+                            <li>Is the foundation of the .NET Framework.</li>
+                            <li>Acts as an execution engine for the .NET Framework.</li>
+                            <li>Manages the execution of programs and provides a suitable environment for programs to run.</li>
+                            <li>Provides a multi-language environment.</li>
+                            <li>The following figure shows a more detailed look at the working of the CLR:</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp2.png" alt="c#">
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp2_1.png" alt="c#">
+                        <p>Different codes(C#,Vb.Net,F# etc) ka apna compiler hota hai jo lastly code ko compile krke ek cil/msil file bnata hai jise clr jit ki help se native code me convert krta hai jo hmara computer smjhta hai.</p>
+                        <h5>When a code is executed for the first time;</h5>
+                        <ul>
+                            <li>The CIL (COMMON INTERMEDIATE LANGUAGE) code is converted to a code native to the operating system.</li>
+                            <li>This is done at runtime by the Just-in-Time (JIT) compiler present in the CLR.</li>
+                            <li>The CLR converts the CIL code to the machine language code.</li>
+                            <li>Once this is done, the code can be directly executed by the CPU.</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('introduction-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('namespace-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="namespace" role="tabpanel" aria-labelledby="namespace-tab">
+                        <h1 class="fw-light py-2 text-danger">Namespace and Main method</h1>
+                        <h5>WHAT IS NAMESPACE</h5>
+                        <ul>
+                            <li>A namespace is used to organize your code and is collection of classes, interfaces, structs, enums and delegates.</li>
+                            <li><b class="text-danger">NOTE:</b> IF U DON'T WANT TO USE NAMESPACE YOU CAN USE FULLY QUALIFIED NAME (FQN).</li>
+                        </ul>
+                        <h5>WHAT IS MAIN METHOD? </h5>
+                        <ul>
+                            <li>Main method is the entry point into your application.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create your first program to print Hello World in the console window.</h5>
+                        <h6 class="text-primary">HelloWorld.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Hello World");  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('clr-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('reading-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="reading" role="tabpanel" aria-labelledby="reading-tab">
+                        <h1 class="fw-light py-2 text-danger">READING AND WRITING TO THE CONSOLE IN C#</h1>
+                        <h5><span class="text-success">Program :</span> Take firstname and lastname from user. Print it in console using both concatination and placeholder syntax.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System; <br>
+                                class Program <br>
+                                { <br>
+                                    public static void Main() <br>
+                                    { <br>
+                                        Console.WriteLine("Enter First Name."); <br>
+                                        string FirstName=Console.ReadLine(); <br>
+                                        Console.WriteLine("Enter First Name."); <br>
+                                        string LastName = Console.ReadLine(); <br>
+                                        Console.WriteLine("Hello "+FirstName+" "+LastName); //Concatination <br>
+                                        Console.WriteLine("Hello {0} {1}.",FirstName,LastName); //Placeholder Syntax <br>
+                                    } <br>
+                                }
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Take two numbers from user. Print the sum of the numbers and print it in console.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Enter First Number.");  <br>
+                                        int num1=int.Parse(Console.ReadLine());  <br>
+                                        Console.WriteLine("Enter Second Number.");  <br>
+                                        int num2 = int.Parse(Console.ReadLine());  <br>
+                                        Console.WriteLine("The sum of {0} and {1} is {2} .", num1, num2, num1 + num2);  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('namespace-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('dataTypes-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="dataTypes" role="tabpanel" aria-labelledby="dataTypes-tab">
+                        <h1 class="fw-light py-2 text-danger">BUILT IN DATA TYPES IN C#</h1>
+                        <h5>INTERGRAL TYPE</h5>
+                        <ul>
+                            <li>SIGNED INTEGERS (WHICH TAKES NEGATIVE AND POSITIVE VALUES)</li>
+                            <li>UNSIGNED INTEGERS (WHICH ONLY TAKES POSITIVE VALUES)</li>
+                            <li>
+                                SBYTE <br> BYTE <br> SHORT <br> USHORT <br> INT <br>UlNT <br>LONG <br> ULONG
+                            </li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp5.png" alt="c#">
+                        <h5><span class="text-success">Program :</span> Print the minimum and maximum value of int,float and byte data type in console.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Minimum value of int is {0}", int.MinValue);  <br>
+                                        Console.WriteLine("Maximum value of int is {0}", int.MaxValue);  <br> <br>
+
+                                        Console.WriteLine("Minimum value of float is {0}", float.MinValue);  <br>
+                                        Console.WriteLine("Maximum value of float is {0}", float.MaxValue);  <br> <br>
+
+                                        Console.WriteLine("Minimum value of byte is {0}", byte.MinValue);  <br>
+                                        Console.WriteLine("Maximum value of byte is {0}", byte.MaxValue);  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5>BOOLEAN DATA TYPE</h5>
+                        <ul>
+                            <li>Bool keyword is used for Boolean data type which only stores TRUE or FALSE.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Compare two variables and store it in third boolean variable, finally print the result in console.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Enter First Number");  <br>
+                                        int num1 = int.Parse(Console.ReadLine());  <br>
+                                        Console.WriteLine("Enter Second Number");  <br>
+                                        int num2 = int.Parse(Console.ReadLine());  <br>
+                                        bool result=num1>num2;  <br>
+                                        if (result)  <br>
+                                        {  <br>
+                                            Console.WriteLine("First number is greater than second.");  <br>
+                                        }  <br>
+                                        else  <br>
+                                        {  <br>
+                                            Console.WriteLine("Second number is greater than first.");  <br>
+                                        }  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('reading-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('float-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="float" role="tabpanel" aria-labelledby="float-tab">
+                        <h1 class="fw-light py-2 text-danger">Float, Double, Decimal DataTypes</h1>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp6.png" alt="C#">
+                        <h5>Float, Double, Decimal</h5>
+                        <ul>
+                            <li>Precision : Point k pehle aur baad milake jo digits hain in total wo uska precision hoga. </li>
+                            <li>For example : float ka precision 7 hai matlab hum usme 123.4567 store kr skte hain.</li>
+                            <li>Float me "f" suffix important hai but decimal me "d" suffix optional hai.</li>
+                            <li>Decimal k liye bhi "m" suffix compulsary hai.</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('dataTypes-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('string-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="string" role="tabpanel" aria-labelledby="string-tab">
+                        <h1 class="fw-light py-2 text-danger">STRING AND CHARACTER DATA TYPE</h1>
+                        <h5>STRING AND CHAR</h5>
+                        <ul>
+                            <li>STRING STORES MULTIPLE CHARACTERS IN A SINGLE VARIABLE.</li>
+                            <li>DOUBLE QUOTES WILL BE USED WITH STRING DATA TYPE. <b> Example : string str = "ABC"</b></li>
+                            <li>CHAR STORES SINGLE CHARACTER AT A TIME IN A VARIABLE.</li>
+                            <li>SINGLE QUOTES WILL BE USED FOR CHAR DATA TYPE. <b> Example : char ch = 'a'</b></li>
+                        </ul>
+                        <h5>ESCAPE SEQUENCE AND VERBATIM LITERAL</h5>
+                        <ul>
+                            <li>ESCAPE SEQUENCE : \ , \n , \t </li>
+                            <li>VERBATIM LITERAL IS A STRING WITH AN @ SYMBOL.</li>
+                            <li>VERBATIM LITERAL MAKE ESCAPE SEQUENCES TRANSLATE AS NORMAL PRINTABLE CHARACTERS TO ENHANCE READABILITY.</li>
+                        </ul>
+                        <h5>PRACTICAL EXAMPLE:</h5>
+                        <ul>
+                            <li><b>WITHOUT VERBATIM LITERAL:</b> "C:\\Programs\\HelloWorld.cs" - Less readable</li>
+                            <li><b>WITH VERBATIM LITERAL:</b> @"C:\Programs\HelloWorld.cs" - More readable</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span>Create a program to show multiple example of escape sequences.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        string str1 = "\"Welcome to C#\"";  <br>
+                                        string str2 = "\'Welcome to C#\'";  <br>
+                                        string str3 = "\\Welcome to C#\\";  <br>
+                                        string str4 = "\tWelcome to C#";  <br>
+                                        string str5 = "One\nTwo\nThreee\n";  <br> <br>
+
+                                        Console.WriteLine(str1);  <br>
+                                        Console.WriteLine(str2);  <br>
+                                        Console.WriteLine(str3);  <br>
+                                        Console.WriteLine(str4);  <br>
+                                        Console.WriteLine(str5);  <br>
+                                    }  <br>
+                                }  <br>
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create a string to store a string value and iterate all its characters using foreach loop.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        string str = "Kumar";  <br>
+                                        foreach(char c in str)  <br>
+                                        {  <br>
+                                            Console.WriteLine(c);  <br>
+                                        }  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('float-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('conversion-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="conversion" role="tabpanel" aria-labelledby="conversion-tab">
+                        <h1 class="fw-light py-2 text-danger">DATA TYPES CONVERSION IN C# PROGRAMMING</h1>
+                        <h5>Type Conversion</h5>
+                        <ul>
+                            <li>THERE ARE TWO TYPES OF CONVERSIONS IMPLICIT AND EXPLICIT CONVERSION.</li>
+                            <li>IMPLICIT CONVERSION IS DONE BY THE COMPILER. <br>
+                                1. WHEN THERE IS NO LOSS OF INFORMATION IF THE CONVERSION IS DONE. <br>
+                                2. IF THERE IS NO POSSIBILITY OF THROWING EXCEPTION DURING THE CONVERSION.
+                            </li>
+                            <li>EXAMPLE: CONVERTING AN INT TO A FLOAT WILL NOT LOOSE ANY DATA AND NO EXCEPTION WILL BE THROWN, HENCE AN IMPLICIT CONVERSION CAN BE DONE.</li>
+                            <li>WHERE AS WHEN CONVERTING A FLOAT TO AN INT, WE LOOSE THE FRACTIONAL PART AND ALSO A POSSIBILITY OF OVERFLOW EXCEPTION. HENCE, IN THIS CASE AN EXPLICIT CONVERSION IS REQUIRED.</li>
+                            <li>Three ways for explicit conversion : (int)12.5 , Convert.ToInt32(12.5), float.Parse(12.5); </li>
+                            <li>Parse always takes a string , so when we take input from user it is the perfect to use Parse.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a program to show the three ways of explicit conversion.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        float a = 12.5f;  <br>
+                                        int b = (int)a;  <br>
+                                        int c = Convert.ToInt32(a);  <br>
+                                        string d = "12.5";  <br>
+                                        float e = float.Parse(d);  <br>
+                                        Console.WriteLine(b);  <br>
+                                        Console.WriteLine(c);  <br>
+                                        Console.WriteLine(e);  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('string-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('constant-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="constant" role="tabpanel" aria-labelledby="constant-tab">
+                        <h1 class="fw-light py-2 text-danger">CONSTANTS IN C#</h1>
+                        <h5>Constant</h5>
+                        <ul>
+                            <li>A constant has a fixed value that remains unchanged throughout the program.</li>
+                            <li>In C#, you can declare constants for all data types.</li>
+                            <li>You have to initialize a constant at the time of its declaration.</li>
+                            <li>Constants are declared for value types rather than for reference types.</li>
+                            <li>To declare an identifier as a constant, the "const" keyword is used in the identifier declaration.</li>
+                            <li>The compiler can identify constants at the time of compilation, because of the "const" keyword.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Write a simple program to print the constant.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public const double PI = 3.14;  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        const string Company = "XYZ";  <br>
+                                        Console.WriteLine(PI);  <br>
+                                        Console.WriteLine(Company);  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('conversion-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('datetime-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="datetime" role="tabpanel" aria-labelledby="datetime-tab">
+                        <h1 class="fw-light py-2 text-danger">STANDARD DATE AND TIME FORMAT SPEClFlERS IN C#</h1>
+                        <h5>DATE AND TIME FORMAT SPECIFIERS</h5>
+                        <ul>
+                            <li>A date and time format specifier is a special character that enables you to display the date and time values in different formats.</li>
+                            <li>
+                                <table class="table table-bordered table-light table-striped border border-5 m-2">
+                                    <thead>
+                                        <tr>
+                                            <th>Format Specifier</th>
+                                            <th>Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>d</td>
+                                            <td>Short date</td>
+                                        </tr>
+                                        <tr>
+                                            <td>D</td>
+                                            <td>Long date</td>
+                                        </tr>
+                                        <tr>
+                                            <td>f</td>
+                                            <td>Full date/time (short time)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>F</td>
+                                            <td>Full date/time (long time)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>g</td>
+                                            <td>General date/time (short time)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>G</td>
+                                            <td>General date/time (long time)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>m or M</td>
+                                            <td>Month day</td>
+                                        </tr>
+                                        <tr>
+                                            <td>t</td>
+                                            <td>Short Time</td>
+                                        </tr>
+                                        <tr>
+                                            <td>T</td>
+                                            <td>Long Time</td>
+                                        </tr>
+                                        <tr>
+                                            <td>y or Y</td>
+                                            <td>Year month pattern</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ddd</td>
+                                            <td>Represents the abbreviated name of the day of the week.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>dddd</td>
+                                            <td>Represents the full name of the day of the week.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FF</td>
+                                            <td>Represents the two digits of the seconds fraction</td>
+                                        </tr>
+                                        <tr>
+                                            <td>HH</td>
+                                            <td>Represents the hour from 00 to 23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>MM</td>
+                                            <td>Represents the month as a number from 01 to 12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>MMM</td>
+                                            <td>Represents the abbreviated name of the month</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ss</td>
+                                            <td>Represents the seconds as a number from O to 59</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a program to show different useful methods of date time.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public const double PI = 3.14;  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        DateTime dt = DateTime.Now;  <br>
+                                        Console.WriteLine("{0:d}", dt); // 11/28/2023  <br>
+                                        Console.WriteLine("{0:D}", dt); // Tuesday, November 28, 2023  <br>
+                                        Console.WriteLine("{0:f}", dt); // Tuesday, November 28, 2023 10:23 AM  <br>
+                                        Console.WriteLine("{0:F}", dt); // Tuesday, November 28, 2023 10:23:55 AM  <br>
+                                        Console.WriteLine("{0:g}", dt); // 11/28/2023 10:23 AM  <br>
+                                        Console.WriteLine("{0:d} {1:D}",dt,dt); // 11/28/2023 Tuesday, November 28, 2023  <br>
+                                        Console.WriteLine("{0:t}",dt); // 2:12 PM  <br>
+                                        Console.WriteLine("{0:T}", dt); // 2:12:47 PM  <br>
+                                        Console.WriteLine("{0:yyyy}", dt); // 2023  <br>
+                                        Console.WriteLine("{0:ddd}", dt); // Tue  <br>
+                                        Console.WriteLine("{0:dddd}", dt); // Tuesday  <br>
+                                        Console.WriteLine("{0:hh:mm:ss}",dt); //02:12:47  <br>
+                                        Console.WriteLine("{0:dd-MM-yyyy}",dt); // 28-11-2023  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('constant-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('babel-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <!-- <div class="tab-pane" id="setup" role="tabpanel" aria-labelledby="babel-tab">
+                        <h1 class="fw-light py-2 text-danger">React Setup and Installation</h1>
+                        <h5>History Of JavaScript, ES5 & ES6</h5>
+                        <ul>
+                            <li>JavaScript was invented by Brendan Eich in 1995 in Netscape.</li>
+                            <li>The history is, Brendan Eich created Mocha which became LiveScript, and later JavaScript.</li>
+                            <li>Netscape presented JavaScript to ECMA International, which develops standards and it was renamed to ECMAScript.</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('babel-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('babel-tab')" >Next </button>
+                        </div>
+                    </div> -->
+                </div>           
+            </div>
+
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                    <p class="col-md-2 mb-0 text-muted">© 2023 Company, Inc</p>
+                    <ul class="nav col-md-10 justify-content-end">
+                        <li class="nav-item"><a href=".././Home.html" class="nav-link px-2 text-muted">Home</a></li>
+                        <li class="nav-item"><a href=".././Tutorial.html" class="nav-link px-2 text-muted">Tutorial</a>
+                        </li>
+                        <li class="nav-item"><a href=".././Qna.html" class="nav-link px-2 text-muted">QnA</a></li>
+                        <li class="nav-item"><a href=".././HotTopics.html" class="nav-link px-2 text-muted">Hot Topics</a>
+                        </li>
+                        <li class="nav-item"><a href=".././ProgramPractice.html" class="nav-link px-2 text-muted">Program
+                                Practice</a></li>
+                        <li class="nav-item"><a href=".././About.html" class="nav-link px-2 text-muted">About</a></li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="../../index.js"></script>
+</body>
+
+</html>
