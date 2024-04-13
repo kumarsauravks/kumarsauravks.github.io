@@ -1,0 +1,941 @@
+WPF Tutorial
+#1 - What is WPF?
+Windows Presentation Foundation
+UI framework for Windows desktop applications
+Built into .NET
+Uses Extensible Application Markup Language (XAML)
+
+#2. why wpf?
+Why not ASP.NET?
+Browser Limited
+Front-end Focus
+Technology Stack Concerns
+
+Why not MAUI?
+Technology Age
+Complexity
+WPF is a Stepping Stone
+
+Why not WinForms?
+Technology Age
+Limited Power
+Limited Potential 
+
+Why WPF
+Low Barrier to Entry
+- Works out of the box with VS
+- Easy to understand markup
+Immediately Powerful UIs
+- Built in Controls
+- Fully Customizable
+Skills Translate Well
+- .NET is Everywhere
+- XAML is recommended in MAUI
+Excellent Career Potential
+- WPF
+- WinForms
+- C#/.NET
+- ASP. NET is a Tutorial Away
+
+#3. First Program
+Program : Hello World in exact center of the Window
+MainWindow.xaml
+<Grid>
+        <TextBlock Text="Hello World" FontSize="75" VerticalAlignment="Center" HorizontalAlignment="Center" />
+</Grid>
+------------------------------------------------------------
+#4. Code Behind
+Program : Create a status toggle button, when a user clicks the the button the process starts running and again when the button is clicked again it get stopped. This click process goes over and over again.
+
+<Grid>
+        <TextBlock Name="tbStatus" FontSize="50" ></TextBlock>
+        <Button Name="btnToggleRun" Height="50" Width="100"
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                Content="Run" FontSize="20" Click="btnToggleRun_Click" />
+</Grid>
+	private void btnToggleRun_Click(object sender, RoutedEventArgs e)
+        {
+            if (running)
+            {
+                tbStatus.Text = "Stopped";
+                btnToggleRun.Content = "Run";
+            }
+            else
+            {
+                tbStatus.Text = "Running";
+                btnToggleRun.Content = "Stop";
+            }
+            running = !running;
+        }
+------------------------------------------------------------
+#5. Grid Basics
+Example : 1
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Row="0" Grid.Column="0" Fill="Red" />
+        <Rectangle Grid.Row="1" Grid.Column="1" Fill="Blue" />
+        <Rectangle Grid.Row="2" Grid.Column="0" Fill="Green" />
+    </Grid>
+
+Example : 2
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+
+        <Rectangle Grid.Row="0" Fill="Red" />
+
+        <Rectangle Grid.Row="1" Fill="Blue" />
+
+        <Rectangle Grid.Row="2" Fill="Green" />
+    </Grid>
+
+Example : 3
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        
+        <!--Menu Bar-->
+        <Rectangle Grid.Row="0" Fill="Red" />
+
+        <!--Content Pane-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+            
+            <Rectangle Fill="Pink" />
+            <Rectangle Grid.Column="1" Fill="Gray" />
+            <Rectangle Grid.Column="2" Fill="DarkGray"/>
+        </Grid>
+
+        <!--Footer-->
+        <Rectangle Grid.Row="2" Fill="Green" />
+    </Grid>
+------------------------------------------------
+#6. Custom User Control
+Root -> Create UserControls folder -> Add New Item -> UserControl(WPF) -> MenuBar.xaml 
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="File" FontSize="16" >
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="Edit" FontSize="16" />
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Width="50" Margin="5" />
+            <TextBox Width="150" Grid.Column="1" Margin="5" />
+        </Grid>
+    </Grid>
+MainWindow.xaml
+First add -> xmlns:userControls="clr-namespace:WpfTutorial.View.UserControls"
+
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition />
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <userControls:MenuBar  />
+    </Grid>
+-----------------------------------------------------------
+#7. Custom Textbox Control
+Root -> UserControls -> ClearableTextbox.xaml
+<Grid Background="White">
+        <TextBox  x:Name="txtInput" VerticalAlignment="Center" 
+                  FontSize="16" FontWeight="Light" Background="Transparent" 
+                  TextChanged="txtInput_TextChanged"/>
+        <TextBlock x:Name="tbPlaceholder" Text="{Binding Placeholder}" FontSize="16" FontWeight="Light"
+                   Foreground="DarkGray" VerticalAlignment="Center" Margin="5,0,0,0"
+                   Panel.ZIndex="-1"/>
+        <Button x:Name="btnClear" Width="30" HorizontalAlignment="Right" Content="X"
+                Background="Transparent" Foreground="LightGray" BorderThickness="0"
+                Click="btnClear_Click"/>
+</Grid>
+
+ClearableTextbox.xaml.cs
+private string placeholder;
+
+        public string Placeholder
+        {
+            get { return placeholder; }
+            set { 
+                placeholder = value;
+                tbPlaceholder.Text = placeholder;
+            }
+        }
+
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            txtInput.Clear();
+            txtInput.Focus();
+        }
+
+        private void txtInput_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(string.IsNullOrEmpty(txtInput.Text))
+            {
+                tbPlaceholder.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                tbPlaceholder.Visibility = Visibility.Hidden;
+            }
+        }
+
+MainWindow.xaml
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <userControls:ClearableTextbox Grid.Row="1" Width="250" Height="40" Placeholder="First Name" />
+        <userControls:ClearableTextbox Grid.Row="2" Width="250" Height="40" Placeholder="Last Name" />
+        <userControls:ClearableTextbox Grid.Row="3" Width="250" Height="40" Placeholder="Email" />
+        <userControls:ClearableTextbox Grid.Row="4" Width="250" Height="40" Placeholder="Phone" />        
+    </Grid>
+----------------------------------------------------
+8. Data Bindings
+MainWindow.xaml
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBox Name="txtInput" VerticalContentAlignment="Center" Width="250" Height="40"
+                FontSize="16" Text="{Binding BoundText,UpdateSourceTrigger=PropertyChanged,Mode=OneWayToSource}"/>
+        <Button Grid.Row="1" Name="btnSet" Content="Set" Width="100" Height="40"
+                Click="btnSet_Click"/>
+        <TextBlock Grid.Row="2" Name="tbResult" FontSize="16" Text="{Binding BoundText}"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Grid>
+
+MainWindow.xaml.cs
+    public partial class MainWindow : Window,INotifyPropertyChanged
+    {
+        bool running = false;
+        public MainWindow()
+        {
+            DataContext = this;
+            InitializeComponent();
+        }
+        private string boundText;
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        public string BoundText
+        {
+            get { return boundText; }
+            set 
+            { 
+                boundText = value;
+                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BoundText"));
+                OnPropertyChanged();
+            }
+        }
+
+        private void btnSet_Click(object sender, RoutedEventArgs e)
+        {
+            BoundText = "set from code";
+        }
+        private void OnPropertyChanged([CallerMemberName]string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }
+----------------------------------------------
+#9. MessageBox
+MainWindow.xaml
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Button Name="btnFire" Content="Fire" Width="100" Height="40"
+                Click="btnFire_Click"/>
+        <TextBlock Grid.Row="2" Name="tbInfo" FontSize="16" 
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Grid>
+
+MainWindow.xaml.cs
+	private void btnFire_Click(object sender, RoutedEventArgs e)
+        {
+            //MessageBox.Show("Your Message Here.");
+            //MessageBox.Show("Could not open file.", "ERROR!", MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBoxResult result = MessageBox.Show("Do you agree?", "Agreement", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if(result == MessageBoxResult.Yes)
+            {
+                tbInfo.Text = "Agreed";
+            }
+            else
+            {
+                tbInfo.Text = "Not Agreed";
+            }
+        }
+----------------------------------------------------
+#10. OpenFileDialog(File Picker)
+MainWindow.xaml
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Button Name="btnFire" Content="Fire" Width="100" Height="40"
+                Click="btnFire_Click"/>
+        <TextBlock Grid.Row="2" Name="tbInfo" FontSize="16" 
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Grid>
+
+MainWindow.xaml.cs
+	private void btnFire_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Filter = "C# Source Files | *.cs";
+            fileDialog.InitialDirectory = "C:\\Users\\KumarSaurav\\Desktop\\Celebal";
+            fileDialog.Title = "Please pick a CS Source file";
+            fileDialog.Multiselect = true;
+            fileDialog.Title = "Please pick a CS Source file(s).";
+
+
+            bool? success=fileDialog.ShowDialog();
+            if (success != null)
+            {
+                string path=fileDialog.FileName;
+                string fileName = fileDialog.SafeFileName;
+
+                string[] paths = fileDialog.FileNames;
+                string[] fileNames = fileDialog.SafeFileNames;
+
+                tbInfo.Text = path +"\n " +fileName;
+                tbInfo.Text = paths + "\n " + fileNames;
+            }
+        }
+--------------------------------------
+#11. FolderBrowserDialog
+To include FolderBrowserDialog in our project :-
+Solution Explorer -> ProjectName -> Properties -> Check : Enable Windows Form for this Project. -> Save
+
+To handle the ambiguity of WinForms :
+using Winforms= System.Windows.Forms;
+Winforms.FolderBrowserDialog dialog = new Winforms.FolderBrowserDialog();
+
+MainWindow.xaml
+    <Grid>
+        <Button Name="btnFire" Content="Fire" Width="100" Height="40"
+                Click="btnFire_Click"/>
+    </Grid>
+
+MainWindow.xaml.cs
+	private void btnFire_Click(object sender, RoutedEventArgs e)
+        {
+            Winforms.FolderBrowserDialog dialog = new Winforms.FolderBrowserDialog();
+            dialog.InitialDirectory = "C:\\Users\\KumarSaurav\\Pictures\\Screenshots";
+            Winforms.DialogResult result= dialog.ShowDialog();
+
+            if(result==Winforms.DialogResult.OK)
+            {
+                string folder = dialog.SelectedPath;
+            }
+        }
+----------------------------------------------
+#12. ListView
+MainWindow.xaml
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBox Name="txtEntry" Height="35" FontSize="16" />
+        <Button Grid.Column="1" Name="btnAdd" Width="50" Content="Add"
+                Click="btnAdd_Click" HorizontalAlignment="Left"/>
+        <Button Grid.Column="1" Name="btnDelete" Width="50" Content="Delete"
+                Click="btnDelete_Click" HorizontalAlignment="Left" Margin="60,0,0,0"/>
+        <Button Grid.Column="1" Name="btnClear" Width="50" Content="Clear"
+                Click="btnClear_Click" HorizontalAlignment="Left" Margin="120,0,0,0"/>
+        <ListView Name="lvEntries" Grid.Row="1" Grid.ColumnSpan="2" SelectionMode="Extended" />
+    </Grid>
+
+MainWindow.xaml.cs
+	private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            lvEntries.Items.Add(txtEntry.Text);
+            txtEntry.Clear();
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            //int index=lvEntries.SelectedIndex;
+            //lvEntries.Items.RemoveAt(index);
+
+            //object item=lvEntries.SelectedItem;
+            //var result = MessageBox.Show($"Are you sure you want to delete : {(string)item}?", "Sure?", MessageBoxButton.YesNo);
+            //if (result == MessageBoxResult.Yes) 
+            //    lvEntries.Items.Remove(item);
+
+            var items = lvEntries.SelectedItems;
+            var result = MessageBox.Show($"Are you sure to delete {items.Count} items?", "Sure?", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                var itemList = new ArrayList(items);
+                foreach (var item in itemList)
+                {                    
+                    lvEntries.Items.Remove(item);
+                }
+            }
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            lvEntries.Items.Clear();
+        }
+------------------------------------------------------------------
+#13. ObservableCollection with ListView
+MainWindow.xaml
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBox Name="txtEntry" Height="35" FontSize="16" />
+        <Button Grid.Column="1" Name="btnAdd" Width="50" Content="Add"
+                Click="btnAdd_Click" HorizontalAlignment="Left"/>
+        <Button Grid.Column="1" Name="btnDelete" Width="50" Content="Delete"
+                Click="btnDelete_Click" HorizontalAlignment="Left" Margin="60,0,0,0"/>
+        <Button Grid.Column="1" Name="btnClear" Width="50" Content="Clear"
+                Click="btnClear_Click" HorizontalAlignment="Left" Margin="120,0,0,0"/>
+        <ListView Name="lvEntries" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Entries}" />
+    </Grid>
+
+MainWindow.xaml.cs
+	public MainWindow()
+        {
+            DataContext = this;
+            entries = new ObservableCollection<string>();
+            InitializeComponent();            
+        }
+        private ObservableCollection<string> entries;
+
+        public ObservableCollection<string> Entries
+        {
+            get { return entries; }
+            set { entries = value; }
+        }
+
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Entries.Add(txtEntry.Text);
+            txtEntry.Clear();
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            string selectedItem=(string)lvEntries.SelectedItem;
+            Entries.Remove(selectedItem);
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            Entries.Clear();
+        }
+
+----------------------------------------------
+#14. Stack Panel
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Height="40" Width="75" Margin="2" Content="A" />
+            <Button Height="40" Width="75" Margin="2" Content="A" />
+            <Button Height="40" Width="75" Margin="2" Content="A" />
+            <Button Height="40" Width="75" Margin="2" Content="A" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Margin="20">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Label"/>
+                <TextBox Width="150"/>
+                <Button Content="Button"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Label"/>
+                <TextBox Width="150"/>
+                <Button Content="Button"/>
+            </StackPanel>
+            <TextBox Width="150" Height="30" Margin="2" />
+            <TextBox Width="150" Height="30" Margin="2" />
+            <TextBox Width="150" Height="30" Margin="2" />
+            <TextBox Width="150" Height="30" Margin="2" />
+            <TextBox Width="150" Height="30" Margin="2" />
+            <TextBox Width="150" Height="30" Margin="2" />
+        </StackPanel>
+    </Grid>
+------------------------------------------------
+#15.Grid Splitter
+#Case1 - Vertical Split
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75" />
+            <RowDefinition/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="Red" />
+        <Rectangle Grid.Row="1" Fill="Green"/>
+        <GridSplitter Grid.Row="2" HorizontalAlignment="Stretch"/>
+        <Rectangle Grid.Row="3" Fill="Blue"/>
+    </Grid>
+#Case2 - Vertical+Horrizontal Split
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="Red" />
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Fill="Yellow"/>
+            <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" />
+            <Rectangle Grid.Column="2" Fill="Orange"/>
+            <GridSplitter Grid.Column="3" HorizontalAlignment="Stretch" />
+            <Rectangle Grid.Column="4" Fill="Green"/>
+        </Grid>
+        
+        <GridSplitter Grid.Row="2" HorizontalAlignment="Stretch"/>
+        <Rectangle Grid.Row="3" Fill="Blue"/>
+    </Grid>
+------------------------------------
+#16. Expander
+MainWindow.xaml
+	<Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <TextBlock Text="Name" FontSize="16"/>
+                <Expander Header="More Details">
+                    <TextBlock Text="Description" FontSize="16"/>
+                </Expander>
+            </StackPanel>
+            <Expander Grid.Column="1" Background="DarkGray" ExpandDirection="Left" BorderThickness="0">
+                <Rectangle  Fill="DarkGray" Width="125"/>
+            </Expander >            
+        </Grid> 
+
+MainWindow.xaml
+	<Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <TextBlock Text="Name" FontSize="16"/>
+                <Expander Header="More Details">
+                    <TextBlock Text="Description" FontSize="16"/>
+                </Expander>
+            <Button x:Name="btnDetails" Width="180" Height="25" Content="Details"
+                    Click="btnDetails_Click"/>
+        </StackPanel>
+            <Expander Name="expanderDetails" Grid.Column="1" Background="DarkGray" ExpandDirection="Left" BorderThickness="0">
+                <Rectangle  Fill="DarkGray" Width="125"/>
+            </Expander >            
+        </Grid>
+
+MainWindow.xaml.cs
+	private void btnDetails_Click(object sender, RoutedEventArgs e)
+        {
+            expanderDetails.IsExpanded=!expanderDetails.IsExpanded;
+        }
+--------------------------------------------------------
+#17. Scroll Viewer
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <StackPanel>
+                <TextBox Height="30" Width="280" Margin="10"/>
+                <TextBox Height="30" Width="280" Margin="10"/>
+                <TextBox Height="30" Width="280" Margin="10"/>
+                <TextBox Height="30" Width="280" Margin="10"/>
+                <TextBox Height="30" Width="280" Margin="10"/>
+                <TextBox Height="30" Width="280" Margin="10"/>
+            </StackPanel>
+        </ScrollViewer>        
+    </Grid> 
+--------------------------------------
+#18.Custom Application Window and Title Bar
+MainWindow.xaml
+<Window x:Class="WpfTutorial.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTutorial"
+        xmlns:userControls="clr-namespace:WpfTutorial.View.UserControls"
+        mc:Ignorable="d" WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        Title="MainWindow" Height="350" Width="300" Background="#333333">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="btnMinimize" Content="_" Width="40" Height="40"
+                    BorderBrush="Transparent" Background="Transparent"
+                    Click="btnMinimize_Click" Foreground="White" />
+            <Button x:Name="btnMaximize" Content="D" Width="40" Height="40"
+                    BorderBrush="Transparent" Background="Transparent"
+                    Click="btnMaximize_Click" Foreground="White" />
+            <Button x:Name="btnClose" Content="X" Width="40" Height="40"
+                    BorderBrush="Transparent" Background="Transparent"
+                    Click="btnClose_Click" Foreground="White" />
+        </StackPanel>
+    </Grid>        
+</Window>
+
+MainWindow.xaml.cs
+	private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState=WindowState.Minimized;
+        }
+
+        private void btnMaximize_Click(object sender, RoutedEventArgs e)
+        {
+            if(WindowState==WindowState.Maximized)
+                WindowState=WindowState.Normal;
+            else WindowState=WindowState.Maximized;
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+            //Application.Current.Shutdown();
+        }
+-----------------------------------
+#19. Opening Custom Window with a Show and ShowDialog
+Normal Window - New kholenge phir bhi pehle wale k sath kaam kr skte hain.
+Modal Window - New kholenge to pehle wale me kuch nhi kr skte jab tak new band na ho jaye.
+
+Create a View folder -> Add New Item -> Window(WPF) -> NormalWindow, ModalWindow
+
+MainWindow.xaml
+   <Grid>
+        <StackPanel>
+            <Button Name="btnNormal" Width="100" Height="40" Content="Normal" Margin="5" Click="btnNormal_Click"/>
+            <Button Name="btnModal" Width="100" Height="40" Content="Modal" Margin="5" Click="btnModal_Click"/>
+            <TextBox Name="txtInput" Width="200" Height="40" FontSize="20"/>
+        </StackPanel>
+    </Grid>
+
+MainWindow.xaml.cs
+private void btnNormal_Click(object sender, RoutedEventArgs e)
+        {
+            NormalWindow normalWindow = new NormalWindow();
+            normalWindow.Show();
+        }
+
+        private void btnModal_Click(object sender, RoutedEventArgs e)
+        {
+            ModalWindow modalWindow = new ModalWindow(this);
+            Opacity = 0.4;
+            modalWindow.ShowDialog();
+            Opacity = 1;
+            if(modalWindow.Success == true)
+            {
+                txtInput.Text = modalWindow.Input;
+            }
+        }
+
+ModalWindow.xaml
+<Window x:Class="WpfTutorial.View.ModalWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTutorial.View"
+        mc:Ignorable="d" WindowStyle="None" WindowStartupLocation="CenterOwner"
+        Title="ModalWindow" Height="200" Width="400">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" >
+            <TextBox x:Name="txtInput" Width="200" Height="40" Margin="5"
+                     TextChanged="txtInput_TextChanged"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btnOk" Content="Ok" Width="50" Height="40" Margin="2"
+                        Click="btnOk_Click" IsEnabled="False"/>
+                <Button x:Name="btnCancel" Content="Cancel" Width="100" Height="40"
+                        Click="btnCancel_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
+
+ModalWindow.xaml.cs
+public partial class ModalWindow : Window
+    {
+        public bool Success { get; set; }
+        public string Input { get; set; }
+        public ModalWindow(Window parentWindow)
+        {
+            Owner = parentWindow;
+            InitializeComponent();
+        }
+
+        private void btnOk_Click(object sender, RoutedEventArgs e)
+        {
+            Success = true;
+            Input =txtInput.Text;
+            Close();
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void txtInput_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(!string.IsNullOrEmpty(txtInput.Text))
+            {
+                btnOk.IsEnabled=true;
+            }
+            else { 
+                btnOk.IsEnabled=false;
+            }
+        }
+    }
+--------------------------------------------------------------
+#20. Custom Reusable Style
+Case #1.
+<Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="175" />
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Light" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="Button" x:Key="ConfirmationButton">
+            <Setter Property="Width" Value="175" />
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Content" Value="OK"/>
+            <Setter Property="Foreground" Value="LimeGreen"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Center">
+            <TextBox />
+            <TextBox Width="250"/>
+            <TextBox />
+            <Button Content="Normal" Margin="0,5,0,0" />
+            <Button Content="Normal" Margin="0,5,0,0" />
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Button Style="{StaticResource ConfirmationButton}" />
+        </Grid>
+    </Grid>
+
+Case #2.
+    <Window.Resources>        
+        <Style TargetType="Button" x:Key="ConfirmationButton">
+            <Setter Property="Width" Value="175" />
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Content" Value="OK"/>
+            <Setter Property="Foreground" Value="LimeGreen"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Center">
+            <StackPanel.Resources>
+                <Style TargetType="TextBox">
+                    <Setter Property="Width" Value="175" />
+                    <Setter Property="Height" Value="40"/>
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="FontWeight" Value="Light" />
+                </Style>
+                <Style TargetType="Button">
+                    <Setter Property="Width" Value="100" />
+                    <Setter Property="Height" Value="40"/>
+                    <Setter Property="FontSize" Value="16"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBox />
+            <TextBox Width="250"/>
+            <TextBox />
+            <Button Content="Normal" Margin="0,5,0,0" />
+            <Button Content="Normal" Margin="0,5,0,0" />
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Button Style="{StaticResource ConfirmationButton}" />
+        </Grid>
+    </Grid> 
+
+Case #3.
+Add a Styles folder -> Add New Item -> Resource Dictionary (WPF) -> TextboxStyles, ButtonStyles
+In App.xaml
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="Styles/TextboxStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+MainWindow.xaml
+<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Center">
+            <TextBox />
+            <TextBox Width="250"/>
+            <TextBox />
+            <Button Content="Normal" Margin="0,5,0,0" />
+            <Button Content="Normal" Margin="0,5,0,0" />
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Button Style="{StaticResource ConfirmationButton}" />
+        </Grid>
+    </Grid>
+
+TextboxStyles.xaml
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="TextBox">
+        <Setter Property="Width" Value="175" />
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="Light" />
+    </Style>
+</ResourceDictionary>
+
+ButtonStyles.xaml
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="Button">
+        <Setter Property="Width" Value="100" />
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="FontSize" Value="16"/>
+    </Style>
+    <Style TargetType="Button" x:Key="ConfirmationButton">
+        <Setter Property="Width" Value="175" />
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Content" Value="OK"/>
+        <Setter Property="Foreground" Value="LimeGreen"/>
+    </Style>
+</ResourceDictionary>
+-----------------------------------------------------
+#21 - Styles and ControlTemplates
+<Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#222222"/>
+            <Setter Property="Foreground" Value="#EEEEEE"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#0052C1" />
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="Green"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <ScrollViewer>
+            <Rectangle Height="1000"/>
+        </ScrollViewer>
+        <Button Width="100" Height="50" Content="I'm a Button"/>
+    </Grid>  
+
+https://www.codeproject.com/Tips/5367587/Improved-WPF-MenuItem-Template
+
+
+
+
+
+
+
+

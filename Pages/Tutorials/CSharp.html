@@ -211,6 +211,60 @@
                           <li class="nav-item w-100" role="presentation">
                             <a class="nav-link" id="dynamicPolimorphism-tab" data-bs-toggle="tab" data-bs-target="#dynamicPolimorphism" type="button" role="tab" aria-controls="dynamicPolimorphism" aria-selected="false">Dynamic Polymorphism</a>
                           </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="hidingOverriding-tab" data-bs-toggle="tab" data-bs-target="#hidingOverriding" type="button" role="tab" aria-controls="hidingOverriding" aria-selected="false">Hiding vs Overriding</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="sealedClass-tab" data-bs-toggle="tab" data-bs-target="#sealedClass" type="button" role="tab" aria-controls="sealedClass" aria-selected="false">Sealed Class</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="sealedMethod-tab" data-bs-toggle="tab" data-bs-target="#sealedMethod" type="button" role="tab" aria-controls="sealedMethod" aria-selected="false">Sealed Method</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="indexers-tab" data-bs-toggle="tab" data-bs-target="#indexers" type="button" role="tab" aria-controls="indexers" aria-selected="false">Indexers</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="delegates-tab" data-bs-toggle="tab" data-bs-target="#delegates" type="button" role="tab" aria-controls="delegates" aria-selected="false">Delegates</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="singleDelegate-tab" data-bs-toggle="tab" data-bs-target="#singleDelegate" type="button" role="tab" aria-controls="singleDelegate" aria-selected="false">Single Cast Delegate</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="delegateTypes-tab" data-bs-toggle="tab" data-bs-target="#delegateTypes" type="button" role="tab" aria-controls="delegateTypes" aria-selected="false">Types Of Delegate</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="multicastDelegate-tab" data-bs-toggle="tab" data-bs-target="#multicastDelegate" type="button" role="tab" aria-controls="multicastDelegate" aria-selected="false">Multi Cast Delegate</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="anonymousFunction-tab" data-bs-toggle="tab" data-bs-target="#anonymousFunction" type="button" role="tab" aria-controls="anonymousFunction" aria-selected="false">Anonymous Function</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="lambda-tab" data-bs-toggle="tab" data-bs-target="#lambda" type="button" role="tab" aria-controls="lambda" aria-selected="false">Lambda Expression</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="abstraction-tab" data-bs-toggle="tab" data-bs-target="#abstraction" type="button" role="tab" aria-controls="abstraction" aria-selected="false">Abstraction</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="abstractClass-tab" data-bs-toggle="tab" data-bs-target="#abstractClass" type="button" role="tab" aria-controls="abstractClass" aria-selected="false">Abstract Class</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="abstractProperty-tab" data-bs-toggle="tab" data-bs-target="#abstractProperty" type="button" role="tab" aria-controls="abstractProperty" aria-selected="false">Abstract Property</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="interfaces-tab" data-bs-toggle="tab" data-bs-target="#interfaces" type="button" role="tab" aria-controls="interfaces" aria-selected="false">Interfaces</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="interfaceInheritance-tab" data-bs-toggle="tab" data-bs-target="#interfaceInheritance" type="button" role="tab" aria-controls="interfaceInheritance" aria-selected="false">Interface Inheritance</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="explicitInterface-tab" data-bs-toggle="tab" data-bs-target="#explicitInterface" type="button" role="tab" aria-controls="explicitInterface" aria-selected="false">Explicit Interface Impl.</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="abstractInterfaceSimilar-tab" data-bs-toggle="tab" data-bs-target="#abstractInterfaceSimilar" type="button" role="tab" aria-controls="abstractInterfaceSimilar" aria-selected="false">Inerfaces vs AbstractClass</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="abstractInterfaceDiffer-tab" data-bs-toggle="tab" data-bs-target="#abstractInterfaceDiffer" type="button" role="tab" aria-controls="abstractInterfaceDiffer" aria-selected="false">Inerfaces vs AbstractClass</a>
+                          </li>
                           <!-- <li class="nav-item w-100" role="presentation">
                             <a class="nav-link" id="setup-tab" data-bs-toggle="tab" data-bs-target="#setup" type="button" role="tab" aria-controls="setup" aria-selected="false">Setup and Installation</a>
                           </li> -->
@@ -4083,7 +4137,1156 @@
                             </code>
                         </div>
                         <div>
-                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('babel-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('hidingOverriding-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('sealedMethod-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="sealedMethod" role="tabpanel" aria-labelledby="sealedMethod-tab">
+                        <h1 class="fw-light py-2 text-danger">SEALED METHODS IN C#</h1>
+                        <h5>Sealed Method</h5>
+                        <ul>
+                            <li>When the derived class overrides a base class ethod, variable, property or event, then the new method, variable, property, or event can be declared as sealed, Sealing the new method prevents the method from further overriding.</li>
+                            <li>An overridden method can be sealed by preceding the override keyword with the sealed keyword.</li>
+                        </ul>
+                        <h5>STEPS TO REMEMBER FOR SEALED METHODS</h5>
+                        <ul>
+                            <li>Sealed method is always an override method of child class.</li>
+                            <li>We cannot again override the sealed method.</li>
+                            <li>Sealed method is only available with Method Overriding.</li>
+                            <li>Sealed keyword is not available with the method hiding.</li>
+                            <li>Sealed is used together with override method.</li>
+                            <li>We cannot make normal methods as sealed.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create three classes A,B,C where B inherits A and C inherits B and Print method is overriding in both the B and C class. Show that if we make the B class Print method sealed then no child class can override it.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class A  <br>
+                                {  <br>
+                                    public virtual void Print()  <br>
+                                    {  <br>
+                                        Console.WriteLine("A Class Method Called.");  <br>
+                                    }  <br>
+                                }  <br>
+                                class B:A  <br>
+                                {  <br>
+                                    public sealed override void Print()  <br>
+                                    {  <br>
+                                        Console.WriteLine("B Class Method Called.");  <br>
+                                    }  <br>
+                                }  <br>
+                                class C : B  <br>
+                                {  <br>
+                                    public override void Print() //This will give Error  <br>
+                                    {  <br>
+                                        Console.WriteLine("C Class Method Called.");  <br>
+                                    }  <br>
+                                }  <br>
+
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        C c=new C();  <br>
+                                        c.Print();  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('sealedClass-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('indexers-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="indexers" role="tabpanel" aria-labelledby="indexers-tab">
+                        <h1 class="fw-light py-2 text-danger">INDEXER IN C# PROGRAMMING</h1>
+                        <h5>History Of JavaScript, ES5 & ES6</h5>
+                        <ul>
+                            <li>Indexers allow our object to be used just like an array, or we can say we can index the object using [] brackets just like arrays.
+                            <li>We can say indexers are special type of properties which adds logic that how can array or list store the values.</li>
+                            <li>Syntax of indexer resembles to properties.</li>
+                            <li>We can use all access modifiers with indexers and also have return types.</li>
+                            <li>Indexers are the regular members of a class.</li>
+                            <li>Indexer is created with the help of this keyword.</li>
+                            <li>In C# introduce new concept is Indexer. This is very useful for some situation. Let us discuss something about Indexer.
+                                <ul>
+                                    <li>Indexer Concept is object act as an array.</li>
+                                    <li>Indexer an object to be indexed in the same way as an array.</li>
+                                    <li>indexer modifier can be private, public, protected or internal.</li>
+                                    <li>The return type can be any valid C# types.</li>
+                                    <li>Indexers in C# must have at least one parameter. Else the compiler will generate a compilation error.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a Class Employee to store array of Age. Create a indexer to set and get the value of Age array of Employee.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                public class Employee  <br>
+                                {  <br>
+                                    private int[] Age=new int[3];  <br>
+                                    public int this[int index]  <br>
+                                    {  <br>
+                                        get { return Age[index]; }  <br>
+                                        set  <br>
+                                        {  <br>
+                                            if(index >= 0 && index < Age.Length)  <br>
+                                            {  <br>
+                                                if (value > 0)  <br>
+                                                {  <br>
+                                                    Age[index] = value;  <br>
+                                                }  <br>
+                                                else  <br>
+                                                {  <br>
+                                                    Console.WriteLine("Age must be greater than 0.");  <br>
+                                                }  <br>
+                                            }  <br>
+                                            else  <br>
+                                            {  <br>
+                                                Console.WriteLine("Please provide a valid Index.");  <br>
+                                            }   <br>           
+                                        }  <br>
+                                    }  <br>
+                                }  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Employee employee = new Employee();  <br>
+                                        employee[0] = 0;  <br>
+                                        Console.WriteLine(employee[0]);  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create the same program with indexer overloading.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                public class Employee  <br>
+                                {  <br>
+                                    private int[] Age=new int[3];  <br>
+                                    public int this[int index]  <br>
+                                    {  <br>
+                                        get { return Age[index]; }  <br>
+                                        set  <br>
+                                        {  <br>
+                                            if(index >= 0 && index < Age.Length)  <br>
+                                            {  <br>
+                                                if (value > 0)  <br>
+                                                {  <br>
+                                                    Age[index] = value;  <br>
+                                                }  <br>
+                                                else  <br>
+                                                {  <br>
+                                                    Console.WriteLine("Age must be greater than 0.");  <br>
+                                                }  <br>
+                                            }  <br>
+                                            else  <br>
+                                            {  <br>
+                                                Console.WriteLine("Please provide a valid Index.");  <br>
+                                            }    <br>          
+                                        }  <br>
+                                    }  <br>
+                                    public int this[int index,int i]  <br>
+                                    {  <br>
+                                        get { return Age[index]; }  <br>
+                                        set {  <br>
+                                            Age[index]=value+i;  <br>
+                                        }  <br>
+                                    }  <br>
+                                }  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Employee employee = new Employee();  <br>
+                                        employee[0] = 2;  <br>
+                                        Console.WriteLine(employee[0]);  <br>
+                                        employee[0, 2] = 23;  <br>
+                                        Console.WriteLine(employee[0]);  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('sealedMethod-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('delegates-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="delegates" role="tabpanel" aria-labelledby="delegates-tab">
+                        <h1 class="fw-light py-2 text-danger">DELEGATES IN C# PROGRAMMING</h1>
+                        <h5>DELEGATES</h5>
+                        <ul>
+                            <li>DELEGATE MEANING FROM GOOGLE: A PERSON SENT OR AUTHORIZED TO REPRESENT OTHERS, IN PARTICULAR AN ELECTED REPRESENTATIVE SENT TO A CONFERENCE.(Mediator) </li>
+                            <li>DELEGATE IS A TYPE WHICH HOLDS A METHOD'S REFERENCE IN AN OBJECT.</li>
+                            <li>IT IS ALSO CALLED FUNCTION POINTER.</li>
+                            <li>DELEGATE IS OF REFERENCE TYPE.</li>
+                            <li>DELEGATE SIGNATURE SHOULD BE AS SAME AS THE METHOD SIGNATURE REFERENCING BY A DELEGATE.</li>
+                            <li>DELEGATE CAN POINT TO A PARAMETERIZED METHOD OR NON-PARAMTERIZED METHOD.</li>
+                            <li>DELAGATE HAS NO IMPLEMENTATION MEANS NO BODY WITH { }.</li>
+                            <li>WE CAN USE INVOKE() METHOD WITH DELEGATES.</li>
+                            <li>DELEGATES ARE USED TO ENCAPSULATE METHODS.</li>
+                            <li>IN THE .NET FRAMEWORK, A DELEGATE POINTS TO ONE OR MORE METHODS. ONCE you INSTANTIATE THE DELEGATE, THE CORRESPONDING METHODS INVOKE.</li>
+                            <li>DELEGATES ARE OBJECTS THAT CONTAIN REFERENCES TO METHODS THAT NEED TO BE INVOKED INSTEAD OF CONTAINING THE ACTUAL METHOD</li>
+                            <li>USING DELEGATES, you CAN CALL ANY METHOD, WHICH IS IDENTIFIED ONLY AT RUN-TIME.</li>
+                            <li>A DELEGATE IS LIKE HAVING A GENERAL METHOD NAME THAT POINTS TO VARIOUS METHODS AT DIFFERENT TIMES AND INVOKES THE REQUIRED METHOD AT RUN-TIME.</li>
+                            <li>IN C# INVOKING A DELEGATE WILL EXECUTE THE REFERENCED METHOD AT RUN-TIME.</li>
+                            <li>TO ASSOCIATE A DELEGATE WITH A PARTICULAR METHOD, THE METHOD MUST HAVE THE SAME RETURN TYPE AND PARAMETER TYPE AS THAT OF THE DELEGATE.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create four static functions to perform Additiion, Subtraction, Multiplication, Division. Instead of calling it directing call all of them using a delegate Calculation.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System; <br>
+                                class Program <br>
+                                { <br>
+                                    public delegate void Calculation(int a,int b); <br>
+                                    public static void Addition(int a,int b) <br>
+                                    { <br>
+                                        Console.WriteLine("Addition of {0} and {1} is : {2}", a, b, a + b); <br>
+                                    } <br>
+                                    public static void Subtraction(int a, int b) <br>
+                                    { <br>
+                                        Console.WriteLine("Subtraction of {0} and {1} is : {2}", a, b, a - b); <br>
+                                    } <br>
+                                    public static void Multiplication(int a, int b) <br>
+                                    { <br>
+                                        Console.WriteLine("Multiplication of {0} and {1} is : {2}", a, b, a * b); <br>
+                                    } <br>
+                                    public static void Division(int a, int b) <br>
+                                    { <br>
+                                        Console.WriteLine("Division of {0} and {1} is : {2}", a, b, a / b); <br>
+                                    } <br>
+                                    public static void Main() <br>
+                                    { <br>
+                                        Program.Addition(1, 2);//Without Delegate <br>
+                                        Calculation obj = new Calculation(Program.Addition); <br>
+                                        obj.Invoke(20, 10);//1st Way  <br>
+                                        obj(12, 13);//2nd Way <br>
+                                        obj = Subtraction; <br>
+                                        obj(30, 12); <br>
+                                        obj = Multiplication; <br>
+                                        obj.Invoke(12,12); <br>
+                                        Calculation obj1 = new Calculation(Program.Division); <br>
+                                        obj1.Invoke(20, 10); <br>
+
+                                    }<br>          
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('indexers-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('singleDelegate-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="singleDelegate" role="tabpanel" aria-labelledby="singleDelegate-tab">
+                        <h1 class="fw-light py-2 text-danger">SINGLE CAST DELEGATES IN C#</h1>
+                        <h5>SINGLE CAST DELEGATES</h5>
+                        <ul>
+                            <li>Singlecast delegate point to single method at a time.
+                            <li>In this the delegate is assigned to a single method at a time.</li>
+                            <li>They are derived from <b>System.Delegate</b> class.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a single cast delegate Calculation which points to a single function Addition.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public delegate void Calculation(int a,int b);  <br>
+                                    public static void Addition(int a,int b)  <br>
+                                    {  <br>
+                                        Console.WriteLine("Addition of {0} and {1} is : {2}", a, b, a + b);  <br>
+                                    }  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Calculation obj = new Calculation(Program.Addition);  <br>
+                                        obj(20, 10);  <br>
+                                    }    <br>            
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('delegates-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('delegateTypes-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="delegateTypes" role="tabpanel" aria-labelledby="delegateTypes-tab">
+                        <h1 class="fw-light py-2 text-danger">TYPES OF DELEGATES IN C#</h1>
+                        <h5>TYPES OF DELEGATES</h5>
+                        <ul>
+                            <li>MULTIPLE DELEGATES</li>
+                            <li>SINGLE CAST DELEGATES</li>
+                            <li>MULTI CAST DELEGATES</li>
+                        </ul>
+                        <h5>MULTIPLE DELGATES</h5>
+                        <ul>
+                            <li>In C#, a user can invoke multiple delegates within a single program: Depending on the delegate name or the type of parameters passed, to the delegate, the appropriate delegate is invoked.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a class with multiple delegates and invoke them with different functions.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public delegate void Calculation(int a, int b);  <br>
+                                    public delegate void Show_Delegate();  <br>
+                                    public delegate void Calcualte_Delegate(int num);  <br>
+
+                                    public static void Addition(int a, int b)  <br>
+                                    {  <br>
+                                        int result = a + b;  <br>
+                                        Console.WriteLine("Addition of {0} and {1} is : {2}.",a,b,result);  <br>
+                                    }  <br>
+                                    public static void Subtraction(int a, int b)  <br>
+                                    {  <br>
+                                        int result = a - b;  <br>
+                                        Console.WriteLine("Subtraction of {0} and {1} is : {2}.", a, b, result);  <br>
+                                    }  <br>
+                                    public static void Show()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Hello World");  <br>
+                                    }  <br>
+                                    public static void Square(int num)  <br>
+                                    {  <br>
+                                        int square = num * num;  <br>
+                                        Console.WriteLine("Square of {0} is : {1}",num,square);  <br>
+                                    }  <br>
+                                    public static void Cube(int num)  <br>
+                                    {  <br>
+                                        int cube = num * num * num;  <br>
+                                        Console.WriteLine("Cube of {0} is : {1}", num, cube);  <br>
+                                    }  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Calculation cal = new Calculation(Addition);  <br>
+                                        cal.Invoke(12, 32);  <br>
+                                        cal = new Calculation(Subtraction);  <br>
+                                        cal.Invoke(32, 12);  <br>
+                                        Show_Delegate del = new Show_Delegate(Show);  <br>
+                                        del.Invoke();  <br>
+                                        Calcualte_Delegate del1 = new Calcualte_Delegate(Square);  <br>
+                                        del1.Invoke(2);  <br>
+                                        del1 = Cube;  <br>
+                                        del1.Invoke(2);  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('singleDelegate-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('multicastDelegate-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="multicastDelegate" role="tabpanel" aria-labelledby="multicastDelegate-tab">
+                        <h1 class="fw-light py-2 text-danger">Multicast Delegates in C#</h1>
+                        <h5>Multicast Delegate</h5>
+                        <ul>
+                            <li>When a delegate is wrapped with more than one method that is known as a multicast delegate.</li>
+                            <li>In C#, delegates are multicast, which means that they can point to more than one function at a time. They are derived from System.MulticastDelegate class.</li>
+                            <li>We can use and assignment operators to implement multi cast delegates.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a program to show multi cast delegate for Calculation and perform Addition, Subtraction, Multiplication and Division using same delegate object.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public delegate void Calculation(int a, int b);  <br>
+
+                                    public static void Addition(int a, int b)  <br>
+                                    {  <br>
+                                        int result = a + b;  <br>
+                                        Console.WriteLine("Addition of {0} and {1} is : {2}.",a,b,result);  <br>
+                                    }  <br>
+                                    public static void Subtraction(int a, int b)  <br>
+                                    {  <br>
+                                        int result = a - b;  <br>
+                                        Console.WriteLine("Subtraction of {0} and {1} is : {2}.", a, b, result);  <br>
+                                    }  <br>
+                                    public static void Multiplication(int a, int b)  <br>
+                                    {  <br>
+                                        int result = a * b;  <br>
+                                        Console.WriteLine("Multiplication of {0} and {1} is : {2}.", a, b, result);  <br>
+                                    }  <br>
+                                    public static void Division(int a, int b)  <br>
+                                    {  <br>
+                                        int result = a / b;  <br>
+                                        Console.WriteLine("Division of {0} and {1} is : {2}.", a, b, result);  <br>
+                                    }  <br>
+                                    
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Calculation del = new Calculation(Addition);  <br>
+                                        del += Subtraction;  <br>
+                                        del += Multiplication;  <br>
+                                        del -= Division;  <br>
+                                        del(20, 10);  <br>
+                                    }  <br>
+                                }
+
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('delegateTypes-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('anonymousFunction-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="anonymousFunction" role="tabpanel" aria-labelledby="anonymousFunction-tab">
+                        <h1 class="fw-light py-2 text-danger">Anonymous Function in C#</h1>
+                        <h5>Anonymous Function</h5>
+                        <ul>
+                            <li>Anonymos function means jiska koi naam nhi hota. Inko hum delegates k sath use kr skte hain.</li>
+                            <li>We discussed that delegates are used to reference any methods that has the same signature as that of the delegate.</li>
+                            <li>As the name suggests, an anonymous method is a method without a name just the body.</li>
+                            <li>Anonymous methods in C# can be defined using the delegate keyword.</li>
+                            <li>It is introduced in C# 2.O.</li>
+                            <li>Anonymous method can be assigned to a variable of delegate type.</li>
+                            <li>You need not specify the return type in an anonymous method; it is inferred from the return statemenk inside the method body.</li>
+                            <li>We don't required to use access modifiers with anonymous function like public, private etc.</li>
+                            <li>We don't required to use return type like int, string because its return type is set as same as delegate type.</li>
+                            <li>Anonymous function is not a static and instance member.</li>
+                        </ul>
+                        <h5>ADVANTAGES OF ANONYMOUS FUNCTION IN C#</h5>
+                        <ul>
+                            <li>Lesser typing work because we don't required to write access modifier, return type and name of the function.</li>
+                            <li>Anonymous functions are suggested when code volumes are less.</li>
+                        </ul>
+                        <h5>LIMITATIONS OF ANONYMOUS FUNCTION</h5>
+                        <ul>
+                            <li>It cannot contain jump statement like goto, break or continue.</li>
+                            <li>It cannot access ref or out parameter of an outer method.</li>
+                        </ul>
+                        <h5>POINTS TO REMEMBER</h5>
+                        <ul>
+                            <li>Anonymous method can be defined using the delegate keyword</li>
+                            <li>Anonymous method must be assigned to a delegate.</li>
+                            <li>Anonymous method can access outer variables or functions.</li>
+                            <li>Anonymous method can be passed as a parameter.</li>
+                            <li>Anonymous method can be used as event handlers.</li>
+                            <li>EXAMPLE: ANONYMOUS METHOD AS EVENT HANDLER <br>
+                                <code>
+                                saveButton.Click delegate(Object o, EventArgs e) <br>
+                                { <br>
+                                    MessageBox.Show("Save Successfully!"); <br>
+                                }
+                                </code>
+                            </li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a delegate which refer to a defined method without using annonymous function.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public delegate void MyDelegate(int num);  <br>
+                                    public static void MyMethod(int num)  <br>
+                                    {  <br>
+                                        num = num + 10;  <br>
+                                        Console.WriteLine(num);  <br>
+                                    }  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        MyDelegate del = new MyDelegate(MyMethod);  <br>
+                                        del(20);  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create a program similar to above and this program does not contain a method istead use annonymous method to perform the operation.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public delegate void MyDelegate(int num);  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        MyDelegate del = delegate (int num)  <br>
+                                        {  <br>
+                                            num = num + 10;  <br>
+                                            Console.WriteLine(num);  <br>
+                                        };  <br>
+                                        del(20);  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create a program to show that annonymous function can be added a parameter to a function.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public delegate void MyDelegate(int num);  <br>
+                                    public static void MyMethod(MyDelegate del, int num)  <br>
+                                    {  <br>
+                                        num = num + 10;  <br>
+                                        Console.WriteLine(num);  <br>
+                                        del(num);  <br>
+                                    }  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        MyMethod(delegate (int num) { num += 20; Console.WriteLine(num); }, 20);  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('multicastDelegate-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('lambda-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="lambda" role="tabpanel" aria-labelledby="lambda-tab">
+                        <h1 class="fw-light py-2 text-danger">LAMBDA EXPRESSION IN C#</h1>
+                        <h5>Lambda Expression</h5>
+                        <ul>
+                            <li>C# 3.0 introduced the lambda expression.</li>
+                            <li>It also works like an anonymous method.</li>
+                            <li>The difference that in Lambda expressions you don't need to specify the type of the value that you input thus making it more flexible to use.</li>
+                            <li>It means lambda expression simplifies the anonymous function or you can say that lambda expression is a shorthand for an anonymous function. </li>
+                            <li>The <b class="text-danger"> => </b> is the lambda operator which is used in all lambda expressions.</li>
+                            <li>The Lambda expression is divided into two parts, the left side is the input and the right is the expression.</li>
+                            <li>The Lambda Expressions can be of two types:
+                                <ul>
+                                    <li><b>Statement Lambda:</b> Consists of the input and a set of statements to be executed. Syntax: input => { statements }; Note: It Does not return any value implicitly.</li>
+                                    <li><b>Expression Lambda:</b> Consists of the input and the expression.</li>
+                                </ul>
+                            </li>
+                            <li>Syntax: <code>input => expression;</code> <br>
+                                Note: Returns the evaluated value implicitly.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a program to call a annonymous function using both delegate and lambda expression.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public delegate void MyDelegate(int num);  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        MyDelegate obj = delegate (int num) {  <br>
+                                            num = num += 10;  <br>
+                                            Console.WriteLine(num);  <br>
+                                        };  <br>
+                                        obj(12);  <br>
+
+                                        MyDelegate obj1 = (num) =>  <br>
+                                        {  <br>
+                                            num = num += 10;  <br>
+                                            Console.WriteLine(num);  <br>
+                                        };  <br>
+                                        obj1(12);  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create a program to print square and cube through annonymous function using expression lambda.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public delegate int MyDelegate(int num);  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        MyDelegate obj = (a) => a * a;  <br>
+                                        MyDelegate obj1 = (a) => a * a * a;  <br>
+                                        Console.WriteLine(obj(2));  <br>
+                                        Console.WriteLine(obj1(2));  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('anonymousFunction-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('abstraction-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="abstraction" role="tabpanel" aria-labelledby="abstraction-tab">
+                        <h1 class="fw-light py-2 text-danger">ABSTRACTION IN C#</h1>
+                        <h5>Abstraction Theory</h5>
+                        <ul>
+                            <li>Abstraction is one of the principle of object oriented programming. It is used to display only necessary and essential features of an object to outside the world. Means displaying what is necessary and encapsulate the unnecessary things to outside the world. Hiding can be achieved by using "private" access modifier.</li>
+                            <li>Abstraction is a process of hiding the implementation details from the user, only the functionality will be provided to the user.</li>
+                            <li>In other words, the user will have the information on what the object does instead of how it does it.</li>
+                            <li>Note - Outside the world means when we use reference of object then it will show only necessary methods and properties (ABSTRACTION) and hide methods which are not necessary (ENCAPSULATION).</li>
+                        </ul>
+                        <h5>Abstraction</h5>
+                        <ul>
+                            <li>1. Abstraction is "To represent the essential feature without representing the background details."</li>
+                            <li>2. Abstraction lets you focus on what the object does instead of how it does it.</li>
+                            <li>3. Abstraction provides you a generalized view of your classes or objects by providing relevant information.</li>
+                            <li>4. Abstraction is the process of hiding the working style of an object, and showing the information of an object in an understandable manner.</li>
+                        </ul>
+                        <h5>IMPLEMENTATION OF ABSTRACTION</h5>
+                        <ul>
+                            <li>To implement abstraction let's take an example of a car. We knows a car, Car is made of name of car, color of car, steering, gear, rear view mirror, brakes, silencer, exhaust system, diesel engine, car battery, car engine and other internal machine details etc.</li>
+                            <li>Now let's think in terms of Car rider or a person who is riding a car. So to drive a car what a car rider should know from above category before he starts a car driving.</li>
+                            <li>Necessary things means compulsory to know before starting a car
+                                <ul>
+                                    <li>1. Name of Car</li>
+                                    <li>2. Color of Car</li>
+                                    <li>3. Steering</li>
+                                    <li>4. Rear View Mirror</li>
+                                    <li>5. Brakes</li>
+                                    <li>6. Gear</li>
+                                </ul>
+                            </li>
+                            <li>Unnecessary things means not that compulsory to know for a rider
+                                <ul>
+                                    <li>1. Internal Details of a Car</li>
+                                    <li>2. Car Engine</li>
+                                    <li>3. Diesel Engine</li>
+                                    <li>4. Exhaust System</li>
+                                    <li>5. Silencer</li>
+                                </ul>                            
+                            </li>
+                            <li>ABSTRACTION CAN BE ACHIEVED USING ABSTRACT CLASSES, ABSTRACT METHODS AND INTERFACES AS WELL.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a Employee class which takes the Id, Name and GrossSalary of employee. Create a method which calculate the NetSalary after TaxDeduction to show Abstraction and encapsulate that method so that only Employee final values are displayed to the users.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Employee  <br>
+                                {  <br>
+                                    public int Id { get; set; }  <br>
+                                    public string Name { get; set; }  <br>
+                                    public int GrossSalary { get; set; }  <br>
+                                    public int NetSalary { get; set; }  <br>
+                                    public int TaxDeduction { get; set; } = 2000;  <br>
+                                    public Employee(int id, string name, int grossSalary)  <br>
+                                    {  <br>
+                                        Id = id;  <br>
+                                        Name = name;  <br>
+                                        GrossSalary = grossSalary;  <br>
+                                    }  <br>
+                                    void CalculateSalary()  <br>
+                                    {  <br>
+                                        if (GrossSalary > 30000)  <br>
+                                        {  <br>
+                                            NetSalary = GrossSalary - TaxDeduction;  <br>           
+                                        }  <br>
+                                        else  <br>
+                                        {  <br>
+                                            NetSalary = GrossSalary;  <br>
+                                        }  <br>        
+                                    }  <br>
+                                    public void ShowEmployeeDetails()  <br>
+                                    {  <br>
+                                        CalculateSalary();  <br>
+                                        Console.WriteLine("Employee Id is : {0}", Id);  <br>
+                                        Console.WriteLine("Employee Name is : {0}", Name);  <br>
+                                        Console.WriteLine("Employee Salary is : {0}", NetSalary);  <br>
+                                    }  <br>
+                                }  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public delegate int MyDelegate(int num);  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Employee Ali = new Employee(101, "Ali Zafar", 32000);  <br>
+                                        Employee Kamal = new Employee(101, "Kamal Hasan", 30000);  <br>
+                                        Ali.ShowEmployeeDetails();  <br>
+                                        Kamal.ShowEmployeeDetails();  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('lambda-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('abstractClass-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="abstractClass" role="tabpanel" aria-labelledby="abstractClass-tab">
+                        <h1 class="fw-light py-2 text-danger">React Setup and Installation</h1>
+                        <h5>Abstract Class in C#</h5>
+                        <ul>
+                            <li>C# Abstract classes are used to declare common characteristics of subclasses.</li>
+                            <li>A class which contains the abstract keyword in its declaration is known as abstract class.</li>
+                            <li>It can only be used as a BASE class for other classes that extend the abstract class.</li>
+                            <li>Abstract classes may or may not contain abstract methods, i.e. methods without body ( public void get(); )</li>
+                            <li>Like any other class, an abstract class can contain fields that describe the characteristics and methods that describe the actions that a class can perform.</li>
+                            <li>But, if a class has at least one abstract method, then the class must be declared abstract.</li>
+                            <li>If a class is declared abstract, it cannot be instantiated.</li>
+                            <li>To use an abstract class, you have to inherit it from another class, provide implementations to the abstract methods in it.</li>
+                            <li>If you inherit an abstract class, you have to provide implementations to all the abstract methods in it.</li>
+                            <li>An abstract class can implement code with non-Abstract methods.</li>
+                            <li>An Abstract class can have modifiers for methods, properties etc.</li>
+                            <li>An Abstract class can have constants and fields.</li>
+                            <li>An abstract class can implement a property.</li>
+                            <li>An abstract class can have constructors or destructors.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create an abstract class Person and inherit it in Student and Teacher class to show abstraction.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                abstract class Person  <br>
+                                {  <br>
+                                    public string? FirstName { get; set; }  <br>
+                                    public string? LastName { get; set; }  <br>
+                                    public string? Address { get; set; }  <br>
+                                    public int Age { get; set; }  <br>
+
+                                    public string FullName()  <br>
+                                    {  <br>
+                                        return FirstName+" "+LastName;   <br>
+                                    }  <br>
+                                    public abstract void PrintDetails();  <br>
+                                }  <br>
+                                class Student:Person  <br>
+                                {  <br>
+                                    public int RollNo;  <br>
+                                    public int Fees;  <br>
+                                    public override void PrintDetails()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Student Name is : {0}",FullName());  <br>
+                                        Console.WriteLine("Student Address is : {0}",Address);  <br>
+                                        Console.WriteLine("Student Age is : {0}", Age);  <br>
+                                        Console.WriteLine("Student Roll No. is : {0}", RollNo);  <br>
+                                        Console.WriteLine("Student Fee is : {0}", Fees);  <br>
+                                    }  <br>
+                                }  <br>
+                                class Teacher : Person  <br>
+                                {  <br>
+                                    public string? Qualification;  <br>
+                                    public int Salary;  <br>
+
+                                    public override void PrintDetails()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Teacher Name is : {0}", FullName());  <br>
+                                        Console.WriteLine("Teacher Address is : {0}", Address);  <br>
+                                        Console.WriteLine("Teacher Age is : {0}", Age);  <br>
+                                        Console.WriteLine("Teacher Qualification is : {0}", Qualification);  <br>
+                                        Console.WriteLine("Teacher Salary is : {0}", Salary);  <br>
+                                    }  <br>
+                                }  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Student Aman = new Student();  <br>
+                                        Aman.RollNo = 1001;  <br>
+                                        Aman.FirstName = "Aman";  <br>
+                                        Aman.LastName = "Gupta";  <br>
+                                        Aman.Age = 12;  <br>
+                                        Aman.Address = "New Delhi";  <br>
+                                        Aman.Fees = 2000;  <br>
+                                        Aman.PrintDetails();  <br>
+                                        Console.WriteLine("-----------------------------");  <br>
+                                        Teacher Asad = new Teacher();  <br>
+                                        Asad.FirstName = "Asad";  <br>
+                                        Asad.LastName = "Ansari";  <br>
+                                        Asad.Age = 24;  <br>
+                                        Asad.Address = "Noida";  <br>
+                                        Asad.Salary = 20000;  <br>
+                                        Asad.Qualification = "Post Graduate";  <br>
+                                        Asad.PrintDetails();  <br>
+
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('abstraction-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('abstractProperty-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="abstractProperty" role="tabpanel" aria-labelledby="abstractProperty-tab">
+                        <h1 class="fw-light py-2 text-danger">ABSTRACT PROPERTIES IN C#</h1>
+                        <h5>Abstract Propertie</h5>
+                        <ul>
+                            <li>The word Abstract means incomplete, which means no implementation in programming.</li>
+                            <li>This is a duty of child class to implement an abstract member of their parent class.</li>
+                            <li>Declared by using the abstract keyword.</li>
+                            <li>Contain only the declaration of the property without the body of the get and set accessors (which do not contain any statements and can be implemented in the derived class).</li>
+                            <li>Are only allowed in an abstract class.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a program having a parent abstract class Person with properties like Id and Name. Create two class Student to provide the properties implementation.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                abstract class Person  <br>
+                                {  <br>
+                                    public abstract int Id { get; set; }  <br>
+                                    public abstract string Name { get; set; }  <br>
+                                }  <br>
+                                class Student : Person  <br>
+                                {  <br>
+                                    int StudentId;  <br>
+                                    string? StudentName;  <br>
+                                    public override int Id  <br>
+                                    {  <br>
+                                        get => StudentId;  <br>
+                                        set  <br>
+                                        {  <br>
+                                            if (value <= 0)  <br>
+                                            {  <br>
+                                                Console.WriteLine("Id must be greater than 0");  <br>
+                                            }  <br>
+                                            else  <br>
+                                            {  <br>
+                                                this.StudentId = value;  <br>
+                                            }  <br>
+                                        }  <br>
+                                    }  <br>
+                                    public override string Name  <br>
+                                    {  <br>
+                                        get => StudentName;  <br>
+                                        set  <br>
+                                        {  <br>
+                                            if (string.IsNullOrEmpty(value))  <br>
+                                            {  <br>
+                                                Console.WriteLine("Student Name must not be null");  <br>
+                                            }  <br>
+                                            else  <br>
+                                            {  <br>
+                                                StudentName = value;  <br>
+                                            }  <br>
+                                        }  <br>
+                                    }  <br>
+
+                                    class Program  <br>
+                                    {  <br>
+                                        public static void Main()  <br>
+                                        {  <br>
+                                            Student Anas = new Student();  <br>
+                                            Anas.Id = 0;  <br>
+                                            Anas.Name = "";      <br>     
+                                        }  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('abstractClass-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('interfaces-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="interfaces" role="tabpanel" aria-labelledby="interfaces-tab">
+                        <h1 class="fw-light py-2 text-danger">INTERFACES IN C#</h1>
+                        <h5>Interfaces</h5>
+                        <ul>
+                            <li>An interface is a contract between itself and any class that implements it.</li>
+                            <li>This contract states that any class that implements the interface will implement the interface's properties, methods and/or events. An interface contains no implementation, only the signatures of the functionality the interface provides. An interface can contain signatures of methods, properties, indexers & events.</li>
+                            <li>The interface defines the 'what' part of the syntactical contract and the deriving classes define the 'how' part of the syntactical contract.</li>
+                            <li>Interfaces define properties, methods, and events, which are the members of the interface. Interfaces contain only the declaration of the members. It is the responsibility of the deriving class to define the members.</li>
+                        </ul>
+                        <h5>One of the main reason to introduce interfaces is that it can be used in multiple inheritance.</h5>
+                        <ul>
+                            <li>An interface contains only abstract members, just like classes interface also contains properties, methods, delegates or events, but only declarations, no implementations.</li>
+                            <li>An interface cannot be instantiated but can only be inherited by classes or other interfaces.</li>
+                            <li>Interface cannot have fields, static bhi nhi.</li>
+                            <li>An interface is declared using the keyword interface.</li>
+                            <li>In C#, by default, all members declared in an interface have public as the access modifier. They don't allow explicit access modifiers. It means - Interface ka method by default public hota hai aur explicitely agar public lgayenge to bhi error milega.</li>
+                        </ul>
+                        <h5>IMPLEMENTING AN INTERFACE</h5>
+                        <ul>
+                            <li>An interface is implemented bv a class in a way similar to inheriting a class.</li>
+                            <li>When implementing an interface in a class, implement all the abstract methods declared in the interface. If all the methods are not implemented, the class cannot be compiled.</li>
+                            <li>The methods implemented in the Class should be declared With the same name and signature as defined in the interface.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a interface IEmployee with a method show(). Implement the interface in Employee class and give it a body.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                interface IEmployee <br>
+                                { <br>
+                                    void show(); <br>
+                                } <br>
+
+                                class Employee : IEmployee <br>
+                                { <br>
+                                    public void show() <br>
+                                    { <br>
+                                        Console.WriteLine("This is a method of IEmployee Interface."); <br>
+                                    } <br>
+                                } <br>
+                                class Program <br>
+                                { <br>
+                                    public static void Main() <br>
+                                    { <br>
+                                        Employee employee = new Employee(); <br>
+                                        employee.show(); <br>
+                                    } <br>
+                                }
+
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create a interface IAnimal with an abstract method AnimalSound. Implement the interface in the respective Dog, Lion and Tiger and give to show interface implementation.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                interface IAnimal   <br>
+                                {   <br>
+                                    void AnimalSound();   <br>
+                                }   <br>
+                                class Dog:IAnimal   <br>
+                                {   <br>
+                                    public void AnimalSound()   <br>
+                                    {   <br>
+                                        Console.WriteLine("The Dog barks.");   <br>
+                                    }   <br>
+                                }   <br>
+                                class Lion : IAnimal   <br>
+                                {   <br>
+                                    public void AnimalSound()   <br>
+                                    {   <br>
+                                        Console.WriteLine("The Lion roars.");   <br>
+                                    }   <br>
+                                }   <br>
+                                class Tiger : IAnimal   <br>
+                                {   <br>
+                                    public void AnimalSound()   <br>
+                                    {   <br>
+                                        Console.WriteLine("The Tiger makes the sound grrr.");   <br>
+                                    }   <br>
+                                }   <br>
+                                class Program   <br>
+                                {   <br>
+                                    public static void Main()   <br>
+                                    {   <br>
+                                        Dog dog = new Dog();   <br>
+                                        dog.AnimalSound();   <br>
+                                        Lion lion = new Lion();   <br>
+                                        lion.AnimalSound();   <br>
+                                        Tiger tiger = new Tiger();   <br>
+                                        tiger.AnimalSound();   <br>
+                                    }   <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('abstractProperty-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('interfaceInheritance-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="interfaceInheritance" role="tabpanel" aria-labelledby="interfaceInheritance-tab">
+                        <h1 class="fw-light py-2 text-danger">INTERFACE INHERITANCE IN C#</h1>
+                        <h5>Interface Inheritance</h5>
+                        <ul>
+                            <li>Interface can inherit from other interfaces.</li>
+                            <li>A class that inherits this interface must provide implementation for all interface members in the entire interface inheritance chain.</li>
+                            <li>Interface reference variable can have the reference of their child class.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create 3 interfaces I1, I2, I3 where I3 extends both I1 and I2. Show that a class which extends I3 interface needs to provide the body for all the methods of I1, I2 and I3. Also show tht we can not instantiate an interface directly but from the class which extends it.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                interface I1  <br>
+                                {  <br>
+                                    void print1();  <br>
+                                }  <br>
+                                interface I2  <br>
+                                {  <br>
+                                    void print2();  <br>
+                                }  <br>
+                                interface I3:I1,I2  <br>
+                                {  <br>
+                                    void print3();  <br>
+                                }  <br>
+                                class Program : I3  <br>
+                                {    <br>
+                                    public void print1()  <br>
+                                    {  <br>
+                                        Console.WriteLine("print1() method of Interface I1");  <br>
+                                    }  <br>
+
+                                    public void print2()  <br>
+                                    {  <br>
+                                        Console.WriteLine("print2() method of Interface I2");  <br>
+                                    }  <br>
+
+                                    public void print3()  <br>
+                                    {  <br>
+                                        Console.WriteLine("print3() method of Interface I3");  <br>
+                                    }  <br>
+
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Program P1=new Program();  <br>
+                                        P1.print1();  <br>
+                                        P1.print2();  <br>
+                                        P1.print3();  <br>   <br>
+                                        
+                                        //I3 i3=new I3(); //not possible  <br>
+                                        I3 i3 = new Program();  <br>
+                                        i3.print1();  <br>
+                                        i3.print2();  <br>
+                                        i3.print3();  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('interfaces-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('explicitInterface-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="explicitInterface" role="tabpanel" aria-labelledby="explicitInterface-tab">
+                        <h1 class="fw-light py-2 text-danger">EXPLICIT INTERFACE IMPLEMENTATION IN C#</h1>
+                        <h5>Explicit Interface Implementation</h5>
+                        <ul>
+                            <li>There are 2 types of implementation of interfaces. <br>
+                                Implicit Interface Implementation <br> Explicit Interface Implementation.</li>
+                            <li>A class has to explicitly implement multiple interfaces if these interfaces have methods with identical names.</li>
+                            <li>If an interface has a method name identical to the name of a method declared in the inheriting class, this interface has to be explicitly implemented.</li>
+                            <li>If we have two interfaces I1 and I2 with same abstract method show() , then if a class which inherit both the interfaces will provide body to which show() method is a confusion where we need explicit interface implementation.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Show two ways to implement multiple interface implementation. First by casting it and second by interface object reference variable.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                interface I1  <br>
+                                {  <br>
+                                    void show();  <br>
+                                }  <br>
+                                interface I2  <br>
+                                {  <br>
+                                    void show();  <br>
+                                }  <br>
+                                class Program : I1, I2  <br>
+                                {  <br>
+                                    void I1.show()  <br>
+                                    {  <br>
+                                        Console.WriteLine("I1 show() method");  <br>
+                                    }  <br>
+                                    void I2.show()  <br>
+                                    {  <br>
+                                        Console.WriteLine("I2 show() method");  <br>
+                                    }  <br>
+
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Program P1 = new Program();  <br>
+                                        ((I1)P1).show();  <br>
+                                        ((I2)P1).show();  <br>
+
+                                        I1 i1 = new Program();  <br>
+                                        i1.show();  <br>
+                                        I2 i2 = new Program();  <br>
+                                        i2.show();  <br>
+
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('interfaceInheritance-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('abstractInterfaceSimilar-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="abstractInterfaceSimilar" role="tabpanel" aria-labelledby="abstractInterfaceSimilar-tab">
+                        <h1 class="fw-light py-2 text-danger">SIMILARITIES BETWEEN ABSTRACT CLASSES AND INTERFACES IN C#</h1>
+                        <h5>Abstract Class & Interfaces Similarities</h5>
+                        <ul>
+                            <li>Abstract classes and interfaces both declare methods without implementing them. <br>
+                                <code>
+                                interface I1 <br>
+                                { <br>
+                                    void show(); <br>
+                                } <br>
+                                abstract class AbstractClass <br>
+                                { <br>
+                                    public abstract void show(); <br>
+                                }
+                                </code>
+                            </li>
+                            <li>Both, abstract classes as well as interfaces, contain abstract methods. </li>
+                            <li>Abstract methods of both, the abstract class as well as the interface, are implemented by the Inheriting subclass. <br>
+                                <code>
+                                interface I1  <br>
+                                {  <br>
+                                    void show();  <br>
+                                }  <br>
+                                abstract class AbstractClass  <br>
+                                {  <br>
+                                    public abstract void show1();  <br>
+                                }  <br>
+
+                                class Program : AbstractClass , I1  <br>
+                                {  <br>
+                                    public void show()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Interface I1 show() method.");  <br>
+                                    }  <br>
+                                    public override void show1()  <br>
+                                    {  <br>
+                                        Console.WriteLine("AbstractClass show1() method.");  <br>
+                                    }  <br>
+
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Program P1=new Program();  <br>
+                                        ((I1)P1).show();  <br>
+                                        AbstractClass P2=new Program();  <br>
+                                        P2.show1();  <br>
+                                    }  <br>
+                                }  <br>
+                                </code>
+                                </li>
+                                <li>Both, abstract classes as well as interfaces, can inherit multiple interfaces.</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('explicitInterface-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('abstractInterfaceDiffer-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="abstractInterfaceDiffer" role="tabpanel" aria-labelledby="abstractInterfaceDiffer-tab">
+                        <h1 class="fw-light py-2 text-danger">Difference between Abstract Class and Interfaces in C#</h1>
+                        <h5>Abstract Class and Interfaces Differences</h5>
+                        <table class="table table-bordered table-light table-striped border border-5 m-2">
+                            <thead>
+                                <tr>
+                                    <th>ABSTRACT CLASS</th>
+                                    <th>INTERFACE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>An abstract class can inherit a class and multiple interfaces.</td>
+                                    <td>An interface can inherit multiple interfaces but cannot inherit a class.</td>
+                                </tr>
+                                <tr>
+                                    <td>An abstract class can have methods with a body.</td>
+                                    <td>An interface cannot have methods with a body.</td>
+                                </tr>
+                                <tr>
+                                    <td>An abstract class method is implemented using the override keyword.</td>
+                                    <td>An interface method is implemented without using the override keyword.</td>
+                                </tr>
+                                <tr>
+                                    <td>An abstract class is a better option when you need to implement common methods and declare common abstract methods.</td>
+                                    <td>An interface is a better option when you need to declare only abstract
+                                        methods.</td>
+                                </tr>
+                                <tr>
+                                    <td>An abstract class can declare constructors and destructors.</td>
+                                    <td>An interface cannot declare constructors or destructors.</td>
+                                </tr>
+                                <tr>
+                                    <td>If you want to declare an abstract member in abstract class then abstract  keyword is mandatory.</td>
+                                    <td>If you want to declare an abstract member in interface then abstract keyword is not mandatory because members of interface are abstract by default.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('abstractInterfaceSimilar-tab')" >Previous </button>
                             <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('babel-tab')" >Next </button>
                         </div>
                     </div>
@@ -4102,7 +5305,6 @@
                     </div> -->
                 </div>           
             </div>
-
             <div class="container">
                 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
                     <p class="col-md-2 mb-0 text-muted">© 2023 Company, Inc</p>

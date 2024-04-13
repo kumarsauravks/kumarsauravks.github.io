@@ -1,0 +1,184 @@
+    <Grid>
+        <Label FontSize="50px">Hello World</Label>
+        <TextBlock>Hello I am <LineBreak /> Kumar Saurav</TextBlock>
+        <TextBlock Foreground="PaleGoldenrod">Hello I am <LineBreak /> Kumar Saurav</TextBlock>
+    </Grid>
+------------------------------------------
+    <StackPanel>
+        <TextBlock Margin="10">Hello I am <LineBreak /> Kumar Saurav</TextBlock>
+        <TextBlock Margin="20" Foreground="Purple">Hello I am Kumar Saurav</TextBlock>
+        
+        <TextBlock Margin="20" TextTrimming="CharacterEllipsis" Foreground="Green">Hello I am Kumar Saurav, Iam a software developer</TextBlock>
+        <TextBlock Margin="20" TextWrapping="Wrap" Foreground="Red">Hello I am Kumar Saurav, Iam a software developer</TextBlock>
+    </StackPanel>
+------------------------------------------
+<StackPanel>
+        <Label>Application Options</Label>
+        <CheckBox>Java</CheckBox>
+        <CheckBox IsChecked="True">C#</CheckBox>
+        <CheckBox>Visual Basics</CheckBox>
+        <StackPanel Margin="10">
+            <Label>Mobile Application Enable</Label>
+            <CheckBox>
+                <TextBlock>
+                    Xamrin Videos Enable
+                </TextBlock>
+            </CheckBox>
+        </StackPanel>
+        <StackPanel Margin="10">
+            <CheckBox IsThreeState="True" Name="AllCheck" Checked="AllCheck_Checked" Unchecked="AllCheck_Checked">
+                All Features Enables
+            </CheckBox>
+            <StackPanel Margin="20,5">
+                <CheckBox Name="first" Checked="first_Checked" Unchecked="first_Checked">First</CheckBox>
+                <CheckBox Name="second" Checked="first_Checked" Unchecked="first_Checked">Second</CheckBox>
+                <CheckBox Name="third" Checked="first_Checked" Unchecked="first_Checked">Third</CheckBox>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+
+private void AllCheck_Checked(object sender, RoutedEventArgs e)
+        {
+            bool allstate = (AllCheck.IsChecked == true);
+            first.IsChecked=allstate;
+            second.IsChecked=allstate;
+            third.IsChecked=allstate;
+        }
+
+        private void first_Checked(object sender, RoutedEventArgs e)
+        {
+            AllCheck.IsChecked = null;
+            if((first.IsChecked == true) && (second.IsChecked==true) && (third.IsChecked==true)) {
+                AllCheck.IsChecked=true;
+            }
+            if ((first.IsChecked == false) && (second.IsChecked == false) && (third.IsChecked == false))
+            {
+                AllCheck.IsChecked = false;
+
+            }
+        }
+-----------------------------------------
+
+<Grid>
+        <Button x:Name="btnClick" Content="Click Me!" Height="100" Width="200" Click="btnClick_Click">
+            <Image Source="house.png"></Image>
+        </Button>
+    </Grid>
+
+or 
+
+<Grid>
+        <Button x:Name="btnClick" Height="100" Width="200" Click="btnClick_Click">
+            <Image Source="house.png"></Image>
+        </Button>
+    </Grid>
+
+private void btnClick_Click(object sender, RoutedEventArgs e)
+        {
+            btnClick.Content = "Button Clicked!";
+        }
+-------------------------------------------
+<Grid>
+        <StackPanel>
+            <Menu IsMainMenu="True">
+                <MenuItem Header="_File" >
+                    <MenuItem Header="Export File" >
+                        <MenuItem.Icon>
+                            <Image Source="house.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Export List" IsCheckable="True" IsChecked="True" />
+                    <MenuItem Header="Mail" />
+                </MenuItem>
+                <MenuItem Header="_View">
+                    <MenuItem Header="New" Command="New" />
+                </MenuItem>
+                <MenuItem Header="_Help" Click="View_Click" />
+            </Menu>
+        </StackPanel>
+    </Grid>
+
+private void View_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("How would I help you?");
+        }
+-------------------------------------------------------------
+Context Menu
+<Grid>
+        <RichTextBox>
+            <RichTextBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Cut" Command="Cut" />
+                    <MenuItem Header="Copy" Command="Copy" />
+                    <MenuItem Header="Paste" Command="Paste">
+                        <MenuItem.Icon>
+                            <Image Source="house.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </RichTextBox.ContextMenu>
+        </RichTextBox>
+    </Grid>
+--------------------------------------------------------
+Expander Control
+ <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Expander Header="Fruit List" Grid.Row="0">
+            <StackPanel>
+                <Label>Apple</Label>
+                <Label>Mango</Label>
+                <Label>Banana</Label>
+            </StackPanel>
+        </Expander>
+        <Expander Header="Veggie List" Grid.Row="1">
+            <StackPanel>
+                <Label>Potato</Label>
+                <Label>Tomato</Label>
+                <Label>Onion</Label>
+            </StackPanel>
+        </Expander>
+    </Grid>
+
+DatePicker Control
+	<StackPanel Margin="115,115,115,111">
+            <DatePicker 
+                DisplayDateStart="2023-01-01" 
+                DisplayDateEnd="2024-01-01" 
+                FirstDayOfWeek="Sunday"
+                IsTodayHighlighted="True"
+                />
+        </StackPanel>
+DatePicker through code:
+public DatePickerExample()
+        {
+            InitializeComponent();
+            DatePicker dp1=new DatePicker();
+            dp1.Name = "datepicker";
+            dp1.DisplayDateStart = new DateTime(2023, 1, 1);
+            dp1.DisplayDateEnd = new DateTime(2024,1,1);
+            dp1.IsTodayHighlighted = true;
+            sp1.Children.Add(dp1);
+        }
+---------------------------------
+Combobox
+<Grid>
+        <ComboBox x:Name="combo1" SelectionChanged="ComboBox_SelectionChanged" HorizontalAlignment="Left" Margin="188,0,0,0" VerticalAlignment="Center">
+            <System:String>Java</System:String>
+            <System:String>C#</System:String>
+            <System:String>Python</System:String>
+            <Button>Ok</Button>
+        </ComboBox>
+    </Grid>
+
+private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MessageBox.Show("You Selected "+ combo1.SelectedItem.ToString());
+        }
+
+
+TreeView
+
+------------------------------------------------
