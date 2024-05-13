@@ -4135,6 +4135,1663 @@ INTERFACE
 methods.
 - An interface cannot declare constructors or destructors.
 - If you want to declare an abstract member in interface then abstract keyword is not mandatory because members of interface are abstract by default.
+-------------------------------------
+#82. Multiple Inheritance in C#
+Image 
+Image
+
+MULTIPLE INHERITANCE USING INTERFACE
+• A class can extends or inherits only one class but a class can
+implements or inherits one or more than one interface.
+• In other words, a sub class can only have one parent class but a
+subclass can implements or inherits one or more than one interfaces.
+
+Create a program with Person and Teacher class, also with interface like Employee and Student to show that multiple interface inheritance is possible where as multiple class inheritance not.
+class Person
+{
+    public void Show()
+    {
+        Console.WriteLine("Person Class Show() method invoked.");
+    }
+}
+interface Employee
+{
+    void Show();
+}
+interface Student
+{
+    void Show();
+}
+class Teacher : Person, Employee, Student
+{
+    void Employee.Show()
+    {
+        Console.WriteLine("Employee Interface Show() method invoked.");
+    }
+    void Student.Show()
+    {
+        Console.WriteLine("Student Interface Show() method invoked.");
+    }
+}
+class Program
+{
+    public static void Main()
+    {
+        Teacher t = new Teacher();
+        t.Show();
+        Employee e = new Teacher();
+        e.Show();
+        Student s = new Teacher();
+        s.Show();
+    }
+}
+---------------------------------------------------------
+#83. GENERICS IN C# PROGRAMMING
+- Generics introduced in 2.0.
+- Generics allow youto write a class or method that can work with any data type.
+- Generics allow you to define a class with placeholders for the type
+of its fields, methods, parameters, etc. Generics replace these placeholders with some specific type at compile time. It helps you
+to maximize code reuse, type safety, and performance.
+- You can create your own generic interfaces, classes, methods, events, and delegates.
+- You may get information on the types used in a generic data type at run-time.
+- A generic class or method can be defined using angle brackets <>
+
+Generics can be applied to the following.
+- Interface
+- Abstract class
+- Class
+- Method
+- Static method
+- Property
+- Event
+- Delegates
+- Operator
+
+Advantages of Generic:
+- Increase the reusability Of the code,
+- Generic are type safe, You get compile time errors if you try to use a different type of data than the one specified in the defination.
+- Generic has a performance advantage because it removes the possibilities Of boxing and unboxing. We can use object in place of T which is not good due to unnecessary boxing and unboxing.
+
+GENERIC METHODS
+- Generic methods process values whose data types are known only
+When accessing the variables that Store these values.
+- A generic method is declared with the generic type parameter list
+enclosed within angular brackets,
+- Defining methods with type pararneters allow you to cali the method
+with a different type every time.
+- You can declare a method Within generic nonageneric
+declarations.
+
+Generic methods can be declared with the following keywords:
+- Virtual
+- Override
+- Abstract
+
+
+Program : Create a program which takes a number aaray and print all the values one by one.
+class Example
+{
+    public static void ShowArr(int[] arr)
+    {
+        for(int i = 0; i < arr.Length; i++)
+        {
+            Console.WriteLine("Number {0} is {1}.", i + 1, arr[i]);
+        }
+    }
+}
+class Program
+{
+    public static void Main()
+    {
+        int[] Numbers = new int[3];
+        Numbers[0] = 11;
+        Numbers[1] = 22;
+        Numbers[2] = 33;
+        Example.ShowArr(Numbers);
+    }
+}
+
+Program : Create the same program with generics such that any array either integer, float or string type it will print the values one by one.
+class Example
+{
+    public static void ShowArr<T>(T[] arr)
+    {
+        for(int i = 0; i < arr.Length; i++)
+        {
+            Console.WriteLine("Value {0} is {1}.", i + 1, arr[i]);
+        }
+        Console.WriteLine("");
+    }
+}
+class Program
+{
+    public static void Main()
+    {
+        int[] Numbers = new int[3];
+        Numbers[0] = 11;
+        Numbers[1] = 22;
+        Numbers[2] = 33;       
+
+        string[] Names = { "Atul","Abram","Turab","Humza" };
+        double[] Points = { 1.1, 2.2, 3.3, 4.4, 5.5 };
+
+        Example.ShowArr(Numbers);
+        Example.ShowArr(Names);
+        Example.ShowArr(Points);
+    }
+}
+
+Program : Create a generic method to compare two values of any datatype and print Equal if they are same and Not Equal if they are different.
+class Example
+{
+    public static void Check<T>(T a,T b)
+    {
+        bool result= a.Equals(b)?true:false;
+        if (result)
+        {
+            Console.WriteLine("{0} is Equal to {1}",a,b);
+        }
+        else
+        {
+            Console.WriteLine("{0} is Not Equal to {1}",a,b);
+        }
+    }
+}
+class Program
+{
+    public static void Main()
+    {
+        Example.Check(1, 1);
+        Example.Check("Kumar", "Saurav");
+    }
+}
+-----------------------------------------
+#84. GENERIC CLASS IN C# PROGRAMMING
+- Generic classes define functionalities that can be used for any
+data type and are declared with a class declaration followed by a
+type parameter enclosed within angular brackets.
+
+- Generics introduced in 2.0, Generics allow you to define a class
+with placeholders for the type of its fields, methods, parameters„
+etc, Generics replace these placeholders with some specific type
+at compile time.
+
+Program: Create a generic class which accepts any type of value and insert it into a box. Store multiple values in the box and show it in console.
+class Example<T>
+{
+    T box;
+    public Example(T b)
+    {
+        box= b;
+    }
+    public void GetBoxValue()
+    {
+        Console.WriteLine("Value inside box is {0} ",box);
+    }
+}
+class Program
+{
+    public static void Main()
+    {
+        Example<int> example = new Example<int>(2);
+        example.GetBoxValue();
+        Example<string> example1 = new Example<string>("Kumar Saurav");
+        example1.GetBoxValue();
+    }
+}
+
+Program : Create the same program using properties.
+class Example<T>
+{
+    public T Box { get; set; }
+}
+class Program
+{
+    public static void Main()
+    {
+        Example<int> example = new Example<int>();
+        example.Box = 20;
+        Console.WriteLine(example.Box);
+        Example<string> example1 = new Example<string>();
+        example1.Box = "Kumar Saurav";
+        Console.WriteLine(example1.Box);
+    }
+}
+
+----------------------------------------------------
+#85. COLLECTIONS IN C# PROGRAMMING
+— A Collection is a set of related data that may not necessarily belong to the same data type that can be set or modified dynamically at run-time.
+— In other words, collection is a dynamic array.
+- Its length can increase on runtime.
+— Normal Arrays length is fixed, it means we cannot change the length after
+declaring an array.
+- Array.Resize();
+- Resize method of an array destroys oid array and create a new array with
+new length.
+- We can never insert a vaive into a middle of an array. because if we want to do this then array length should be increased but we cannot increase the
+length of an array after declaring the length of an array.
+— We can never delete a value from a middle of an array.
+— Accessing collections is similar to accessing arrays, where elements are
+accessed by their index numbers. However, there are differences between
+arrays and collections in C#.
+
+ARRAY
+Cannot be resized at run-time.
+The individual elements are of the same data type.
+Do not contain any methods for operations on elements.
+We can never insert a value into a middle of an array.
+We can never delete a value from a middle of an array.
+
+COLLECTION
+Can be resized at run-time.
+The individual elements can be of different data types.
+Contain methods for operations on elements.
+We can insert a value into a middle of a collection.
+We can delete a value from a middle of a collection.
+
+— Collections were introduce< in 1.0
+- We have two kinds of Collections.
+o Non-Generic collections
+• Stack, ArrayList, Hashtable, SortedList etc.
+• System.Collections namespace have non-generic collections.
+o Generic collections.
+• List<T>, LinkedList<T>, Queue<T>,SortedList<T,V>.
+• System.Collections.Generic namespace have generic collections.
+
+COLLECTIONS HAVE
+- COLLECTIONS HAVE A MECHANISM CALLED AUTO-RESIZING.
+- CAPACITY PROPERTY WHICH TELLS NUMBER or ITEMS THAT CAN BE STOREO UNDER ANY COLLECTION.
+- INSERT METHOD
+- REMOVE AND REMOVEAT METHOD.
+
+Image
+
+Program : Create a array of length 3. Use the Array.Resize method to resize the array and store one more number to it.
+class Program
+{
+    public static void Main()
+    {
+        int[] arr = new int[3];
+        arr[0]= 11;
+        arr[1]= 12;
+        arr[2]= 13;
+        Array.Resize(ref arr,4);
+        arr[3]= 14;
+        for(int i = 0; i < arr.Length; i++)
+        {
+            Console.WriteLine(arr[i]);
+        }
+    }
+}
+
+Program : Create a program with arraylist to store some values and check the length of the arraylist to show thst arraylist can automatically grow in size. Also perform inseertion and deletion of elements from specific place.
+
+using System.Collections;
+class Program
+{
+    public static void Main()
+    {
+        ArrayList list=new ArrayList();
+        Console.WriteLine(list.Capacity);
+        list.Add(10);
+        Console.WriteLine(list.Capacity);
+        list.Add(20);
+        list.Add(30);
+        list.Add(40);
+        Console.WriteLine(list.Capacity);
+        list.Add(50);
+        Console.WriteLine(list.Capacity);
+        list.Insert(2, "Kumar");
+        list.Remove(40);
+        foreach(object obj in list)
+        {
+            Console.Write(obj+" ");
+        }
+    }
+}
+---------------------------------------
+#86. HASH TABLE COLLECTION IN C#
+Image
+• Array: It is a collection of homogeneous(SAME DATA TYPE) elements
+
+• Collections: It is a collection of heterogeneous(DIFFERENT DATA TYPE)elements.
+
+HASH TABLE COLLECTION IN C#
+• HashTable stores data in key/value format.
+• Array and ArrayList also stores data in key/value format.
+• In Array or ArrayList keys are pre-defined i-e index numbers, it means you cannot explicitly define keys in Array or ArrayList.
+• In HashTable, keys are not pre-defined it means you can explicitly define user-defined keys in HashTable.
+• C# includes Hashtable collection in System.Collections namespace.
+• The Hashtable collection stores key-value pairs.
+• The Hashtable class reprernts a collection of key-and-value pairs that are organized based on the hash code ofthe key.
+• It uses the key to access the elements in the collection.
+• A hash table is used when you need to access elements by
+using key, and you can identify a useful key value.
+• Each item in the hash table has a key/value pair. The key is
+used to access the items in the collection.
+- HASH TABLE DOES NOT ALLOW DUPLICATE KEYS, KEYS SHOULD ALWAYS BE UNIQUE BUT VALUES CAN BE DUPLICATE.
+
+Image
+
+METHODS OF HASH TABLE
+Add: Adds an item with a key and value into the hashtable.
+Remove: Removes the item with the specified key from the hashtable.
+Clear: Removes all the items from the hashtable.
+Contains: Checks whether the hashtable contains a specific key.
+ContainsKey: Checks whether the hashtable contains a specific key.
+ContainsVaIue: Checks whether the hashtable contains a specific value.
+GetHashCode: Returns the hash code for the specified key.
+
+Image
+
+PROPERTIES OF HASH TABLE
+• Count: Gets the total count of key/value pairs in the Hashtable.
+- Keys: Gets an ICollection of keys in the Hashtable.
+• Values: Gets an ICollection of values in the Hashtable.
+
+Program : Create a hashtable to store Employee Details in proper key value form.
+using System.Collections;
+
+class Program
+{
+    public static void Main()
+    {
+        Hashtable ht = new Hashtable();
+        ht.Add("Id", 101);
+        ht.Add("Name", "Kumar Saurav");
+        ht.Add("Designation", "Software Developer");
+        ht.Add("IsMarried", false);
+        Console.WriteLine("Employee Name is {0}", ht["Name"]);
+
+        Hashtable ht1 = new Hashtable()
+        {
+            {"Id",102 },
+            {"Name","Ali Zafar" },
+            {"Designation","Singer" },
+            {"IsMarried",true }
+        };
+        Console.WriteLine("Employee Designation is : {0}", ht1["Designation"]);
+    }
+}
+
+Program : Create a program to print all Employee data with key and values from hashtable. Remove one element from the hashtable and print it again.
+using System.Collections;
+class Program
+{
+    public static void Main()
+    {
+        Hashtable ht = new Hashtable();
+        ht.Add("Id", 101);
+        ht.Add("Name", "Kumar Saurav");
+        ht.Add("Designation", "Software Developer");
+        ht.Add("IsMarried", false);
+        foreach(var key in ht.Keys)
+        {
+            Console.WriteLine("Employee {0} is : {1}", key, ht[key]);
+        }
+        Console.WriteLine("----------After Removal---------------");
+        ht.Remove("Designation");
+        foreach (var key in ht.Keys)
+        {
+            Console.WriteLine("Employee {0} is : {1}", key, ht[key]);
+        }
+        Console.WriteLine("----------Contains Key---------------");
+        Console.WriteLine("Employee Age Exist...{0}", ht.Contains("Age"));
+        Console.WriteLine("Employee Id Exist....{0}", ht.ContainsKey("Id"));
+        Console.WriteLine("Kumar Saurav".GetHashCode());
+    }
+}
+-------------------------------------------------------------------------
+#88. STACK - NON-GENERIC COLLECTION IN C#
+All non-generic collection classes have these features.
+• 1. They can store homogeneous elements as well as heterogeneous elements.
+• 2. They are not type safe.
+• 3. It can automatically resize dynamically (Auto Resizing).
+
+Image
+Image
+
+STACK 
+• C# includes a special type of collection which stores
+elements in LIFO style (Last In First Out).
+• C# includes a generic and non-generic Stack. Here, you are
+going to learn about the non-generic stack.
+• Stack allows null value and also duplicate values. It
+provides a Push() method to add a value and Pop() or
+Peek() methods to retrieve values.
+• Stack allows null value and also duplicate values.
+• A stack is used to create a dynamic collection which grows,
+according to the need of your program.
+• The capacity of a Stack is the number of elements the Stack
+can hold. As elements are added to a Stack, the capacity is
+automatically increased as required through reallocation.
+• In a stack, you can store elements of the same type or
+different types.
+• The Stack class implements the IEnumerable, ICoIIection,
+and ICloneable interfaces.
+• When you add an item in the list, it is called pushing the
+element.
+• When you remove it, it is called popping the element.
+
+IMPORTANT PROPERTIES AND METHODS OF STACK
+• Count : Returns the total count of elements in the Stack.
+• Push : Inserts an item at the top of the stack.
+• Peek : Returns the top item from the stack.
+- Pop : Removes and returns items from the top of the stack.
+• Contains : Checks whether an item exists in the stack or not.
+• Clear : Removes all items from the stack.
+
+Program : Create a stack to store Person Details like Name, Age, Height, Marital Status, Designation . Iterate through each item to show LIFO mechanism of stack.
+using System;
+using System.Collections;
+
+class Program
+{
+    public static void Main()
+    {
+        Stack stack = new Stack();
+        stack.Push("Kumar Saurav");
+        stack.Push(30);
+        stack.Push(5.7);
+        stack.Push(true);
+        stack.Push("Software Developer");
+        foreach (var item in stack)
+        {
+            Console.WriteLine(item);
+        }
+    }
+}
+-----------------------------------------
+#89. QUEUE NON-GENERIC COLLECTION IN C#
+COLLECTIONS IN C#                                                                                                                                                                                                                                                                                                                                                                                                                                             
+All non-generic collection classes have these features.
+• 1. They can store homogeneous elements as well as heterogeneous elements.
+• 2. They are not type safe.
+• 3. It can automatically resize dynamically (Auto Resizing).
+
+Image
+Image
+
+QUEUE NON-GENERIC COLLECTION
+• C# includes a Queue collection class in the System.CoIIection namespace.
+• Queue stores the elements in FIFO style (First In First Out), exactly opposite of the Stack collection.
+• It contains the elements in the order they were added.
+• Queue collection allows multiple null and duplicate values.
+• Use the Enqueue() method to add values and the Dequeue() method to retrieve the values from the Queue.
+
+PROPERTIES AND METHODS OF QUEUE
+• Count : Returns the total count of elements in the Queue.
+• Enqueue : Adds an item into the queue.
+• Dequeue : Removes and returns an item from the beginning of the queue.
+• Peek : Returns first item from the queue
+• Contains  : Checks whether an item is in the queue or not
+• Clear : Removes all the items from the queue.
+
+Program : Create a queue to store Person Details like Name, Age, Height, Marital Status, Designation . Iterate through each item to show FIFO mechanism of queue.
+using System;
+using System.Collections;
+
+class Program
+{
+    public static void Main()
+    {
+        Queue queue = new Queue();
+        queue.Enqueue("Kumar Saurav");
+        queue.Enqueue(30);
+        queue.Enqueue(5.7);
+        queue.Enqueue(true);
+        queue.Enqueue("Software Developer");
+        foreach (var item in queue)
+        {
+            Console.WriteLine(item);
+        }
+        queue.Dequeue();
+        foreach (var item in queue)
+        {
+            Console.WriteLine(item);
+        }
+    }
+}
+----------------------------------------------------
+#90. DIFFERENCE BETWEEN GENERIC AND NON-GENERIC COLLECTION IN C#
+Image
+
+Scenario
+1. I want to create a collection which will only have integer
+2. I don't know how many integer elements will be stored in the collection.
+THEN GENERIC COLLECTIONS COMES INTO ACTION
+
+GENERIC COLLECTIONS:
+• Are Type Safe.
+• Variable length (Auto Resizing)
+
+Image
+
+DIFFERENCE
+NON-GENERIC COLLECTION
+• These are the collection that can
+hold elements of different data
+types.
+• It holds elements as Object type.
+So it includes overhead of type
+conversions.
+• These are also called loosely
+typed.
+• Not Type Safe.
+- Not Secure
+
+GENERIC COLLECTION
+• These are the collection that can
+hold data of same data type.
+• It reduced overhead of type-
+conversions.
+• These are also called Strongly
+typed.
+• Type Safe.
+- Secure
+
+Program : Create a Generic List to store numbers and show that Generic Collection are type safe and have auto resizing capability.
+using System;
+using System.Collections;
+class Program
+{
+    public static void Main()
+    {
+        List<int> list = new List<int>();
+        list.Add(11);
+        list.Add(22);
+        list.Add(33);
+        list.Add(44);
+        Console.WriteLine(list.Capacity);//4
+        list.Add(11);
+        list.Add(11);
+        Console.WriteLine(list.Capacity);//8
+    }
+}
+-------------------------------------------------------
+#91. LIST<T> GENERIC COLLECTION IN C#
+• A List is one of the g€Feric collection classes in the "System.Collection.Generic" namespace.
+• There are several generic collection classes in the System.ColIection.Generic namespace that includes the following:
+- List
+• Dictionary
+- Stack
+- Queue
+• An ArrayList resizes automatically as it grows (Auto-
+Resizing).
+• The List<T> collection is the same as an ArrayList except
+that List<T> is a generic collection whereas ArrayList is a
+non-gerkeric collection.
+• A List class can be used to create a collection of any type.
+• For example, we can create a list Integers, strings and
+even any complex types.
+• List<T> class represents the list of objects which can be
+accessed by index.
+
+Image
+
+Program : Create two Generic List to store numbers and Names respectively and iterate all the items of list using foreach loop.
+using System;
+using System.Collections;
+class Program
+{
+    public static void Main()
+    {
+        List<int> numbers = new List<int>();
+        numbers.Add(11);
+        numbers.Add(22);
+        numbers.Add(33);
+        numbers.Add(44);
+        numbers.Add(55);
+        foreach(int num in numbers)
+        {
+            Console.WriteLine(num);
+        };
+        List<string> names = new List<string>();
+        names.Add("Ram");
+        names.Add("Lakshman");
+        names.Add("Bharat");
+        names.Add("Satrughan");
+        foreach(string name in names)
+        {
+            Console.WriteLine(name);
+        }
+    }
+}
+
+Program : Create a Employee type with Id, Name, Age and Designation. With the help of a foreach loop iterate all the details in console.
+using System;
+using System.Collections;
+
+class Program
+{
+    public static void Main()
+    {
+        Employee emp1 = new Employee()
+        {
+            Id=101,
+            Name="Kumar Saurav",
+            Age=30,
+            Designation="Software Engineer"
+        };
+        Employee emp2 = new Employee()
+        {
+            Id = 102,
+            Name = "Anand Mohan",
+            Age = 28,
+            Designation = "Mechanical Engineer"
+        };
+        List<Employee> emps = new List<Employee>();
+        emps.Add(emp1);
+        emps.Add(emp2);
+        foreach(Employee emp in emps)
+        {
+            Console.WriteLine("Employee {0} with Id {1} and Age {2} is a {3}",emp.Name,emp.Id,emp.Age,emp.Designation);
+        }
+    }
+}
+class Employee
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Designation { get; set; }
+}
+---------------------------------------------
+#92. LIST<T> GENERIC COLLECTION IN C#
+• List<T> class can accept null as a valid value for reference
+types and it also allows duplicate elements
+• List<T> class is not sorted by default and elements are
+accessed by zero-based index.
+
+Program : Create a List to store numbers and print the sorted list.
+using System;
+using System.Collections;
+class Program
+{
+    public static void Main()
+    {
+        List<int> numbers = new List<int>();
+        numbers.Add(67);
+        numbers.Add(57);
+        numbers.Add(87);
+        numbers.Add(27);
+        foreach(int num in numbers)
+        {
+            Console.WriteLine(num);
+        }
+        numbers.Sort();
+        Console.WriteLine("--------After Sorting--------");
+        foreach (int num in numbers)
+        {
+            Console.WriteLine(num);
+        }
+    }
+}
+
+WHY TO USE A LIST
+• Unlike arrays, a List can grow in size automatically in other
+words a list can be re-sized dynamically but arrays cannot.
+• List is a generic type.
+• List is type safe.
+• The List class also provides methods to search, sort and
+manipulate lists.
+
+PROPERTIES OF LIST<T>
+• Capacity : Gets or sets the total number of elements the internal data structure can hold.
+. Count : Gets the number of elements contained in the List<T>.
+
+METHODS OF LIST<T>
+• Add() : Adds an object to the end of the List<T>.
+• AddRange() : Adds the elements of the specified collection to the end of the List<T>.
+• Insert() : Inserts an element into the List<T> at the specified index
+• InsertRange() Inserts the elements of a collection into the
+List<T> at the specified index.
+• Remove() : Removes the first occurrence of a specific object from the List<T>.
+• RemoveAt() : Removes the element at the specified index of the List<T>.
+• RemoveRange() Removes a range of elements from the List<T>
+• RemoveAIl() Removes all the elements that match the conditions defined by the specified predicate.
+
+Program : Create a list of numbers and add the same list to it using AddRange(). Finally print the new list using foreach loop.
+using System;
+using System.Collections;
+class Program
+{
+    public static void Main()
+    {
+        List<int> numbers = new List<int>();
+        numbers.Add(67);
+        numbers.Add(57);
+        numbers.Add(87);
+        numbers.Add(27);
+        foreach(int num in numbers)
+        {
+            Console.WriteLine(num);
+        }
+        numbers.AddRange(numbers);
+        Console.WriteLine("--------After Adding--------");
+        foreach (int num in numbers)
+        {
+            Console.WriteLine(num);
+        }
+    }
+}
+
+Program : Create a list of numbers and add the same list at 2nd index of the list. Finally print the new list using foreach loop.
+using System;
+using System.Collections;
+
+class Program
+{
+    public static void Main()
+    {
+        List<int> numbers = new List<int>();
+        numbers.Add(67);
+        numbers.Add(57);
+        numbers.Add(87);
+        numbers.Add(27);
+        foreach(int num in numbers)
+        {
+            Console.WriteLine(num);
+        }
+        numbers.InsertRange(2,numbers);
+        Console.WriteLine("--------After Adding--------");
+        foreach (int num in numbers)
+        {
+            Console.WriteLine(num);
+        }
+    }
+}
+
+Program : Create a list of employee and print only those employee whose age is greater than 20.
+using System;
+using System.Collections;
+class Program
+{
+    public static void Main()
+    {
+        Employee emp1 = new Employee()
+        {
+            Id = 101,
+            Name = "Kumar Saurav",
+            Age = 30,
+            Designation = "Software Engineer"
+        };
+        Employee emp2 = new Employee()
+        {
+            Id = 102,
+            Name = "Anand Mohan",
+            Age = 28,
+            Designation = "Mechanical Engineer"
+        };
+        Employee emp3 = new Employee()
+        {
+            Id = 102,
+            Name = "Priti Sukla",
+            Age = 18,
+            Designation = "Electrical Engineer"
+        };
+        List<Employee> emps = new List<Employee>();
+        emps.Add(emp1);
+        emps.Add(emp2);
+        emps.Add(emp3);
+        foreach (Employee emp in emps)
+        {
+            Console.WriteLine("Employee {0} with Id {1} and Age {2} is a {3}", emp.Name, emp.Id, emp.Age, emp.Designation);
+        }
+        emps.RemoveAll(emp => emp.Age > 20);
+        Console.WriteLine("--After Removing employee of age greater than 20. --");
+        foreach (Employee emp in emps)
+        {
+            Console.WriteLine("Employee {0} with Id {1} and Age {2} is a {3}", emp.Name, emp.Id, emp.Age, emp.Designation);
+        }
+    }
+}
+class Employee
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Designation { get; set; }
+}
+
+--------------------------------------------------------------
+#93. LIST<T> GENERIC COLLECTION IN C#
+METHODS OF LIST<T>
+• Contains() : Determines whether an element is in the List<T>.
+• Reverse() : Reverses the order of the elements in the List<T> or a portion of it.
+• Sort() : Sorts the elements or a portion of the elements in the List<T>
+• IndexOf() : Returns the zero-based index of the first occurrence of a value in the List<T>.
+• LastlndexOf() Returns the zero-based index of the last occurrence of a value in the List<T>
+• Clear() : Removes all elements from the List<T>
+• Find() : Searches for an element that matches the conditions defined by the specified predicate, and returns the first occurrence within the entire
+• FindLast() : Searches for an element that matches the conditions defined by the specified predicate, and returns the last occurrence within the entire List<T>.
+• FindAll() Retrieves all the elements that match the
+conditions defined by the specified predicate.
+• Findlndex() Searches for an element that matches the conditions defined by a specified predicate, and returns the zero-based index of the first
+occurrence within the List<T> or a portion of it. This method returns -1 if an item that matches the conditions is not found.
+• FindLastIndex() : Searches for an element that matches the conditions defined by a specified predicate, and returns the zero-based index of the last occurrence within the List<T> or a portion of it
+• ToArray() : Copies the elements of the List<T> to a new array.
+• ToList() : Copies the elements of the array to a new List.
+
+Program : Create a list of employee and find the employee whose age is greater than 20.
+using System;
+using System.Collections;
+class Program
+{
+    public static void Main()
+    {
+        Employee emp1 = new Employee()
+        {
+            Id = 101,
+            Name = "Kumar Saurav",
+            Age = 30,
+            Designation = "Software Engineer"
+        };
+        Employee emp2 = new Employee()
+        {
+            Id = 102,
+            Name = "Anand Mohan",
+            Age = 28,
+            Designation = "Mechanical Engineer"
+        };
+        Employee emp3 = new Employee()
+        {
+            Id = 102,
+            Name = "Priti Sukla",
+            Age = 18,
+            Designation = "Electrical Engineer"
+        };
+        List<Employee> emps = new List<Employee>();
+        emps.Add(emp1);
+        emps.Add(emp2);
+        emps.Add(emp3);
+        Employee emp = emps.Find(e => e.Age > 20);
+        Console.WriteLine("Employee {0} with Id {1} and Age {2} is a {3}", emp.Name, emp.Id, emp.Age, emp.Designation);
+        emp = emps.FindLast(e => e.Age > 20);
+        Console.WriteLine("Employee {0} with Id {1} and Age {2} is a {3}", emp.Name, emp.Id, emp.Age, emp.Designation);
+
+	List<Employee> employees = emps.FindAll(emp => emp.Age > 20);
+        foreach(Employee empl in employees)
+        {
+            Console.WriteLine("Employee {0} with Id {1} and Age {2} is a {3}", empl.Name, empl.Id, empl.Age, empl.Designation);
+        }
+    }
+}
+class Employee
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Designation { get; set; }
+}
+
+Program : Create a program to convert a list into array and also convert the array into a list . Finally print the array and list in the console.
+using System;
+using System.Collections;
+class Program
+{
+    public static void Main()
+    {
+        Employee emp1 = new Employee()
+        {
+            Id = 101,
+            Name = "Kumar Saurav",
+            Age = 30,
+            Designation = "Software Engineer"
+        };
+        Employee emp2 = new Employee()
+        {
+            Id = 102,
+            Name = "Anand Mohan",
+            Age = 28,
+            Designation = "Mechanical Engineer"
+        };
+        Employee emp3 = new Employee()
+        {
+            Id = 102,
+            Name = "Priti Sukla",
+            Age = 18,
+            Designation = "Electrical Engineer"
+        };
+        List<Employee> emps = new List<Employee>();
+        emps.Add(emp1);
+        emps.Add(emp2);
+        emps.Add(emp3);
+        Employee[] empss=emps.ToArray();
+        foreach (Employee empl in empss)
+        {
+            Console.WriteLine("Employee {0} with Id {1} and Age {2} is a {3}", empl.Name, empl.Id, empl.Age, empl.Designation);
+        }
+        Console.WriteLine("-------------------------------");
+        List<Employee> employees = empss.ToList();
+        foreach(Employee empl in employees)
+        {
+            Console.WriteLine("Employee {0} with Id {1} and Age {2} is a {3}", empl.Name, empl.Id, empl.Age, empl.Designation);
+        }
+    }
+}
+class Employee
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Designation { get; set; }
+}
+--------------------------------------------------------
+#94. - DICTIONARY
+GENERIC COLLECTIONS:
+• Are Type Safe.
+• Variable length (Auto Resizing)
+
+Scenario 
+- ArrayList and Hashtable is not satisfying our requirement as mentioned below.
+• Now we want to create a collection in which we don't want to access elements through index.
+• We want to store data in key value format where keys are user-defined.
+• We want to insert same type of data in a collection.
+
+DICTIONARY<Tkey, Tvalue>
+
+"active": "ready to engage in physically energetic pursuit",
+"amazing": "causing great surprise or wonder",
+"honest: "free of deceit, truthful and sincere",
+"patriotic": "expressing devotion to and vigorous support for one's country.",
+"quarantine": "place of isolation"
+
+Program : Using Dictionary collection create a mini dictionary to store meaning of words and print it using foreach loop.
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    public static void Main()
+    {
+        Dictionary<string,string> dictionary = new Dictionary<string,string>();
+        dictionary.Add("active", "ready to engage in physically energetic pursuit");
+        dictionary.Add("amazing", "causing great surprise or wonder");
+        dictionary.Add("honest", "free of deceit, truthful and sincere");
+        dictionary.Add("patriotic", "expressing devotion to and vigorous support for one's country.");
+        dictionary.Add("quarantine", "place of isolation");
+        foreach(KeyValuePair<string,string> item in dictionary)
+        {
+            Console.WriteLine("Key is : {0} & Value is : {1}",item.Key,item.Value);
+        }
+    }
+}
+--------------------------------------------------
+#95. DICTIONARY<TKEY, TVALUE>
+• In C#, Dictionary is a generic collection which is generally used to store key/value pairs.
+• The working of Dictionary is quite similar to the non-generic
+hashtable.
+• The advantage of Dictionary is, it is generic type.
+• Dictionary is defined under System.ColIection.Generic namespace.
+• It is dynamic in nature means the size of the dictionary is grows according to the need.
+• The Dictionary<TKey, TValue> collection in C# is same as
+English dictionary.
+• English dictionary is a collection of words and their
+definitions, often listed alphabetically in one or more
+specific languages.
+• In the same way, the Dictionary in C# is a collection of Keys and Values, where key is like word and value is like definition.
+• The Dictionary<TKey, TValue> class is a generic collection class in the System.ColIection.Generics namespace.
+• T Key denotes the tybe of key and TValue is the type of TValue.
+
+IMPORTANT PROPERTIES OF DICTIONARY
+• Count : Gets the total number of elements exists in the
+Dictionary<TKey,TValue>.
+• Keys : Returns collection of keys of Dictionary<TKey,TValue>.
+- Values : Returns collection of values in Dictionary<TKey,TValue>.
+
+IMPORTANT METHODS OF DICTIONARY
+• Add : Adds an item to the Dictionary collection,Add key-value pairs in Dictionary<TKey, TValue> collection.
+• Remove : Removes the element with the specified key.
+• ContainsKey : Checks whether the specified key exists in Dictionary<TKey, TValue>.
+• ContainsValue : Checks whether the specified key exists in Dictionary<TKey, TValue>.
+• Clear : Removes all the elements from Dictionary<TKey,
+TValue>.
+• TryGetValue : Returns true and assigns the value with specified
+key, if key does not exists then return false.
+
+IMPORTANT POINTS
+- In Dictionary, the key cannot be null, but value can be.
+- In Dictionary, key must be unique. Duplicate keys are not allowed if you try to use duplicate key then compiler will throw an exception.
+- In Dictionary, you can only store same types of elements.
+- The capacity of a Dictionary is the number of elements that Dictionary can hold. 
+
+Program : Create a Dictionary to store Employee Details and find the count of Employee with Salary more than 15000.
+using System;
+class Employee
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Designation { get; set; }
+    public int Salary { get; set; }
+}
+class Program
+{
+    public static void Main()
+    {
+        Dictionary<int, Employee> employees = new Dictionary<int, Employee>();
+        Employee emp1 = new Employee()
+        {
+            Id = 111,
+            Name="Amar Deep",
+            Designation="Manager",
+            Salary=20000
+        };
+        Employee emp2 = new Employee()
+        {
+            Id = 222,
+            Name = "Amit Saini",
+            Designation = "Operator",
+            Salary = 18000
+        };
+        Employee emp3 = new Employee()
+        {
+            Id = 333,
+            Name = "Ankit Seth",
+            Designation = "Assistant",
+            Salary = 12000
+        };
+        employees.Add(emp1.Id, emp1);
+        employees.Add(emp2.Id, emp2);
+        employees.Add(emp3.Id, emp3);
+
+        Console.WriteLine(employees.Count(emp=>emp.Value.Salary>15000));
+    }
+}
+---------------------------------------------------
+#96. EXCEPTION AND EXCEPTION HANDLING IN C#
+WHAT IS EXCEPTION?
+• An exception is an event, which occurs during the
+execution of a program that disrupts the normal flow of the program's instructions.
+• In general, when a C# code encounters a situation that it cannot cope with, it raises an exception.
+• An exception is a C# object that represents an error.
+• When a C# code raises an exception, it must either
+handle the exception immediately otherwise it
+terminates and quits.
+
+Image
+
+When an exception occur 3 things happen.
+• Program terminates or program crashes.
+• Ugly kind of error message is displayed that user can
+never ever understand.
+• Statements after excenion will not be executed.
+
+EXCEPTION
+• Exceptions are abnormal events that prevent a certain task from being completed successfully.
+- An Exception is a problem that arises during the execution of a program.
+• A C# exception is a response to an exceptional circumstance that arises while a program is running, such as an attempt to divide by zero.
+
+EXCEPTION HANDLING
+• The exception handling in is one of the powerful
+mechanism to handle the runtime errors so that
+normal flow of the application can be maintained.
+
+Image
+
+Program : Create a program to accept two numbers from user and display the division result back. Use the try catch to display a message when user tries to divide the number by zero.
+using System;
+class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Please enter first number");
+        int num1=int.Parse(Console.ReadLine());
+        Console.WriteLine("Please enter second number");
+        int num2 = int.Parse(Console.ReadLine());
+        try
+        {
+            int result = num1 / num2;
+            Console.WriteLine("Division result of {0} and {1} is {2}", num1, num2, result);
+        }
+        catch(DivideByZeroException ex)
+        {
+            Console.WriteLine(ex.Message);
+            Console.WriteLine("Sorry you can not divide a number by Zero.");
+        }
+        Console.WriteLine("Remaining Statements");
+    }
+}
+------------------------------------------
+#97. HANDLING INDEX OUT OF RANGE EXCEPTION IN C#
+Program : Create an array to store 3 number and try to store 4 numbers in it .Create a try catch mechanism to handle the index out of range exception.
+using System;
+class Program
+{
+    public static void Main()
+    {
+        int[] arr = new int[3];
+        try
+        {
+            arr[0] = 1;
+            arr[1] = 2;
+            arr[2] = 3;
+            arr[3] = 4;
+            foreach (int i in arr)
+            {
+                Console.WriteLine(i);
+            }
+        }
+        catch (IndexOutOfRangeException ex)
+        {
+            Console.WriteLine(ex.Message);
+            Console.WriteLine("You have supplied more values than your array can hold.");
+        }
+    }
+} 
+------------------------------------
+#98. HANDLING NULL REFERENCE EXCEPTION IN C#
+Program : Create a string variable and store null in it. Now try to print the Length of the variable which will throw a null reference exception.
+using System;
+class Program
+{
+    public static void Main()
+    {        
+        try
+        {
+            string ?name = null;
+            Console.WriteLine(name.Length);
+        }
+        catch (NullReferenceException ex)
+        {
+            Console.WriteLine("String value is Null.");
+            Console.WriteLine(ex.Message);
+        }
+    }
+}
+--------------------------------------------------
+#99. HANDLING FORMAT EXCEPTION IN C#
+Program : Accept a number from user , if it a valid integer print it back else print user has not entered a number.
+using System;
+class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Please Enter a Number.");
+        try
+        {
+            int num = int.Parse(Console.ReadLine());
+            Console.WriteLine("Your Entered number is {0}",num);
+        }
+        catch (FormatException ex)
+        {
+            Console.WriteLine("You have not entered a number");
+            Console.WriteLine(ex.Message);
+        }
+
+    }
+}
+------------------------------------------------
+#100. EXCEPTION CLASS AND ITS USE IN C#
+- For all the exception Exception class under System namespace is responsible.
+----------------------------------------------
+#101. TRY WITH MULTIPLE CATCH BLOCKS IN C#
+SYNTAX
+• try
+- {
+• // CODE OF TRY BLOCK
+- }
+• catch ( DivideByZeroException ex) { // CODE OF THIS CATCH BLOCK
+- }
+• catch ( IndexOutOfRangeException ex) { // CODE OF THIS CATCH BLOCK 
+- }
+• catch ( Exception e) { // CODE OF THIS CATCH BLOCK 
+- }
+• AT A TIME ONLY ONE EXCEPTION IS OCCURRED AND AT A TIME ONLY ONE CATCH BLOCK IS EXECUTED.
+• ALL CATCH BLOCKS MUST BE ORDERED FROM MOST SPECIFIC TO MOST GENERAL.
+-----------------------------------------------
+#102. TRY CATCH WITH FINALLY BLOCK IN C#
+TRY CATCH WITH FINALLY BLOCK
+• C# finally block is always executed whether
+exception is occurs or not .
+• C# finally block is always executed whether
+exception is handled or not.
+• C# finally block is a block that is used to execute
+important code such as closing connection, stream
+etc•
+• C# finally block follows try or catch block.
+• Note: If you don't handle exception, before terminating the program, C# executes finally block(if any).
+
+WHY USE FINALLY
+• Finally block in C# can be used to put
+"cleanup" code such as closing a file, closing
+connection etc.
+• Rule: For each try block there can be zero or more catch blocks, but only one finally block.
+--------------------------------------------------
+#103. WAYS OF EXCEPTION IN C#
+FOUR WAYS OF EXCEPTION IN C#
+• DEFAULT THROW AND DEFAULT CATCH - Jab hum try aur catch nhi lgate
+• DEFAULT THROW AND OUR CATCH - Jab hum apna try aur catch lgate hain.
+• OUR THROW AND DEFAULT CATCH - throw new Exception("My Error Message"); use krke
+• OUR THROW AND OUR CATCH 
+
+Program : Create a program to ask age from user, if he is 18+ then print he is elgible else throw an exception saying he is not eligible. Also implement a catch block to catch the exception and display the result back to user.
+using System;
+class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Please Enter Your Age : ");
+        try
+        {
+            int age = int.Parse(Console.ReadLine());
+            if(age >= 18)
+            {
+                Console.WriteLine("You are eligible to vote.");
+            }
+            else
+            {
+                throw new Exception("You are not eligible to vote.");
+            }            
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+
+    }
+}
+
+WHY SHOULD WE THROW AN EXCEPTION OBJECT?
+• BECAUSE WE WANT TO SET A DIFFERENT MESSAGE.
+• BECAUSE CANNOT RECOGNIZE EXCEPTIONAL SITUATION OF BUSINESS LOGIC.
+-------------------------------------------
+#104. PARTIAL CLASS IN C-SHARP PROGRAMMING
+PARTIAL CLASS
+• A partial class is a special feature of C#.
+• It provides a special ability to implement the functionality ofa
+single class into multiple files and all these files are combined into
+a single class file when the application is compiled.
+• A partial class is created by using a partial keyword.
+• The partial keyword can also be used to split a struct or an
+interface over two or more files.
+• We use partial class when code of a class contains so many lines to
+manage
+
+Program : Create two partial class Student. In first class declare the private variables firstName and lastName. In second class create a method PrintFullName to print the full name of the student.
+public partial class Student 
+{
+    private string _firstName;
+    private string _lastName;
+    public string FirstName
+    {
+        get { return _firstName; }
+        set { _firstName = value; }
+    }
+    public string LastName
+    {
+            set { _lastName = value; }
+            get { return _lastName; }   
+    }
+}
+public partial class Student 
+{
+    public void GetFullName()
+    {
+        Console.WriteLine("Your Full Name is : {0} {1}",_firstName,_lastName);
+    }
+}
+class Program
+{
+    public static void Main()
+    {
+        Student s = new Student();
+        s.FirstName = "Kumar";
+        s.LastName = "Saurav";
+        s.GetFullName();
+    }
+}
+
+ADVANTAGES OF PARTIAL CLASS
+• Multiple developers can work simultaneously with a single class in separate files.
+• When working on large projects, spreading a class over separate
+files allows programmers to work on it simultaneously.
+• Visual Studio uses partial classes to separate, automatically
+generated system code from the developer's code. For Example
+when you add a webform, two .CS files are generated.
+• 1. WebFormI.aspx.cs — Contains the developer code.
+• 2. WebForm1.aspx.designer.cs— Contains the system generated
+code. For example, declarations for the controls that you drag and
+drop on the webform
+
+--------------------------------------------
+#105. RULES FOR PARTIAL CLASS IN C-SHARP PROGRAMMING
+RULES FOR PARTIAL CLASS
+• All the parts spread across different files, must use the partial
+keyword.
+• All the partial class definitions must be in the same assembly and
+namespace.
+• All the parts must have th same accessibility like public or private,
+etc.
+• If any part is declared abstract, sealed or base type then the whole
+class is declared of the same type.
+• If any part is declared sealed then the whole class is declared of
+the same type.
+• If any of the parts inherit a class, then the entire type inherits the
+class
+• C# does not support multiple class inheritance. Different parts of
+the partial class, must not specify different base classes.
+• Different parts of the partial class can specify different base
+interfaces.
+• Any member that are declared in a partial definition are available
+to all of the other parts of the partial class.
+-----------------------------------------------
+#106. PARAMS
+• Params is an important keyword in C#. It is used as a parameter which can take the variable number of arguments.
+• It is useful when programmer don't have any prior knowledge about the number of parameters to be used.
+• Only one Params keyword is allowed and no additional Params will
+be allowed in function declaration after a params keyword.
+• The length of params will be zero if no arguments will be passed.
+
+Program : Create a program using params to take n numbers from user and print back the sum of it.
+class Program
+{
+    public static void Add(params int[] nums)
+    {
+        int sum = 0;
+        foreach (int num in nums)
+        {
+            sum=sum+num;            
+        }
+        Console.WriteLine("The sum is : " + sum);
+    } 
+    public static void Main()
+    {
+        Program.Add(12, 14, 78, 73, 65);
+        Program.Add(11, 22, 33);
+    }
+}
+--------------------------------------------------------------
+#107. DIFFERENCE BETWEEN STRING AND STRING BUILDER IN C#
+Strings
+• Strings are immutable.
+• String cannot be changed once created.
+- Jab hume pta ho hmari string value baar baar change hogi to hum string builder use krenge because string ko use krne se multiple copies bnegi different location par aur string builder me modifications hogi ek hi  memory location par.
+
+• StringBuilder is a dynamic object that allows you to
+expand the number of characters in the string.
+- It doesn't create a new object in the memory but
+dynamically expands memory to accommodate the
+modified string.
+
+Image
+Image
+
+Program : Create two Stopwatch to record the duration in miliseconds of string vs StingBuilder.
+using System.Diagnostics;
+using System.Text;
+
+class Program
+{
+    public static void Main()
+    {
+        string str = "Kumar";
+        StringBuilder sb = new StringBuilder("Saurav");
+        Stopwatch sw1 = Stopwatch.StartNew();
+        Stopwatch sw2 = Stopwatch.StartNew();
+        sw1.Start();        
+        for (int i = 0; i < 10000; i++)
+        {
+            str += i;
+        }
+        sw1.Stop();
+        sw2.Start();
+        for (int i = 0; i < 10000; i++)
+        {
+            sb.Append(i);
+        }
+        sw2.Stop();
+        Console.WriteLine("Time taken by string : "+sw1.ElapsedMilliseconds);
+        Console.WriteLine("Time taken by StringBuilder : " + sw2.ElapsedMilliseconds);
+    }
+}
+
+POINTS TO REMEMBER
+• When you have to do few modifications or append, string is preferred.
+• But when you have to do more than 3 to 4 modifications or append then StringBuilder is preferred instead of string.
+--------------------------
+#108. STRING BUILDER IN C#
+• StringBuilder is a dynamic object that allows you to expand the number of characters in the string.
+• It doesn't create a new object in the memory but dynamically expands memory to accommodate the modified string.
+
+STRING BUILDER INITIALIZATION
+• StringBuilder can be initialized the same way as class.
+• Example:
+• StringBuilder sb = new StringBuilder();
+• StringBuilder sb = new StringBuilder("Hello World!");
+• You can give an initial capacity of characters by passing an int value in the constructor. By default its 16 characters.
+• Example:
+• StringBuilder sb = new StringBuilder(50);
+• StringBuilder sb = new StringBuilder("Hello World!!" 50);
+
+APPEND() / APPENDLINE() STRING BUILDER
+• Use Append method of StringBuilder to add or append a string to StringBuilder.
+• AppendLine() method appends the string with a newline at the end.
+
+APPENDFORMAT() STRING BUILDER
+• Use AppendFormat method to format input string into specified format and then append it.
+• Example:
+• StringBuilder amountMsg = new StringBuilder("Your total amount is ");
+• amountMsg.AppendFormat("{O:C} 25); // $25
+
+INSERT() STRING BUILDER
+• The Insert() method inserts the string at specified index in StringBuilder.
+• Example:
+• StringBuilder sb = new StringBuilder("Hello World!",50);
+• sb.Insert(5," C#");
+• Console-WriteLine(sb);
+
+REMOVE() STRING BUILDER
+• The Remove() method removes the ing at specified index with specified length.
+• Example:
+• StringBuilder sb = new StringBuilder("Hello World!!" 50);
+• sb.Remove(6, 7);
+• Console.WriteLine(sb);
+
+REPLACE() STRING BUILDER
+• The Replace() method replaces all occurrence of a specified string with a specified replacement string.
+Example:
+• StringBuilder sb = new StringBuilder("Hello World!!" 50);
+• sb.Replace("World", "C#");
+• Console.WriteLine(sb);
+
+TOSTRING() STRING BUILDER
+• Use ToString() method to get string from StringBuilder.
+• Example:
+• StringBuilder sb = new StringBuilder("Hello World!!")•
+• string str = sb.ToString(); // "Hello World!!"
+
+POINTS TO REMEMBER
+• StringBuilder is mutable.
+• StringBuilder performs faster than string when appending
+multiple string values.
+• Use StringBuilder when you need to append more than three
+or four strings.
+• Use Append() method to add or append strings with StringBuilder.
+• Use ToString() method to get the string from StringBuilder.
+• It is available in System.Text namespace.
+
+---------------------------------------------
+#109. Multithreading in C#
+MULTI-TASKING
+• Every application is executed in a process by operating system.
+• Process use Thread to execute application code.
+
+Image
+
+• Every application has a single thread by default to execute a program and that single thread is known as MAIN THREAD.
+• Every application follows single threaded model.
+
+MULTI-THREADING
+• Threads are executed by the operating system using time-sharing
+• Threads are executed simultaneously.
+
+Program : Create three functions with a loop to print iteration of 50. Delay the 2nd thread for 8 seconds. Create three threads to execute the three functions. Show that multithreading execution runs parallaly and manage the other executions if there is some delay in another execution.
+using System.Diagnostics;
+using System.Text;
+
+class Program
+{
+    public static void func1()
+    {
+        for(int i = 0; i <= 50; i++)
+        {
+            Console.WriteLine("func1 = "+i);            
+        }
+    }
+    public static void func2()
+    {
+        for (int i = 0; i <= 50; i++)
+        {
+            Console.WriteLine("func2 = " + i);
+            if(i == 25)
+            {
+                Console.WriteLine("Thread is going to sleep for 8 sec");
+                Thread.Sleep(8000);
+            }
+        }
+    }
+    public static void func3()
+    {
+        for (int i = 0; i <= 50; i++)
+        {
+            Console.WriteLine("func3 = " + i);
+        }
+    }
+    public static void Main()
+    {
+        //Program.func1();
+        //Program.func2();
+        //Program.func3();
+        Thread t1=new Thread(func1);
+        Thread t2=new Thread(func2);
+        Thread t3=new Thread(func3);
+
+        t1.Start(); t2.Start(); t3.Start();
+    }
+}
+ 
+WHAT IS THREAD ?
+• Threads are lightweight processes.
+• A thread is defined as the execution path of a program.
+• Each thread defines a unique flow of control.
+• If your application involves complicated and time consuming operations, then it is often helpful to set different exe ion paths or threads, with each thread performing a particular job.
+
+THE MAIN THREAD
+• In C#, the System.Threading.Thread class is used for working with threads.
+• It allows creating and accessing individual threads in a multithreaded
+application.
+• The first thread to be executed in a process is called the main thread.
+• When a C# program starts execution, the main thread is automatically created.
+• The threads created using the Thread class are called the child threads of the main thread.
+• You can access a thread using the CurrentThread property of the Thread class.
+
+THREADING
+• The following are the most commonly used static members of the System.Threading.Thread class:
+• CurrentThread(): gives a reference to the currently executing thread
+• Thread.Sleep(): cause the currently executing thread to pause temporarily for the specified amount of time
+
+MULTI-THREADING
+• Multithreading is a feature provided by the operating
+system that enables your application to have more than
+one execution path at the same time.
+• Technically, multithreaded programming requires a multitasking operating system.
+• Multithreading in C# is a process in which multiple threads work simultaneously.
+• It is a process to achieve multitasking.
+• It saves time because multiple tasks are being executed at a time
+• To create multithreaded application in C#, we need to use System System.Threading namespace.
+• Let's understand this concept with a very basic example. Everyone has used Microsoft Word.
+• It takes input from the user and displays it on the screen in one thread while it continues to check spelling and grammatical mistakes in another thread and at the same time another thred saves the document automatically at regular intervals.
+
+-------------------------------------
+#111. EXTENSION METHODS IN C#
+• Extension methods allow you to inject additional methods without  modifying, deriving or recompiling the original class, struct or interface.
+• Inheritance is a process in which we can inherit the functionalities of a class.
+• We cannot apply inheritance on sealed classes.
+• There is no inheritance is available for structures.
+• Extension methods are defined as static methods but once they bind with any class or struture then they convert into non-static or instance methods.
+• If an extension method is defined with the same name and same signature of an existing method in the class, then extension method will not be called.
+• (this propram p) -5 It is a binding parameter only.
+• When you call any extension method no need to provide value to this
+binding parameter.
+• If you want to provide parameters to extension method then you can
+place your parameters after the binding parameter. 
+public static void Func3(this SampleOne s, int i)
+• But remember one thing that binding parameter always be the first
+parameter in the parameter list.
+• Binding parameter is ignored always but not other parameters.
+• Only one binding parameter is allowed.
+• Extension methods, as the name suggests, are additional methods.
+• Extension methods are static methods.
+• Extension method is a new feature that has been added in C# 3.0
+• Extension methods can be added to your own custom
+class, .NET framework classes, or third party classes or
+interfaces.
+
+Program: Create a class with two function Func1() and Func2() . Create another class with Extension method Func3. Finally call all the three function in Program class.
+class SampleOne
+{
+    public void Func1()
+    {
+        Console.WriteLine("This is First Function.");
+    }
+    public void Func2()
+    {
+        Console.WriteLine("This is Second Function.");
+    }
+}
+static class SampleTwo
+{
+    public static void Func3(this SampleOne s)
+    {
+        Console.WriteLine("This is Third Function.");
+    }
+}
+class Program
+{
+    public static void Main()
+    {
+        SampleOne s = new SampleOne();
+        s.Func1();
+        s.Func2();
+        s.Func3();
+    }
+}
+
+Program : Create a Extention metod for struct int to compare a integer value is greater than the supplied value or not.
+static class Sample
+{
+    public static bool IsGreaterThan(this int i, int value)
+    {
+        return i > value;
+    }
+}
+class Program
+{
+    public static void Main()
+    {
+        int s = 20;
+        Console.WriteLine(s.IsGreaterThan(12));
+    }
+}
+---------------------------------------------------
+#112. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

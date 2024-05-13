@@ -265,6 +265,54 @@
                           <li class="nav-item w-100" role="presentation">
                             <a class="nav-link" id="abstractInterfaceDiffer-tab" data-bs-toggle="tab" data-bs-target="#abstractInterfaceDiffer" type="button" role="tab" aria-controls="abstractInterfaceDiffer" aria-selected="false">Inerfaces vs AbstractClass</a>
                           </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="multipleInhertance-tab" data-bs-toggle="tab" data-bs-target="#multipleInhertance" type="button" role="tab" aria-controls="multipleInhertance" aria-selected="false">Multiple Inhertance</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="generics-tab" data-bs-toggle="tab" data-bs-target="#generics" type="button" role="tab" aria-controls="generics" aria-selected="false">Generics</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="genericClass-tab" data-bs-toggle="tab" data-bs-target="#genericClass" type="button" role="tab" aria-controls="genericClass" aria-selected="false">Generic Class</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="collection-tab" data-bs-toggle="tab" data-bs-target="#collection" type="button" role="tab" aria-controls="collection" aria-selected="false">Collection</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="hashtable-tab" data-bs-toggle="tab" data-bs-target="#hashtable" type="button" role="tab" aria-controls="hashtable" aria-selected="false">Hashtable</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="stack-tab" data-bs-toggle="tab" data-bs-target="#stack" type="button" role="tab" aria-controls="stack" aria-selected="false">Stack</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="queue-tab" data-bs-toggle="tab" data-bs-target="#queue" type="button" role="tab" aria-controls="queue" aria-selected="false">Queue</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="genericNonGeneric-tab" data-bs-toggle="tab" data-bs-target="#genericNonGeneric" type="button" role="tab" aria-controls="genericNonGeneric" aria-selected="false">Generic vs NonGeneric</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="list-tab" data-bs-toggle="tab" data-bs-target="#list" type="button" role="tab" aria-controls="list" aria-selected="false">List</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="dictionary-tab" data-bs-toggle="tab" data-bs-target="#dictionary" type="button" role="tab" aria-controls="dictionary" aria-selected="false">Dictionary</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="exception-tab" data-bs-toggle="tab" data-bs-target="#exception" type="button" role="tab" aria-controls="exception" aria-selected="false">Exception</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="partial-tab" data-bs-toggle="tab" data-bs-target="#partial" type="button" role="tab" aria-controls="partial" aria-selected="false">Partial Class</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="params-tab" data-bs-toggle="tab" data-bs-target="#params" type="button" role="tab" aria-controls="params" aria-selected="false">Params</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="stringBuilder-tab" data-bs-toggle="tab" data-bs-target="#stringBuilder" type="button" role="tab" aria-controls="stringBuilder" aria-selected="false">StringBuilder</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="thread-tab" data-bs-toggle="tab" data-bs-target="#thread" type="button" role="tab" aria-controls="thread" aria-selected="false">Multi Threading</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="extension-tab" data-bs-toggle="tab" data-bs-target="#extension" type="button" role="tab" aria-controls="extension" aria-selected="false">Extension Method</a>
+                          </li>
                           <!-- <li class="nav-item w-100" role="presentation">
                             <a class="nav-link" id="setup-tab" data-bs-toggle="tab" data-bs-target="#setup" type="button" role="tab" aria-controls="setup" aria-selected="false">Setup and Installation</a>
                           </li> -->
@@ -5287,9 +5335,1793 @@
                         </table>
                         <div>
                             <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('abstractInterfaceSimilar-tab')" >Previous </button>
-                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('babel-tab')" >Next </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('multipleInhertance-tab')" >Next </button>
                         </div>
                     </div>
+                    <div class="tab-pane" id="multipleInhertance" role="tabpanel" aria-labelledby="multipleInhertance-tab">
+                        <h1 class="fw-light py-2 text-danger">Multiple Inheritance in C#</h1>
+                        <h5>Multiple Inheritance</h5>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp82.png" alt="">
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp82_1.png" alt="">
+                        <h5>MULTIPLE INHERITANCE USING INTERFACE</h5>
+                        <ul>
+                            <li>A class can extends or inherits only one class but a class can implements or inherits one or more than one interface.</li>
+                            <li>In other words, a sub class can only have one parent class but a subclass can implements or inherits one or more than one interfaces.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a program with Person and Teacher class, also with interface like Employee and Student to show that multiple interface inheritance is possible where as multiple class inheritance not.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                class Person  <br>
+                                {  <br>
+                                    public void Show()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Person Class Show() method invoked.");  <br>
+                                    }  <br>
+                                }  <br>
+                                interface Employee  <br>
+                                {  <br>
+                                    void Show();  <br>
+                                }  <br>
+                                interface Student  <br>
+                                {  <br>
+                                    void Show();  <br>
+                                }  <br>
+                                class Teacher : Person, Employee, Student  <br>
+                                {  <br>
+                                    void Employee.Show()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Employee Interface Show() method invoked.");  <br>
+                                    }  <br>
+                                    void Student.Show()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Student Interface Show() method invoked.");  <br>
+                                    }  <br>
+                                }  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Teacher t = new Teacher();  <br>
+                                        t.Show();  <br>
+                                        Employee e = new Teacher();  <br>
+                                        e.Show();  <br>
+                                        Student s = new Teacher();  <br>
+                                        s.Show();  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('abstractInterfaceDiffer-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('generics-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="generics" role="tabpanel" aria-labelledby="generics-tab">
+                        <h1 class="fw-light py-2 text-danger">GENERICS IN C# PROGRAMMING</h1>
+                        <h5>Generics</h5>
+                        <ul>
+                            <li>Generics introduced in 2.0.</li>
+                            <li>Generics allow youto write a class or method that can work with any data type.</li>
+                            <li>Generics allow you to define a class with placeholders for the type of its fields, methods, parameters, etc. Generics replace these placeholders with some specific type at compile time. It helps you to maximize code reuse, type safety, and performance.</li>
+                            <li>You can create your own generic interfaces, classes, methods, events, and delegates.</li>
+                            <li>You may get information on the types used in a generic data type at run-time.</li>
+                            <li>A generic class or method can be defined using angle brackets <> </li>
+                        </ul>
+                        <h5>Generics can be applied to the following.</h5>
+                        <ul>
+                            <li>Interface</li>
+                            <li>Abstract class</li>
+                            <li>Class</li>
+                            <li>Method</li>
+                            <li>Static method</li>
+                            <li>Property</li>
+                            <li>Event</li>
+                            <li>Delegates</li>
+                            <li>Operator</li>
+                        </ul>
+                        <h5>Advantages of Generic:</h5>
+                        <ul>
+                            <li>Increase the reusability Of the code.</li>
+                            <li>Generic are type safe, You get compile time errors if you try to use a different type of data than the one specified in the defination.</li>
+                            <li>Generic has a performance advantage because it removes the possibilities Of boxing and unboxing. We can use object in place of T which is not good due to unnecessary boxing and unboxing.</li>
+                        </ul>
+                        <h5>GENERIC METHODS</h5>
+                        <ul>
+                            <li>Generic methods process values whose data types are known only When accessing the variables that Store these values.</li>
+                            <li>A generic method is declared with the generic type parameter list enclosed within angular brackets.</li>
+                            <li>Defining methods with type pararneters allow you to cali the method with a different type every time.</li>
+                            <li>You can declare a method Within generic nonageneric declarations.</li>
+                        </ul>
+                        <h5>Generic methods can be declared with the following keywords:</h5>
+                        <ul>
+                            <li>Virtual</li>
+                            <li>Override</li>
+                            <li>Abstract</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a program which takes a number aaray and print all the values one by one.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                class Example  <br>
+                                {  <br>
+                                    public static void ShowArr(int[] arr)  <br>
+                                    {  <br>
+                                        for(int i = 0; i < arr.Length; i++)  <br>
+                                        {  <br>
+                                            Console.WriteLine("Number {0} is {1}.", i + 1, arr[i]); <br>
+                                        }  <br>
+                                    }  <br>
+                                }  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        int[] Numbers = new int[3];  <br>
+                                        Numbers[0] = 11;  <br>
+                                        Numbers[1] = 22;  <br>
+                                        Numbers[2] = 33;  <br>
+                                        Example.ShowArr(Numbers);  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create the same program with generics such that any array either integer, float or string type it will print the values one by one.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                class Example  <br>
+                                {  <br>
+                                    public static void ShowArr<T>(T[] arr)  <br>
+                                    {  <br>
+                                        for(int i = 0; i < arr.Length; i++)  <br>
+                                        {  <br>
+                                            Console.WriteLine("Value {0} is {1}.", i + 1, arr[i]);  <br>
+                                        }  <br>
+                                        Console.WriteLine("");  <br>
+                                    }  <br>
+                                }  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        int[] Numbers = new int[3];  <br>
+                                        Numbers[0] = 11;  <br>
+                                        Numbers[1] = 22;  <br>
+                                        Numbers[2] = 33;    <br>     
+
+                                        string[] Names = { "Atul","Abram","Turab","Humza" };  <br>
+                                        double[] Points = { 1.1, 2.2, 3.3, 4.4, 5.5 };  <br>
+
+                                        Example.ShowArr(Numbers);  <br>
+                                        Example.ShowArr(Names);  <br>
+                                        Example.ShowArr(Points);  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create a generic method to compare two values of any datatype and print Equal if they are same and Not Equal if they are different.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                class Example  <br>
+                                {  <br>
+                                    public static void Check<T>(T a,T b)  <br>
+                                    {  <br>
+                                        bool result= a.Equals(b)?true:false;  <br>
+                                        if (result)  <br>
+                                        {  <br>
+                                            Console.WriteLine("{0} is Equal to {1}",a,b);  <br>
+                                        }  <br>
+                                        else  <br>
+                                        {  <br>
+                                            Console.WriteLine("{0} is Not Equal to {1}",a,b);  <br>
+                                        }  <br>
+                                    }  <br>
+                                }  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Example.Check(1, 1);  <br>
+                                        Example.Check("Kumar", "Saurav");  <br>
+                                    }  <br>
+                                }  <br>
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('multipleInhertance-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('genericClass-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="genericClass" role="tabpanel" aria-labelledby="genericClass-tab">
+                        <h1 class="fw-light py-2 text-danger">Generic Class in C#</h1>
+                        <h5>Generic Classes</h5>
+                        <ul>
+                            <li>Generic classes define functionalities that can be used for any data type and are declared with a class declaration followed by a type parameter enclosed within angular brackets.</li>
+                            <li>Generics introduced in 2.0, Generics allow you to define a class with placeholders for the type of its fields, methods, parameters etc. Generics replace these placeholders with some specific type at compile time.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a generic class which accepts any type of value and insert it into a box. Store multiple values in the box and show it in console.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                class Example<T>  <br>
+                                    {  <br>
+                                        T box;  <br>
+                                        public Example(T b)  <br>
+                                        {  <br>
+                                            box= b;  <br>
+                                        }  <br>
+                                        public void GetBoxValue()  <br>
+                                        {  <br>
+                                            Console.WriteLine("Value inside box is {0} ",box);  <br>
+                                        }  <br>
+                                    }  <br>
+                                    class Program  <br>
+                                    {  <br>
+                                        public static void Main()  <br>
+                                        {  <br>
+                                            Example<int> example = new Example<int>(2);  <br>
+                                            example.GetBoxValue();  <br>
+                                            Example<string> example1 = new Example<string>("Kumar Saurav");  <br>
+                                            example1.GetBoxValue();    <br>
+                                        }  <br>
+                                    }
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create the same program using properties.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                class Example<T>  <br>
+                                    {  <br>
+                                        public T Box { get; set; }  <br>
+                                    }  <br>
+                                    class Program  <br>
+                                    {  <br>
+                                        public static void Main()  <br>
+                                        {  <br>
+                                            Example<int> example = new Example<int>();  <br>
+                                            example.Box = 20;  <br>
+                                            Console.WriteLine(example.Box);  <br>
+                                            Example<string> example1 = new Example<string>();  <br>
+                                            example1.Box = "Kumar Saurav";  <br>
+                                            Console.WriteLine(example1.Box);  <br>
+                                        }  <br>
+                                    }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('generics-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('collection-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="collection" role="tabpanel" aria-labelledby="collection-tab">
+                        <h1 class="fw-light py-2 text-danger">COLLECTIONS IN C# PROGRAMMING</h1>
+                        <h5>Collection</h5>
+                        <ul>
+                            <li>A Collection is a set of related data that may not necessarily belong to the same data type that can be set or modified dynamically at run-time.</li>
+                            <li>In other words, collection is a dynamic array.</li>
+                            <li>Its length can increase on runtime.</li>
+                            <li>Normal Arrays length is fixed, it means we cannot change the length after declaring an array.</li>
+                            <li>Array.Resize();</li>
+                            <li>Resize method of an array destroys oid array and create a new array with new length.</li>
+                            <li>We can never insert a vaive into a middle of an array. because if we want to do this then array length should be increased but we cannot increase the length of an array after declaring the length of an array.</li>
+                            <li>We can never delete a value from a middle of an array.</li>
+                            <li>Accessing collections is similar to accessing arrays, where elements are accessed by their index numbers. However, there are differences between arrays and collections in C#.</li>
+                        </ul>
+                        <h5>ARRAY</h5>
+                        <ul>
+                            <li>Cannot be resized at run-time.</li>
+                            <li>The individual elements are of the same data type.</li>
+                            <li>Do not contain any methods for operations on elements.</li>
+                            <li>We can never insert a value into a middle of an array.</li>
+                            <li>We can never delete a value from a middle of an array.</li>
+                        </ul>
+                        <h5>COLLECTION</h5>
+                        <ul>
+                            <li>Can be resized at run-time.</li>
+                            <li>The individual elements can be of different data types.</li>
+                            <li>Contain methods for operations on elements.</li>
+                            <li>We can insert a value into a middle of a collection.</li>
+                            <li>We can delete a value from a middle of a collection.</li>
+                            <li>Collections were introduced in C#1.0</li>
+                            <li>We have two kinds of Collections.
+                                <ul>
+                                    <li>Non-Generic collections
+                                        <ul>
+                                            <li>Stack, ArrayList, Hashtable, SortedList etc.</li>
+                                            <li>System.Collections namespace have non-generic collections.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Generic collections.
+                                        <ul>
+                                            <li>List<T>, LinkedList<T>, Queue<T>,SortedList<T,V>.</li>
+                                            <li>System.Collections.Generic namespace have generic collections.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h5>COLLECTIONS HAVE</h5>
+                        <ul>
+                            <li>COLLECTIONS HAVE A MECHANISM CALLED AUTO-RESIZING.</li>
+                            <li>CAPACITY PROPERTY WHICH TELLS NUMBER or ITEMS THAT CAN BE STOREO UNDER ANY COLLECTION.</li>
+                            <li>INSERT METHOD</li>
+                            <li>REMOVE AND REMOVEAT METHOD.</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp85.png" alt="">
+                        <h5><span class="text-success">Program :</span> Create a array of length 3. Use the Array.Resize method to resize the array and store one more number to it.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        int[] arr = new int[3];  <br>
+                                        arr[0]= 11;  <br>
+                                        arr[1]= 12;  <br>
+                                        arr[2]= 13;  <br>
+                                        Array.Resize(ref arr,4);  <br>
+                                        arr[3]= 14;  <br>
+                                        for(int i = 0; i < arr.Length; i++)  <br>
+                                        {  <br>
+                                            Console.WriteLine(arr[i]);  <br>
+                                        }  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create a program with arraylist to store some values and check the length of the arraylist to show thst arraylist can automatically grow in size. Also perform inseertion and deletion of elements from specific place.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System.Collections;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        ArrayList list=new ArrayList();  <br>
+                                        Console.WriteLine(list.Capacity);  <br>
+                                        list.Add(10);  <br>
+                                        Console.WriteLine(list.Capacity);  <br>
+                                        list.Add(20);  <br>
+                                        list.Add(30);  <br>
+                                        list.Add(40);  <br>
+                                        Console.WriteLine(list.Capacity);  <br>
+                                        list.Add(50);  <br>
+                                        Console.WriteLine(list.Capacity);  <br>
+                                        list.Insert(2, "Kumar");  <br>
+                                        list.Remove(40);  <br>
+                                        foreach(object obj in list)  <br>
+                                        {  <br>
+                                            Console.Write(obj+" ");  <br>
+                                        }  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('genericClass-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('hashtable-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="hashtable" role="tabpanel" aria-labelledby="hashtable-tab">
+                        <h1 class="fw-light py-2 text-danger">HASH TABLE COLLECTION IN C#</h1>                        
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp86.png" alt="">
+                        <h5>Array vs Collection</h5>
+                        <ul>
+                            <li><b>Array: </b>It is a collection of homogeneous(SAME DATA TYPE) elements</li>
+                            <li><b>Collection: </b>It is a collection of heterogeneous(DIFFERENT DATA TYPE)elements.</li>
+                        </ul>
+                        <h5>HASH TABLE COLLECTION IN C#</h5>
+                        <ul>
+                            <li>HashTable stores data in key/value format.</li>
+                            <li>Array and ArrayList also stores data in key/value format.</li>
+                            <li>In Array or ArrayList keys are pre-defined i-e index numbers, it means you cannot explicitly define keys in Array or ArrayList.</li>
+                            <li>In HashTable, keys are not pre-defined it means you can explicitly define user-defined keys in HashTable.</li>
+                            <li>C# includes Hashtable collection in System.Collections namespace.</li>
+                            <li>The Hashtable collection stores key-value pairs.</li>
+                            <li>The Hashtable class reprernts a collection of key-and-value pairs that are organized based on the hash code of the key.</li>
+                            <li>It uses the key to access the elements in the collection.</li>
+                            <li>A hash table is used when you need to access elements by using key, and you can identify a useful key value.</li>
+                            <li>Each item in the hash table has a key/value pair. The key is used to access the items in the collection.</li>
+                            <li>HASH TABLE DOES NOT ALLOW DUPLICATE KEYS, KEYS SHOULD ALWAYS BE UNIQUE BUT VALUES CAN BE DUPLICATE.</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp86_1.png" alt="">
+                        <h5>METHODS OF HASH TABLE</h5>
+                        <ul>
+                            <li><b>Add:</b> Adds an item with a key and value into the hashtable.</li>
+                            <li><b>Remove:</b> Removes the item with the specified key from the hashtable.</li>
+                            <li><b>Clear:</b> Removes all the items from the hashtable.</li>
+                            <li><b>Contains:</b> Checks whether the hashtable contains a specific key.</li>
+                            <li><b>ContainsKey:</b> Checks whether the hashtable contains a specific key.</li>
+                            <li><b>ContainsVaIue:</b> Checks whether the hashtable contains a specific value.</li>
+                            <li><b>GetHashCode:</b> Returns the hash code for the specified key.</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp86_2.png" alt="">
+                        <h5>PROPERTIES OF HASH TABLE</h5>
+                        <ul>
+                            <li><b>Count:</b> Gets the total count of key/value pairs in the Hashtable.</li>
+                            <li><b>Keys:</b> Gets an ICollection of keys in the Hashtable.</li>
+                            <li><b>Values:</b> Gets an ICollection of values in the Hashtable.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a hashtable to store Employee Details in proper key value form.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System.Collections;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Hashtable ht = new Hashtable();  <br>
+                                        ht.Add("Id", 101);  <br>
+                                        ht.Add("Name", "Kumar Saurav");  <br>
+                                        ht.Add("Designation", "Software Developer");  <br>
+                                        ht.Add("IsMarried", false);  <br>
+                                        Console.WriteLine("Employee Name is {0}", ht["Name"]);  <br>
+                                
+                                        Hashtable ht1 = new Hashtable()  <br>
+                                        {  <br>
+                                            {"Id",102 },  <br>
+                                            {"Name","Ali Zafar" },  <br>
+                                            {"Designation","Singer" },  <br>
+                                            {"IsMarried",true }  <br>
+                                        };  <br>
+                                        Console.WriteLine("Employee Designation is : {0}", ht1["Designation"]);  <br>
+                                    }  <br>
+                                } 
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create a program to print all Employee data with key and values from hashtable. Remove one element from the hashtable and print it again.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System.Collections;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Hashtable ht = new Hashtable();  <br>
+                                        ht.Add("Id", 101);  <br>
+                                        ht.Add("Name", "Kumar Saurav");  <br>
+                                        ht.Add("Designation", "Software Developer");  <br>
+                                        ht.Add("IsMarried", false);  <br>
+                                        foreach(var key in ht.Keys)  <br>
+                                        {  <br>
+                                            Console.WriteLine("Employee {0} is : {1}", key, ht[key]);  <br>
+                                        }  <br>
+                                        Console.WriteLine("----------After Removal---------------");  <br>
+                                        ht.Remove("Designation");  <br>
+                                        foreach (var key in ht.Keys)  <br>
+                                        {  <br>
+                                            Console.WriteLine("Employee {0} is : {1}", key, ht[key]);  <br>
+                                        }  <br>
+                                        Console.WriteLine("----------Contains Key---------------");  <br>
+                                        Console.WriteLine("Employee Age Exist...{0}", ht.Contains("Age"));  <br>
+                                        Console.WriteLine("Employee Id Exist....{0}", ht.ContainsKey("Id"));  <br>
+                                        Console.WriteLine("Kumar Saurav".GetHashCode());  <br>
+                                    }  <br>
+                                }
+
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('collection-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('stack-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="stack" role="tabpanel" aria-labelledby="stack-tab">
+                        <h1 class="fw-light py-2 text-danger">STACK - NON-GENERIC COLLECTION IN C#</h1>
+                        <h5>All non-generic collection classes have these features.</h5>
+                        <ul>
+                            <li>1. They can store homogeneous elements as well as heterogeneous elements.</li>
+                            <li>2. They are not type safe.</li>
+                            <li>3. It can automatically resize dynamically (Auto Resizing).</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp88.png" alt="">
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp88_1.png" alt="">
+                        <h5>STACK</h5>
+                        <ul>
+                            <li>C# includes a special type of collection which stores elements in LIFO style (Last In First Out).</li>
+                            <li>C# includes a generic and non-generic Stack. Here, you are going to learn about the non-generic stack.</li>
+                            <li>Stack allows null value and also duplicate values. It provides a Push() method to add a value and Pop() or Peek() methods to retrieve values.</li>
+                            <li>Stack allows null value and also duplicate values.</li>
+                            <li>A stack is used to create a dynamic collection which grows, according to the need of your program.</li>
+                            <li>The capacity of a Stack is the number of elements the Stack can hold. As elements are added to a Stack, the capacity is automatically increased as required through reallocation.</li>
+                            <li>In a stack, you can store elements of the same type or different types.</li>
+                            <li>The Stack class implements the IEnumerable, ICoIIection, and ICloneable interfaces.</li>
+                            <li>When you add an item in the list, it is called pushing the element.</li>
+                            <li>When you remove it, it is called popping the element.</li>
+                        </ul>
+                        <h5>IMPORTANT PROPERTIES AND METHODS OF STACK</h5>
+                        <ul>
+                            <li><b>Count</b> : Returns the total count of elements in the Stack.</li>
+                            <li><b>Push</b> : Inserts an item at the top of the stack.</li>
+                            <li><b>Peek</b> : Returns the top item from the stack.</li>
+                            <li><b>Pop</b> : Removes and returns items from the top of the stack.</li>
+                            <li><b>Contains</b> : Checks whether an item exists in the stack or not.</li>
+                            <li><b>Clear</b> : Removes all items from the stack.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a stack to store Person Details like Name, Age, Height, Marital Status, Designation . Iterate through each item to show LIFO mechanism of stack.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                using System.Collections;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Stack stack = new Stack();  <br>
+                                        stack.Push("Kumar Saurav");  <br>
+                                        stack.Push(30);  <br>
+                                        stack.Push(5.7);  <br>
+                                        stack.Push(true);  <br>
+                                        stack.Push("Software Developer");  <br>
+                                        foreach (var item in stack)  <br>
+                                        {  <br>
+                                            Console.WriteLine(item);  <br>
+                                        }  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('hashtable-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('queue-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="queue" role="tabpanel" aria-labelledby="queue-tab">
+                        <h1 class="fw-light py-2 text-danger">QUEUE NON-GENERIC COLLECTION IN C#</h1>
+                        <h5>COLLECTIONS IN C#</h5>
+                        <ul>
+                            <li>All non-generic collection classes have these features.</li>
+                            <li>1. They can store homogeneous elements as well as heterogeneous elements.</li>
+                            <li>2. They are not type safe.</li>
+                            <li>3. It can automatically resize dynamically (Auto Resizing).</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp89.png" alt="">
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp89_1.png" alt="">
+                        <h5>QUEUE NON-GENERIC COLLECTION</h5>
+                        <ul>
+                            <li>C# includes a Queue collection class in the System.CoIIection namespace.</li>
+                            <li>Queue stores the elements in FIFO style (First In First Out), exactly opposite of the Stack collection.</li>
+                            <li>It contains the elements in the order they were added.</li>
+                            <li>Queue collection allows multiple null and duplicate values.</li>
+                            <li>Use the Enqueue() method to add values and the Dequeue() method to retrieve the values from the Queue.</li>
+                        </ul>
+                        <h5>PROPERTIES AND METHODS OF QUEUE</h5>
+                        <ul>
+                            <li><b>Count</b> : Returns the total count of elements in the Queue.</li>
+                            <li><b>Enqueue</b> : Adds an item into the queue.</li>
+                            <li><b>Dequeue</b> : Removes and returns an item from the beginning of the queue.</li>
+                            <li><b>Peek</b> : Returns first item from the queue</li>
+                            <li><b>Contains</b>  : Checks whether an item is in the queue or not</li>
+                            <li><b>Clear</b> : Removes all the items from the queue.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a queue to store Person Details like Name, Age, Height, Marital Status, Designation . Iterate through each item to show FIFO mechanism of queue.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                using System.Collections;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Queue queue = new Queue();  <br>
+                                        queue.Enqueue("Kumar Saurav");  <br>
+                                        queue.Enqueue(30);  <br>
+                                        queue.Enqueue(5.7);  <br>
+                                        queue.Enqueue(true);  <br>
+                                        queue.Enqueue("Software Developer");  <br>
+                                        foreach (var item in queue)  <br>
+                                        {  <br>
+                                            Console.WriteLine(item);  <br>
+                                        }  <br>
+                                        queue.Dequeue();  <br>
+                                        foreach (var item in queue)  <br>
+                                        {  <br>
+                                            Console.WriteLine(item);  <br>
+                                        }  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('stack-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('genericNonGeneric-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="genericNonGeneric" role="tabpanel" aria-labelledby="genericNonGeneric-tab">
+                        <h1 class="fw-light py-2 text-danger">DIFFERENCE BETWEEN GENERIC AND NON-GENERIC COLLECTION IN C#</h1>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp90.png" alt="">
+                        <h5>Scenario</h5>
+                        <ul>
+                            <li>1. I want to create a collection which will only have integer</li>
+                            <li>2. I don't know how many integer elements will be stored in the collection.</li>
+                            <li>THEN GENERIC COLLECTIONS COMES INTO ACTION</li>
+                        </ul>
+                        <h5>GENERIC COLLECTIONS:</h5>
+                        <ul>
+                            <li>Are Type Safe.</li>
+                            <li>Variable length (Auto Resizing)</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp90_1.png" alt="">
+                        <h5>DIFFERENCE BETWEEN NON-GENERIC & GENERIC COLLECTION</h5>
+                        <table class="table table-bordered table-light table-striped border border-5 m-2">
+                            <thead>
+                                <tr>
+                                    <th>NON-GENERIC COLLECTION</th>
+                                    <th>GENERIC COLLECTION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>These are the collection that can hold elements of different data types.</td>
+                                    <td>These are the collection that can hold data of same data type.</td>
+                                </tr>
+                                <tr>
+                                    <td>It holds elements as Object type. So it includes overhead of type conversions.</td>
+                                    <td>It reduced overhead of type-conversions.</td>
+                                </tr>
+                                <tr>
+                                    <td>These are also called loosely typed.</td>
+                                    <td>These are also called Strongly typed.</td>
+                                </tr>
+                                <tr>
+                                    <td>Not Type Safe.</td>
+                                    <td>Type Safe.</td>
+                                </tr>
+                                <tr>
+                                    <td>Not Secure</td>
+                                    <td>Secure</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h5><span class="text-success">Program :</span> Create a Generic List to store numbers and show that Generic Collection are type safe and have auto resizing capability.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                using System.Collections;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        List<int> list = new List<int>();  <br>
+                                        list.Add(11);  <br>
+                                        list.Add(22);  <br>
+                                        list.Add(33);  <br>
+                                        list.Add(44);  <br>
+                                        Console.WriteLine(list.Capacity);//4  <br>
+                                        list.Add(11);  <br>
+                                        list.Add(11);  <br>
+                                        Console.WriteLine(list.Capacity);//8  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('queue-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('list-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="list" role="tabpanel" aria-labelledby="list-tab">
+                        <h1 class="fw-light py-2 text-danger">LIST&lt;T&gt; GENERIC COLLECTION IN C#</h1>
+                        <h5>List</h5>
+                        <ul>
+                            <li>A List is one of the g€Feric collection classes in the "System.Collection.Generic" namespace.</li>
+                            <li>There are several generic collection classes in the System.ColIection.Generic namespace that includes the following: <br>
+                                List <br>
+                                Dictionary <br>
+                                Stack <br>
+                                Queue <br>
+                            </li>
+                            <li>An ArrayList resizes automatically as it grows (Auto-Resizing).</li>
+                            <li>The List&lt;T&gt; collection is the same as an ArrayList except that List&lt;T&gt; is a generic collection whereas ArrayList is a non-generic collection.</li>
+                            <li>A List class can be used to create a collection of any type.</li>
+                            <li>For example, we can create a list Integers, strings and even any complex types.</li>
+                            <li>List&lt;T&gt; class represents the list of objects which can be accessed by index.</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp91.png" alt="">
+                        <h5><span class="text-success">Program :</span> Create two Generic List to store numbers and Names respectively and iterate all the items of list using foreach loop.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                using System.Collections;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        List<int> numbers = new List<int>();  <br>
+                                        numbers.Add(11);  <br>
+                                        numbers.Add(22);  <br>
+                                        numbers.Add(33);  <br>
+                                        numbers.Add(44);  <br>
+                                        numbers.Add(55);  <br>
+                                        foreach(int num in numbers)  <br>
+                                        {  <br>
+                                            Console.WriteLine(num);  <br>
+                                        };  <br>
+                                        List<string> names = new List<string>();  <br>
+                                        names.Add("Ram");  <br>
+                                        names.Add("Lakshman");  <br>
+                                        names.Add("Bharat");  <br>
+                                        names.Add("Satrughan");  <br>
+                                        foreach(string name in names)  <br>
+                                        {  <br>
+                                            Console.WriteLine(name);  <br>
+                                        }  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create a Employee type with Id, Name, Age and Designation. With the help of a foreach loop iterate all the details in console.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                using System.Collections;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Employee emp1 = new Employee()  <br>
+                                        {  <br>
+                                            Id=101,  <br>
+                                            Name="Kumar Saurav",  <br>
+                                            Age=30,  <br>
+                                            Designation="Software Engineer"  <br>
+                                        };  <br>
+                                        Employee emp2 = new Employee()  <br>
+                                        {  <br>
+                                            Id = 102,  <br>
+                                            Name = "Anand Mohan",  <br>
+                                            Age = 28,  <br>
+                                            Designation = "Mechanical Engineer"  <br>
+                                        };  <br>
+                                        List<Employee> emps = new List<Employee>();  <br>
+                                        emps.Add(emp1);  <br>
+                                        emps.Add(emp2);  <br>
+                                        foreach(Employee emp in emps)  <br>
+                                        {  <br>
+                                            Console.WriteLine("Employee {0} with Id {1} and Age {2} is a {3}",emp.Name,emp.Id,emp.Age,emp.Designation); <br>
+                                        }  <br>
+                                    }  <br>
+                                }  <br>
+                                class Employee  <br>
+                                {  <br>
+                                    public int Id { get; set; }  <br>
+                                    public string Name { get; set; }  <br>
+                                    public int Age { get; set; }  <br>
+                                    public string Designation { get; set; }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5>List</h5>
+                        <ul>
+                            <li>List<T> class can accept null as a valid value for reference types and it also allows duplicate elements</li>
+                            <li>List<T> class is not sorted by default and elements are accessed by zero-based index.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a List to store numbers and print the sorted list.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                using System.Collections;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        List<int> numbers = new List<int>();  <br>
+                                        numbers.Add(67);  <br>
+                                        numbers.Add(57);  <br>
+                                        numbers.Add(87);  <br>
+                                        numbers.Add(27);  <br>
+                                        foreach(int num in numbers)  <br>
+                                        {  <br>
+                                            Console.WriteLine(num);  <br>
+                                        }  <br>
+                                        numbers.Sort();  <br>
+                                        Console.WriteLine("--------After Sorting--------"); <br>
+                                        foreach (int num in numbers)  <br>
+                                        {  <br>
+                                            Console.WriteLine(num);  <br>
+                                        }  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5>WHY TO USE A LIST</h5>
+                        <ul>
+                            <li>Unlike arrays, a List can grow in size automatically in other words a list can be re-sized dynamically but arrays cannot.</li>
+                            <li>List is a generic type.</li>
+                            <li>List is type safe.</li>
+                            <li>The List class also provides methods to search, sort and manipulate lists.</li>
+                        </ul>
+                        <h5>PROPERTIES OF LIST<T></h5>
+                        <ul>
+                            <li><b>Capacity</b> : Gets or sets the total number of elements the internal data structure can hold.</li>
+                            <li><b>Count</b> : Gets the number of elements contained in the List<T>.</li>
+                        </ul>
+                        <h5>METHODS OF LIST<T></h5>
+                        <ul>
+                            <li><b>Add()</b> : Adds an object to the end of the List<T>. </li>
+                            <li><b>AddRange()</b>: Adds the elements of the specified collection to the end of the List<T>.</li>
+                            <li><b>Insert()</b> : Inserts an element into the List<T> at the specified index</li>
+                            <li><b>InsertRange()</b> : Inserts the elements of a collection into the List<T> at the specified index.</li>
+                            <li><b>Remove()</b> : Removes the first occurrence of a specific object from the List<T>.</li>
+                            <li><b>RemoveAt()</b> : Removes the element at the specified index of the List<T>. </li>
+                            <li><b>RemoveRange()</b> : Removes a range of elements from the List<T> </li>
+                            <li><b>RemoveAIl()</b> : Removes all the elements that match the conditions defined by the specified predicate.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a list of numbers and add the same list to it using AddRange(). Finally print the new list using foreach loop.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                using System.Collections;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        List<int> numbers = new List<int>();  <br>
+                                        numbers.Add(67);  <br>
+                                        numbers.Add(57);  <br>
+                                        numbers.Add(87);  <br>
+                                        numbers.Add(27);  <br>
+                                        foreach(int num in numbers)  <br>
+                                        {  <br>
+                                            Console.WriteLine(num);  <br>
+                                        }  <br>
+                                        numbers.AddRange(numbers);  <br>
+                                        Console.WriteLine("--------After Adding--------"); <br>
+                                        foreach (int num in numbers)  <br>
+                                        {  <br>
+                                            Console.WriteLine(num);  <br>
+                                        }  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create a list of numbers and add the same list at 2nd index of the list. Finally print the new list using foreach loop.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                using System.Collections;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        List<int> numbers = new List<int>();  <br>
+                                        numbers.Add(67);  <br>
+                                        numbers.Add(57);  <br>
+                                        numbers.Add(87);  <br>
+                                        numbers.Add(27);  <br>
+                                        foreach(int num in numbers)  <br>
+                                        {  <br>
+                                            Console.WriteLine(num);  <br>
+                                        }  <br>
+                                        numbers.InsertRange(2,numbers);  <br>
+                                        Console.WriteLine("--------After Adding--------");  <br>
+                                        foreach (int num in numbers)  <br>
+                                        {  <br>
+                                            Console.WriteLine(num);  <br>
+                                        }  <br>
+                                    } <br>
+                                }
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create a list of employee and print only those employee whose age is greater than 20.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                using System.Collections;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Employee emp1 = new Employee()  <br>
+                                        {  <br>
+                                            Id = 101,  <br>
+                                            Name = "Kumar Saurav",  <br>
+                                            Age = 30,  <br>
+                                            Designation = "Software Engineer"  <br>
+                                        };  <br>
+                                        Employee emp2 = new Employee()  <br>
+                                        {  <br>
+                                            Id = 102,  <br>
+                                            Name = "Anand Mohan",  <br>
+                                            Age = 28,  <br>
+                                            Designation = "Mechanical Engineer"  <br>
+                                        };  <br>
+                                        Employee emp3 = new Employee()  <br>
+                                        {  <br>
+                                            Id = 102,  <br>
+                                            Name = "Priti Sukla",  <br>
+                                            Age = 18,  <br>
+                                            Designation = "Electrical Engineer"  <br>
+                                        };  <br>
+                                        List<Employee> emps = new List<Employee>();  <br>
+                                        emps.Add(emp1);  <br>
+                                        emps.Add(emp2);  <br>
+                                        emps.Add(emp3);  <br>
+                                        foreach (Employee emp in emps)  <br>
+                                        {  <br>
+                                            Console.WriteLine("Employee {0} with Id {1} and Age {2} is a {3}", emp.Name, emp.Id, emp.Age, emp.Designation);  <br>
+                                        }  <br>
+                                        emps.RemoveAll(emp => emp.Age > 20);  <br>
+                                        Console.WriteLine("--After Removing employee of age greater than 20. --");  <br>
+                                        foreach (Employee emp in emps)  <br>
+                                        {  <br>
+                                            Console.WriteLine("Employee {0} with Id {1} and Age {2} is a {3}", emp.Name, emp.Id, emp.Age, emp.Designation);  <br>
+                                        }  <br>
+                                    }  <br>
+                                }  <br>
+                                class Employee  <br>
+                                {  <br>
+                                    public int Id { get; set; }  <br>
+                                    public string Name { get; set; }  <br>
+                                    public int Age { get; set; }  <br>
+                                    public string Designation { get; set; }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create a program to convert a list into array and also convert the array into a list . Finally print the array and list in the console.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                using System.Collections;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Employee emp1 = new Employee()  <br>
+                                        {  <br>
+                                            Id = 101,  <br>
+                                            Name = "Kumar Saurav",  <br>
+                                            Age = 30,  <br>
+                                            Designation = "Software Engineer"  <br>
+                                        };  <br>
+                                        Employee emp2 = new Employee()  <br>
+                                        {  <br>
+                                            Id = 102,  <br>
+                                            Name = "Anand Mohan",  <br>
+                                            Age = 28,  <br>
+                                            Designation = "Mechanical Engineer"  <br>
+                                        };  <br>
+                                        Employee emp3 = new Employee()  <br>
+                                        {  <br>
+                                            Id = 102,  <br>
+                                            Name = "Priti Sukla",  <br>
+                                            Age = 18,  <br>
+                                            Designation = "Electrical Engineer"  <br>
+                                        };  <br>
+                                        List<Employee> emps = new List<Employee>();  <br>
+                                        emps.Add(emp1);  <br>
+                                        emps.Add(emp2);  <br>
+                                        emps.Add(emp3);  <br>
+                                        Employee[] empss=emps.ToArray();  <br>
+                                        foreach (Employee empl in empss)  <br>
+                                        {  <br>
+                                            Console.WriteLine("Employee {0} with Id {1} and Age {2} is a {3}", empl.Name, empl.Id, empl.Age, empl.Designation);  <br>
+                                        }  <br>
+                                        Console.WriteLine("-------------------------------");  <br>
+                                        List<Employee> employees = empss.ToList();  <br>
+                                        foreach(Employee empl in employees)  <br>
+                                        {  <br>
+                                            Console.WriteLine("Employee {0} with Id {1} and Age {2} is a {3}", empl.Name, empl.Id, empl.Age, empl.Designation);  <br>
+                                        }  <br>
+                                    }  <br>
+                                }  <br>
+                                class Employee  <br>
+                                {  <br>
+                                    public int Id { get; set; }  <br>
+                                    public string Name { get; set; }  <br>
+                                    public int Age { get; set; }  <br>
+                                    public string Designation { get; set; }  <br>
+                                }  <br>
+                                using System;  <br>
+                                using System.Collections;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Employee emp1 = new Employee()  <br>
+                                        {  <br>
+                                            Id = 101,  <br>
+                                            Name = "Kumar Saurav",  <br>
+                                            Age = 30,  <br>
+                                            Designation = "Software Engineer"  <br>
+                                        };  <br>
+                                        Employee emp2 = new Employee()  <br>
+                                        {  <br>
+                                            Id = 102,  <br>
+                                            Name = "Anand Mohan",  <br>
+                                            Age = 28,  <br>
+                                            Designation = "Mechanical Engineer"  <br>
+                                        };  <br>
+                                        Employee emp3 = new Employee()  <br>
+                                        {  <br>
+                                            Id = 102,  <br>
+                                            Name = "Priti Sukla",  <br>
+                                            Age = 18,  <br>
+                                            Designation = "Electrical Engineer"  <br>
+                                        };  <br>
+                                        List<Employee> emps = new List<Employee>();  <br>
+                                        emps.Add(emp1);  <br>
+                                        emps.Add(emp2);  <br>
+                                        emps.Add(emp3);  <br>
+                                        Employee[] empss=emps.ToArray();  <br>
+                                        foreach (Employee empl in empss)  <br>
+                                        {  <br>
+                                            Console.WriteLine("Employee {0} with Id {1} and Age {2} is a {3}", empl.Name, empl.Id, empl.Age, empl.Designation);  <br>
+                                        }  <br>
+                                        Console.WriteLine("-------------------------------");  <br>
+                                        List<Employee> employees = empss.ToList();  <br>
+                                        foreach(Employee empl in employees)  <br>
+                                        {  <br>
+                                            Console.WriteLine("Employee {0} with Id {1} and Age {2} is a {3}", empl.Name, empl.Id, empl.Age, empl.Designation);  <br>
+                                        }  <br>
+                                    }  <br>
+                                }  <br>
+                                class Employee  <br>
+                                {  <br>
+                                    public int Id { get; set; }  <br>
+                                    public string Name { get; set; }  <br>
+                                    public int Age { get; set; }  <br>
+                                    public string Designation { get; set; }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('genericNonGeneric-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('dictionary-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="dictionary" role="tabpanel" aria-labelledby="dictionary-tab">
+                        <h1 class="fw-light py-2 text-danger">DICTIONARY</h1>
+                        <h5>GENERIC COLLECTIONS:</h5>
+                        <ul>
+                            <li>Are Type Safe.</li>
+                            <li>Variable length (Auto Resizing)</li>
+                        </ul>
+                        <h5>Scenario</h5>
+                        <ul>
+                            <li>ArrayList and Hashtable is not satisfying our requirement as mentioned below.</li>
+                            <li>Now we want to create a collection in which we don't want to access elements through index.</li>
+                            <li>We want to store data in key value format where keys are user-defined.</li>
+                            <li>We want to insert same type of data in a collection.</li>
+                        </ul>
+                        <h5>DICTIONARY&lt;Tkey, Tvalue&gt;</h5>
+                        <ul>
+                            <li>"active": "ready to engage in physically energetic pursuit",</li>
+                            <li>"amazing": "causing great surprise or wonder",</li>
+                            <li>"honest: "free of deceit, truthful and sincere",</li>
+                            <li>"patriotic": "expressing devotion to and vigorous support for one's country.",</li>
+                            <li>"quarantine": "place of isolation"</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Using Dictionary collection create a mini dictionary to store meaning of words and print it using foreach loop.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                using System.Collections.Generic;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Dictionary&lt;string,string&gt; dictionary = new Dictionary&lt;string,string&gt;();  <br>
+                                        dictionary.Add("active", "ready to engage in physically energetic pursuit");  <br>
+                                        dictionary.Add("amazing", "causing great surprise or wonder");  <br>
+                                        dictionary.Add("honest", "free of deceit, truthful and sincere");  <br>
+                                        dictionary.Add("patriotic", "expressing devotion to and vigorous support for one's country.");  <br>
+                                        dictionary.Add("quarantine", "place of isolation");  <br>
+                                        foreach(KeyValuePair&lt;string,string&gt; item in dictionary)  <br>
+                                        {  <br>
+                                            Console.WriteLine("Key is : {0} & Value is : {1}",item.Key,item.Value);  <br>
+                                        }  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5>DICTIONARY&lt;TKEY, TVALUE&gt;</h5>
+                        <ul>
+                            <li>In C#, Dictionary is a generic collection which is generally used to store key/value pairs.</li>
+                            <li>The working of Dictionary is quite similar to the non-generic hashtable.</li>
+                            <li>The advantage of Dictionary is, it is generic type.</li>
+                            <li>Dictionary is defined under System.ColIection.Generic namespace.</li>
+                            <li>It is dynamic in nature means the size of the dictionary is grows according to the need.</li>
+                            <li>The Dictionary&lt;TKey, TValue&gt; collection in C# is same as English dictionary.</li>
+                            <li>English dictionary is a collection of words and their definitions, often listed alphabetically in one or more specific languages.</li>
+                            <li>In the same way, the Dictionary in C# is a collection of Keys and Values, where key is like word and value is like definition.</li>
+                            <li>The Dictionary&lt;TKey, TValue&gt; class is a generic collection class in the System.ColIection.Generics namespace.</li>
+                            <li>T Key denotes the tybe of key and TValue is the type of TValue.</li>
+                        </ul>
+                        <h5>IMPORTANT PROPERTIES OF DICTIONARY</h5>
+                        <ul>
+                            <li><b>Count</b> : Gets the total number of elements exists in the Dictionary&lt;TKey,TValue&gt;.</li>
+                            <li><b>Keys</b> : Returns collection of keys of Dictionary&lt;TKey,TValue&gt;.</li>
+                            <li><b>Values</b> : Returns collection of values in Dictionary&lt;TKey,TValue&gt;.</li>
+                        </ul>
+                        <h5>IMPORTANT METHODS OF DICTIONARY</h5>
+                        <ul>
+                            <li><b>Add</b> : Adds an item to the Dictionary collection,Add key-value pairs in Dictionary&lt;TKey, TValue&gt; collection.</li>
+                            <li><b>Remove</b> : Removes the element with the specified key.</li>
+                            <li><b>ContainsKey</b> : Checks whether the specified key exists in Dictionary&lt;TKey, TValue&gt;.</li>
+                            <li><b>ContainsValue</b> : Checks whether the specified key exists in Dictionary&lt;TKey, TValue&gt;.</li>
+                            <li><b>Clear</b> : Removes all the elements from Dictionary&lt;TKey,TValue&gt;. </li>
+                            <li><b>TryGetValue</b> : Returns true and assigns the value with specified key, if key does not exists then return false.</li>
+                        </ul>
+                        <h5>IMPORTANT POINTS</h5>
+                        <ul>
+                            <li>In Dictionary, the key cannot be null, but value can be.</li>
+                            <li>In Dictionary, key must be unique. Duplicate keys are not allowed if you try to use duplicate key then compiler will throw an exception.</li>
+                            <li>In Dictionary, you can only store same types of elements.</li>
+                            <li>The capacity of a Dictionary is the number of elements that Dictionary can hold. </li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a Dictionary to store Employee Details and find the count of Employee with Salary more than 15000.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Employee  <br>
+                                {  <br>
+                                    public int Id { get; set; }  <br>
+                                    public string Name { get; set; }  <br>
+                                    public string Designation { get; set; }  <br>
+                                    public int Salary { get; set; }  <br>
+                                }  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Dictionary&lt;int, Employee&gt; employees = new Dictionary&lt;int, Employee&gt;();  <br>
+                                        Employee emp1 = new Employee()  <br>
+                                        {  <br>
+                                            Id = 111,  <br>
+                                            Name="Amar Deep",  <br>
+                                            Designation="Manager",  <br>
+                                            Salary=20000  <br>
+                                        };  <br>
+                                        Employee emp2 = new Employee()  <br>
+                                        {  <br>
+                                            Id = 222,  <br>
+                                            Name = "Amit Saini",  <br>
+                                            Designation = "Operator",  <br>
+                                            Salary = 18000  <br>
+                                        };  <br>
+                                        Employee emp3 = new Employee()  <br>
+                                        {  <br>
+                                            Id = 333,  <br>
+                                            Name = "Ankit Seth",  <br>
+                                            Designation = "Assistant",  <br>
+                                            Salary = 12000  <br>
+                                        };  <br>
+                                        employees.Add(emp1.Id, emp1);  <br>
+                                        employees.Add(emp2.Id, emp2);  <br>
+                                        employees.Add(emp3.Id, emp3);  <br>
+
+                                        Console.WriteLine(employees.Count(emp=>emp.Value.Salary>15000));  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('list-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('exception-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="exception" role="tabpanel" aria-labelledby="exception-tab">
+                        <h1 class="fw-light py-2 text-danger">EXCEPTION AND EXCEPTION HANDLING IN C#</h1>
+                        <h5>WHAT IS EXCEPTION?</h5>
+                        <ul>
+                            <li>An exception is an event, which occurs during the execution of a program that disrupts the normal flow of the program's instructions.</li>
+                            <li>In general, when a C# code encounters a situation that it cannot cope with, it raises an exception.</li>
+                            <li>An exception is a C# object that represents an error.</li>
+                            <li>When a C# code raises an exception, it must either handle the exception immediately otherwise it terminates and quits.</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp96.png" alt="">
+                        <h5>When an exception occur 3 things happen.</h5>
+                        <ul>
+                            <li>Program terminates or program crashes.</li>
+                            <li>Ugly kind of error message is displayed that user can never ever understand.</li>
+                            <li>Statements after excenion will not be executed.</li>
+                        </ul>
+                        <h5>EXCEPTION</h5>
+                        <ul>
+                            <li>Exceptions are abnormal events that prevent a certain task from being completed successfully.</li>
+                            <li>An Exception is a problem that arises during the execution of a program.</li>
+                            <li>A C# exception is a response to an exceptional circumstance that arises while a program is running, such as an attempt to divide by zero.</li>
+                        </ul>
+                        <h5>EXCEPTION HANDLING</h5>
+                        <ul>
+                            <li>The exception handling in is one of the powerful mechanism to handle the runtime errors so that normal flow of the application can be maintained.</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp96_1.png" alt="">
+                        <h5 class="text-danger">DivideByZeroException</h5>
+                        <h5><span class="text-success">Program :</span>Create a program to accept two numbers from user and display the division result back. Use the try catch to display a message when user tries to divide the number by zero.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Please enter first number");  <br>
+                                        int num1=int.Parse(Console.ReadLine());  <br>
+                                        Console.WriteLine("Please enter second number");  <br>
+                                        int num2 = int.Parse(Console.ReadLine());  <br>
+                                        try  <br>
+                                        {  <br>
+                                            int result = num1 / num2;  <br>
+                                            Console.WriteLine("Division result of {0} and {1} is {2}", num1, num2, result);  <br>
+                                        }  <br>
+                                        catch(DivideByZeroException ex)  <br>
+                                        {  <br>
+                                            Console.WriteLine(ex.Message);  <br>
+                                            Console.WriteLine("Sorry you can not divide a number by Zero.");  <br>
+                                        }  <br>
+                                        Console.WriteLine("Remaining Statements");  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5 class="text-danger">IndexOutOfRangeException</h5>
+                        <h5><span class="text-success">Program :</span> Create an array to store 3 number and try to store 4 numbers in it .Create a try catch mechanism to handle the index out of range exception.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        int[] arr = new int[3];  <br>
+                                        try  <br>
+                                        {  <br>
+                                            arr[0] = 1;  <br>
+                                            arr[1] = 2;  <br>
+                                            arr[2] = 3;  <br>
+                                            arr[3] = 4;  <br>
+                                            foreach (int i in arr)  <br>
+                                            {  <br>
+                                                Console.WriteLine(i);  <br>
+                                            }  <br>
+                                        }  <br>
+                                        catch (IndexOutOfRangeException ex)  <br>
+                                        {  <br>
+                                            Console.WriteLine(ex.Message);  <br>
+                                            Console.WriteLine("You have supplied more values than your array can hold.");  <br>
+                                        }  <br>
+                                    }  <br>
+                                } 
+                            </code>
+                        </div>
+                        <h5 class="text-danger">FormatException</h5>
+                        <h5><span class="text-success">Program :</span> Accept a number from user , if it a valid integer print it back else print user has not entered a number.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Please Enter a Number.");  <br>
+                                        try  <br>
+                                        {  <br>
+                                            int num = int.Parse(Console.ReadLine());  <br>
+                                            Console.WriteLine("Your Entered number is {0}",num);  <br>
+                                        }  <br>
+                                        catch (FormatException ex)  <br>
+                                        {  <br>
+                                            Console.WriteLine("You have not entered a number");  <br>
+                                            Console.WriteLine(ex.Message);  <br>
+                                        }  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5>TRY WITH MULTIPLE CATCH BLOCKS IN C#</h5>
+                        <ul>
+                            <li>Syntax</li>
+                            <li>
+                                <code>
+                                    try  <br>
+                                    {  <br>
+                                    // CODE OF TRY BLOCK  <br>
+                                    }  <br>
+                                    catch ( DivideByZeroException ex) { // CODE OF THIS CATCH BLOCK  <br>
+                                    }  <br>
+                                    catch ( IndexOutOfRangeException ex) { // CODE OF THIS CATCH BLOCK   <br>
+                                    }  <br>
+                                    catch ( Exception e) { // CODE OF THIS CATCH BLOCK   <br>
+                                    }
+                                </code>
+                            </li>
+                            <li>AT A TIME ONLY ONE EXCEPTION IS OCCURRED AND AT A TIME ONLY ONE CATCH BLOCK IS EXECUTED.</li>
+                            <li>ALL CATCH BLOCKS MUST BE ORDERED FROM MOST SPECIFIC TO MOST GENERAL.</li>
+                        </ul>
+                        <h5>TRY CATCH WITH FINALLY BLOCK</h5>
+                        <ul>
+                            <li>C# finally block is always executed whether exception is occurs or not .</li>
+                            <li>C# finally block is always executed whether exception is handled or not.</li>
+                            <li>C# finally block is a block that is used to execute important code such as closing connection, stream etc. </li>
+                            <li>C# finally block follows try or catch block.</li>
+                            <li><span class="text-danger">Note:</span>If you don't handle exception, before terminating the program, C# executes finally block(if any).</li>
+                        </ul>
+                        <h5>WHY USE FINALLY</h5>
+                        <ul>
+                            <li>Finally block in C# can be used to put "cleanup" code such as closing a file, closing connection etc.</li>
+                            <li>Rule: For each try block there can be zero or more catch blocks, but only one finally block.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a program to ask age from user, if he is 18+ then print he is elgible else throw an exception saying he is not eligible. Also implement a catch block to catch the exception and display the result back to user.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Please Enter Your Age : ");  <br>
+                                        try  <br>
+                                        {  <br>
+                                            int age = int.Parse(Console.ReadLine());  <br>
+                                            if(age >= 18)  <br>
+                                            {  <br>
+                                                Console.WriteLine("You are eligible to vote.");  <br>
+                                            }  <br>
+                                            else  <br>
+                                            {  <br>
+                                                throw new Exception("You are not eligible to vote.");  <br>
+                                            }              <br>
+                                        }  <br>
+                                        catch (Exception ex)  <br>
+                                        {  <br>
+                                            Console.WriteLine(ex.Message);  <br>
+                                        }  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5>WHY SHOULD WE THROW AN EXCEPTION OBJECT?</h5>
+                        <ul>
+                            <li>BECAUSE WE WANT TO SET A DIFFERENT MESSAGE.</li>
+                            <li>BECAUSE CANNOT RECOGNIZE EXCEPTIONAL SITUATION OF BUSINESS LOGIC.</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('dictionary-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('partial-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="partial" role="tabpanel" aria-labelledby="partial-tab">
+                        <h1 class="fw-light py-2 text-danger">PARTIAL CLASS IN C-SHARP PROGRAMMING</h1>
+                        <h5>Partial Class</h5>
+                        <ul>
+                            <li>A partial class is a special feature of C#.</li>
+                            <li>It provides a special ability to implement the functionality of a single class into multiple files and all these files are combined into a single class file when the application is compiled.</li>
+                            <li>A partial class is created by using a partial keyword.</li>
+                            <li>The partial keyword can also be used to split a struct or an interface over two or more files.</li>
+                            <li>We use partial class when code of a class contains so many lines to manage</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create two partial class Student. In first class declare the private variables firstName and lastName. In second class create a method PrintFullName to print the full name of the student.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                public partial class Student   <br>
+                                {  <br>
+                                    private string _firstName;  <br>
+                                    private string _lastName;  <br>
+                                    public string FirstName  <br>
+                                    {  <br>
+                                        get { return _firstName; }  <br>
+                                        set { _firstName = value; }  <br>
+                                    }  <br>
+                                    public string LastName  <br>
+                                    {  <br>
+                                            set { _lastName = value; }  <br>
+                                            get { return _lastName; }     <br>
+                                    }  <br>
+                                }  <br>
+                                public partial class Student  <br> 
+                                {  <br>
+                                    public void GetFullName()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Your Full Name is : {0} {1}",_firstName,_lastName);  <br>
+                                    }  <br>
+                                }  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Student s = new Student();  <br>
+                                        s.FirstName = "Kumar";  <br>
+                                        s.LastName = "Saurav";  <br>
+                                        s.GetFullName();  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5>ADVANTAGES OF PARTIAL CLASS</h5>
+                        <ul>
+                            <li>Multiple developers can work simultaneously with a single class in separate files.</li>
+                            <li>When working on large projects, spreading a class over separate files allows programmers to work on it simultaneously.</li>
+                            <li>Visual Studio uses partial classes to separate, automatically generated system code from the developer's code. For Example when you add a webform, two .CS files are generated.</li>
+                            <li>1. WebFormI.aspx.cs — Contains the developer code.</li>
+                            <li>2. WebForm1.aspx.designer.cs— Contains the system generated code. For example, declarations for the controls that you drag and drop on the webform</li>
+                        </ul>
+                        <h5>RULES FOR PARTIAL CLASS</h5>
+                        <ul>
+                            <li>All the parts spread across different files, must use the partial keyword.</li>
+                            <li>All the partial class definitions must be in the same assembly and namespace.</li>
+                            <li>All the parts must have th same accessibility like public or private, etc.</li>
+                            <li>If any part is declared abstract, sealed or base type then the whole class is declared of the same type.</li>
+                            <li>If any part is declared sealed then the whole class is declared of the same type.</li>
+                            <li>If any of the parts inherit a class, then the entire type inherits the class</li>
+                            <li>C# does not support multiple class inheritance. Different parts of the partial class, must not specify different base classes.</li>
+                            <li>Different parts of the partial class can specify different base interfaces.</li>
+                            <li>Any member that are declared in a partial definition are available to all of the other parts of the partial class.</li>
+                        </ul>
+
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('exception-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('params-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="params" role="tabpanel" aria-labelledby="params-tab">
+                        <h1 class="fw-light py-2 text-danger">Params in C#</h1>
+                        <h5>Params</h5>
+                        <ul>
+                            <li>Params is an important keyword in C#. It is used as a parameter which can take the variable number of arguments.</li>
+                            <li>It is useful when programmer don't have any prior knowledge about the number of parameters to be used.</li>
+                            <li>Only one Params keyword is allowed and no additional Params will be allowed in function declaration after a params keyword.</li>
+                            <li>The length of params will be zero if no arguments will be passed.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a program using params to take n numbers from user and print back the sum of it.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Add(params int[] nums)  <br>
+                                    {  <br>
+                                        int sum = 0;  <br>
+                                        foreach (int num in nums)  <br>
+                                        {  <br>
+                                            sum=sum+num;  <br>            
+                                        }  <br>
+                                        Console.WriteLine("The sum is : " + sum);  <br>
+                                    }   <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Program.Add(12, 14, 78, 73, 65);  <br>
+                                        Program.Add(11, 22, 33);  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('partial-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('stringBuilder-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="stringBuilder" role="tabpanel" aria-labelledby="stringBuilder-tab">
+                        <h1 class="fw-light py-2 text-danger">STRING BUILDER IN C#</h1>
+                        <h5>DIFFERENCE BETWEEN STRING AND STRING BUILDER IN C#</h5>
+                        <ul>
+                            <li>Strings are immutable.</li>
+                            <li>String cannot be changed once created.</li>
+                            <li>Jab hume pta ho hmari string value baar baar change hogi to hum string builder use krenge because string ko use krne se multiple copies bnegi different location par aur string builder me modifications hogi ek hi  memory location par.</li>
+                            <br>
+                            <li>StringBuilder is a dynamic object that allows you to expand the number of characters in the string.</li>
+                            <li>It doesn't create a new object in the memory but dynamically expands memory to accommodate the modified string.</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp107.png" alt="">
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp107_1.png" alt="">
+                        <h5><span class="text-success">Program :</span> Create two Stopwatch to record the duration in miliseconds of string vs StingBuilder.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System.Diagnostics;  <br>
+                                using System.Text;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        string str = "Kumar";  <br>
+                                        StringBuilder sb = new StringBuilder("Saurav");  <br>
+                                        Stopwatch sw1 = Stopwatch.StartNew();  <br>
+                                        Stopwatch sw2 = Stopwatch.StartNew();  <br>
+                                        sw1.Start();          <br>
+                                        for (int i = 0; i < 10000; i++)  <br>
+                                        {  <br>
+                                            str += i;  <br>
+                                        }  <br>
+                                        sw1.Stop();  <br>
+                                        sw2.Start();  <br>
+                                        for (int i = 0; i < 10000; i++)  <br>
+                                        {  <br>
+                                            sb.Append(i);  <br>
+                                        }  <br>
+                                        sw2.Stop();  <br>
+                                        Console.WriteLine("Time taken by string : "+sw1.ElapsedMilliseconds);  <br>
+                                        Console.WriteLine("Time taken by StringBuilder : " + sw2.ElapsedMilliseconds);  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5>POINTS TO REMEMBER</h5>
+                        <ul>
+                            <li>When you have to do few modifications or append, string is preferred.</li>
+                            <li>But when you have to do more than 3 to 4 modifications or append then StringBuilder is preferred instead of string.</li>
+                        </ul>
+                        <h5>STRING BUILDER</h5>
+                        <ul>
+                            <li>StringBuilder is a dynamic object that allows you to expand the number of characters in the string.</li>
+                            <li>It doesn't create a new object in the memory but dynamically expands memory to accommodate the modified string.</li>
+                        </ul>
+                        <h5>STRING BUILDER INITIALIZATION</h5>
+                        <ul>
+                            <li>StringBuilder can be initialized the same way as class.</li>
+                            <li>Example: <br>
+                            StringBuilder sb = new StringBuilder(); <br>
+                            StringBuilder sb = new StringBuilder("Hello World!");</li>
+                            <li>You can give an initial capacity of characters by passing an int value in the constructor. By default its 16 characters.</li>
+                            <li>Example: <br>
+                            StringBuilder sb = new StringBuilder(50); <br>
+                            StringBuilder sb = new StringBuilder("Hello World!!" 50);</li>
+                        </ul>
+                        <h5>APPEND() / APPENDLINE() STRING BUILDER</h5>
+                        <ul>
+                            <li>Use Append method of StringBuilder to add or append a string to StringBuilder.</li>
+                            <li>AppendLine() method appends the string with a newline at the end.</li>
+                        </ul>
+                        <h5>APPENDFORMAT() STRING BUILDER</h5>
+                        <ul>
+                            <li>Use AppendFormat method to format input string into specified format and then append it.</li>
+                            <li>Example: <br>
+                                StringBuilder amountMsg = new StringBuilder("Your total amount is "); <br>
+                                amountMsg.AppendFormat("{O:C} 25); // $25</li>
+                        </ul>
+                        <h5>INSERT() STRING BUILDER</h5>
+                        <ul>
+                            <li>The Insert() method inserts the string at specified index in StringBuilder.</li>
+                            <li>Example: <br>
+                            StringBuilder sb = new StringBuilder("Hello World!",50); <br>
+                            sb.Insert(5," C#"); <br>
+                            Console-WriteLine(sb);</li>
+                        </ul>
+                        <h5>REMOVE() STRING BUILDER</h5>
+                        <ul>
+                            <li>The Remove() method removes the ing at specified index with specified length.</li>
+                            <li>Example: <br>
+                            StringBuilder sb = new StringBuilder("Hello World!!" 50); <br>
+                            sb.Remove(6, 7); <br>
+                            Console.WriteLine(sb);</li>
+                        </ul>
+                        <h5>REPLACE() STRING BUILDER</h5>
+                        <ul>
+                            <li>The Replace() method replaces all occurrence of a specified string with a specified replacement string.</li>
+                            <li>Example: <br>
+                            StringBuilder sb = new StringBuilder("Hello World!!" 50); <br>
+                            sb.Replace("World", "C#"); <br>
+                            Console.WriteLine(sb);</li>
+                        </ul>
+                        <h5>TOSTRING() STRING BUILDER</h5>
+                        <ul>
+                            <li>Use ToString() method to get string from StringBuilder.</li>
+                            <li>Example: <br>
+                            StringBuilder sb = new StringBuilder("Hello World!!") <br>
+                            string str = sb.ToString(); // "Hello World!!"</li>
+                        </ul>
+                        <h5>POINTS TO REMEMBER</h5>
+                        <ul>
+                            <li>StringBuilder is mutable.</li>
+                            <li>StringBuilder performs faster than string when appending multiple string values.</li>
+                            <li>Use StringBuilder when you need to append more than three or four strings.</li>
+                            <li>Use Append() method to add or append strings with StringBuilder.</li>
+                            <li>Use ToString() method to get the string from StringBuilder.</li>
+                            <li>It is available in System.Text namespace.</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('params-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('thread-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="thread" role="tabpanel" aria-labelledby="thread-tab">
+                        <h1 class="fw-light py-2 text-danger">Multithreading in C#</h1>
+                        <h5>MULTI-TASKING</h5>
+                        <ul>
+                            <li>Every application is executed in a process by operating system.</li>
+                            <li>Process use Thread to execute application code.</li>
+                            <li>Every application has a single thread by default to execute a program and that single thread is known as MAIN THREAD.</li>
+                            <li>Every application follows single threaded model.</li>
+                        </ul>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp109.png" alt="">
+                        <h5>MULTI-THREADING</h5>
+                        <ul>
+                            <li>Threads are executed by the operating system using time-sharing </li>
+                            <li>Threads are executed simultaneously.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create three functions with a loop to print iteration of 50. Delay the 2nd thread for 8 seconds. Create three threads to execute the three functions. Show that multithreading execution runs parallaly and manage the other executions if there is some delay in another execution.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                using System.Diagnostics;  <br>
+                                using System.Text;  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void func1()  <br>
+                                    {  <br>
+                                        for(int i = 0; i <= 50; i++)  <br>
+                                        {  <br>
+                                            Console.WriteLine("func1 = "+i);     <br>         
+                                        }  <br>
+                                    }  <br>
+                                    public static void func2()  <br>
+                                    {  <br>
+                                        for (int i = 0; i <= 50; i++)  <br>
+                                        {  <br>
+                                            Console.WriteLine("func2 = " + i);  <br>
+                                            if(i == 25)  <br>
+                                            {  <br>
+                                                Console.WriteLine("Thread is going to sleep for 8 sec");  <br>
+                                                Thread.Sleep(8000);  <br>
+                                            }  <br>
+                                        }  <br>
+                                    }  <br>
+                                    public static void func3()  <br>
+                                    {  <br>
+                                        for (int i = 0; i <= 50; i++)  <br>
+                                        {  <br>
+                                            Console.WriteLine("func3 = " + i);  <br>
+                                        }  <br>
+                                    }  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        //Program.func1();  <br>
+                                        //Program.func2();  <br>
+                                        //Program.func3();  <br>
+                                        Thread t1=new Thread(func1);  <br>
+                                        Thread t2=new Thread(func2);  <br>
+                                        Thread t3=new Thread(func3);  <br>
+
+                                        t1.Start(); t2.Start(); t3.Start();  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5>WHAT IS THREAD ?</h5>
+                        <ul>
+                            <li>Threads are lightweight processes.</li>
+                            <li>A thread is defined as the execution path of a program.</li>
+                            <li>Each thread defines a unique flow of control.</li>
+                            <li>If your application involves complicated and time consuming operations, then it is often helpful to set different exe ion paths or threads, with each thread performing a particular job.</li>
+                        </ul>
+                        <h5>THE MAIN THREAD</h5>
+                        <ul>
+                            <li>In C#, the System.Threading.Thread class is used for working with threads.</li>
+                            <li>It allows creating and accessing individual threads in a multithreaded application.</li>
+                            <li>The first thread to be executed in a process is called the main thread.</li>
+                            <li>When a C# program starts execution, the main thread is automatically created.</li>
+                            <li>The threads created using the Thread class are called the child threads of the main thread.</li>
+                            <li>You can access a thread using the CurrentThread property of the Thread class.</li>
+                        </ul>
+                        <h5>THREADING</h5>
+                        <ul>
+                            <li>The following are the most commonly used static members of the System.Threading.Thread class:</li>
+                            <li>CurrentThread(): gives a reference to the currently executing thread</li>
+                            <li>Thread.Sleep(): cause the currently executing thread to pause temporarily for the specified amount of time</li>
+                        </ul>
+                        <h5>MULTI-THREADING</h5>
+                        <ul>
+                            <li>Multithreading is a feature provided by the operating system that enables your application to have more than one execution path at the same time.</li>
+                            <li>Technically, multithreaded programming requires a multitasking operating system.</li>
+                            <li>Multithreading in C# is a process in which multiple threads work simultaneously.</li>
+                            <li>It is a process to achieve multitasking.</li>
+                            <li>It saves time because multiple tasks are being executed at a time</li>
+                            <li>To create multithreaded application in C#, we need to use System System.Threading namespace.</li>
+                            <li>Let's understand this concept with a very basic example. Everyone has used Microsoft Word.</li>
+                            <li>It takes input from the user and displays it on the screen in one thread while it continues to check spelling and grammatical mistakes in another thread and at the same time another thred saves the document automatically at regular intervals.</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('params-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('extension-tab')" >Next </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="extension" role="tabpanel" aria-labelledby="extension-tab">
+                        <h1 class="fw-light py-2 text-danger">EXTENSION METHODS IN C#</h1>
+                        <h5>Extension Method</h5>
+                        <ul>
+                            <li>Extension methods allow you to inject additional methods without  modifying, deriving or recompiling the original class, struct or interface.</li>
+                            <li>Inheritance is a process in which we can inherit the functionalities of a class.</li>
+                            <li>We cannot apply inheritance on sealed classes.</li>
+                            <li>There is no inheritance is available for structures.</li>
+                            <li>Extension methods are defined as static methods but once they bind with any class or struture then they convert into non-static or instance methods.</li>
+                            <li>If an extension method is defined with the same name and same signature of an existing method in the class, then extension method will not be called.</li>
+                            <li>(this program p) - It is a binding parameter only.</li>
+                            <li>When you call any extension method no need to provide value to this binding parameter.</li>
+                            <li>If you want to provide parameters to extension method then you can place your parameters after the binding parameter. </li>
+                            <li>public static void Func3(this SampleOne s, int i)</li>
+                            <li>But remember one thing that binding parameter always be the first parameter in the parameter list.</li>
+                            <li>Binding parameter is ignored always but not other parameters.</li>
+                            <li>Only one binding parameter is allowed.</li>
+                            <li>Extension methods, as the name suggests, are additional methods.</li>
+                            <li>Extension methods are static methods.</li>
+                            <li>Extension method is a new feature that has been added in C# 3.0</li>
+                            <li>Extension methods can be added to your own custom class, .NET framework classes, or third party classes or interfaces.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a class with two function Func1() and Func2() . Create another class with Extension method Func3. Finally call all the three function in Program class.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                class SampleOne  <br>
+                                {  <br>
+                                    public void Func1()  <br>
+                                    {  <br>
+                                        Console.WriteLine("This is First Function.");  <br>
+                                    }  <br>
+                                    public void Func2()  <br>
+                                    {  <br>
+                                        Console.WriteLine("This is Second Function.");  <br>
+                                    }  <br>
+                                }  <br>
+                                static class SampleTwo  <br>
+                                {  <br>
+                                    public static void Func3(this SampleOne s)  <br>
+                                    {  <br>
+                                        Console.WriteLine("This is Third Function.");  <br>
+                                    }  <br>
+                                }  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        SampleOne s = new SampleOne();  <br>
+                                        s.Func1();  <br>
+                                        s.Func2();  <br>
+                                        s.Func3();  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <h5><span class="text-success">Program :</span> Create a Extention metod for struct int to compare a integer value is greater than the supplied value or not.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                static class Sample  <br>
+                                {  <br>
+                                    public static bool IsGreaterThan(this int i, int value)  <br>
+                                    {  <br>
+                                        return i > value;  <br>
+                                    }  <br>
+                                }  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        int s = 20;  <br>
+                                        Console.WriteLine(s.IsGreaterThan(12));  <br>
+                                    }  <br>
+                                }
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('thread-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('babel-tab')" >Next </button>
+                        </div>
+                    </div> 
                     <!-- <div class="tab-pane" id="setup" role="tabpanel" aria-labelledby="babel-tab">
                         <h1 class="fw-light py-2 text-danger">React Setup and Installation</h1>
                         <h5>History Of JavaScript, ES5 & ES6</h5>
