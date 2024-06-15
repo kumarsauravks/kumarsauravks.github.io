@@ -5520,7 +5520,6 @@ Image
 Program : Create two Stopwatch to record the duration in miliseconds of string vs StingBuilder.
 using System.Diagnostics;
 using System.Text;
-
 class Program
 {
     public static void Main()
@@ -5629,7 +5628,6 @@ MULTI-THREADING
 Program : Create three functions with a loop to print iteration of 50. Delay the 2nd thread for 8 seconds. Create three threads to execute the three functions. Show that multithreading execution runs parallaly and manage the other executions if there is some delay in another execution.
 using System.Diagnostics;
 using System.Text;
-
 class Program
 {
     public static void func1()
@@ -5775,33 +5773,342 @@ class Program
     }
 }
 ---------------------------------------------------
-#112. 
+#113. STRUCTURES IN C#
 
+Image
+Image
 
+STRUCTURE
+• Structure is a user-defined data type.
+• Class is also a user-defined data type.
+• Structures are introduced first before classes.
+• Structures are first introduced in procedural language
+called C Programming language.
+• Classes are introduced after Structures in OOP language.
 
+Syntax:
+• <Access_Specifiers> struct <struct_name>
+{
+ Members here...
+}
 
+Class vs Structure
+• Structures belongs to procedural language.
+• Classes belongs to OOP language.
+• Structures in C Programming Language can contain only
+fields / variables.
+• Structures in C# Programming Language can contain most
+of the members that a class can contain like Methods,
+Fields, Constructors, Properties, Indexers etc.
+• In C#, classes and structs are blueprints that are used to
+create instance of a class.
+• Structure is a value type.
+• Structures are stored in stack memory.
+• Class is a reference type and it is stored in Heap memory.
+• Stack memory is small in size.
+• While Heap memory is big in size.
+• Class and Structures both are used to represent entities like
+student, employee, customer etc.
+• We can use class for representing large amount of data.
+• On the other hand we can use structures for representing
+small amount of data.
+• Structs are used for lightweight objects such as Color,
+Rectangle, Point etc.
+• string is a class, reference type.
+• int is a struct, value type.
+• Pre-defined reference types are big in size.
+• Pre-defined value types are small in size.
 
+Differences between Class & Structure
+• In case of a class "new" keyword is compulsory while creating
+the object / instance, on the other hand "new" is not
+compulsory while working with structures.
+• In case of structures, if you don't specify new keyword and
+constructor then you have to explicitly initialize the field.
+• In case of classes, if you don't specify new keyword and
+constructor then you cannot the explicitly initialize the field.
+Because "new" keyword is compulsory while creating instance
+of a class.
+• In case of classes, if we don't create a constructor then a
+default constructor comes into place.
+• In case of classes, we can explicitly create default
+constructor / parameterless constructor and
+parameterized constructor.
+• But if we create any constructor in class then default
+constructor will be gone.
+• In case of structure, if we don't create a constructor then
+a default constructor comes into place.
+• In case of structure, we cannot explicitly create default
+constructor / parameterless constructor because it is
+always pre-defined, we can create only parameterized
+constructor in structures.
+• Class support inheritance whereas structures don't
+support inheritance.
+• Class can implement interfaces as well as structures can
+implement interfaces.
 
+Program : Create a struct Sample with a Print method just like a class and call it in Main method.
+struct Sample
+{
+    public void Print()
+    {
+        Console.WriteLine("Print Function Called.");
+    }
+}
+class Program
+{
+    public static void Main()
+    {
+        Sample sample;
+        sample.Print();
+    }
+}
+-------------------------------------
+124. BOXING AND UNBOXING IN C#
+BOXING
+IMPLICIT CONVERSION OF A VALUE TYPE TO A REFERENCE TYPE IS
+CALLED BOXING.
+Example:
+int numl = 10; // int is value type
+object objl = numl; // Implicit conversion of value type into reference type.
+— In Boxing process, a value type is being allocated on the heap rather than the stack.
+ 
+Image
 
+UNBOXING:
+EXPLICIT CONVERSION OF THE SAMF REFERENCE TYPE (WHICH IS BEING CREATED BY BOXING), BACK TO A VALUE TYPE.
+Example:
+int numl = 10 // int is value type
+object objl = numl; // Implicit conversion of value type into reference type
+( Boxing)
+int num2 = (int)objl; // Explicit conversion of reference type into value type(Unboxing)
 
+- IN UNBOXING PROCESS, AN UNBOXED VALUE IS BEING ALLOCATED TO A VARIABLE ON THE STACK RATHER THAN THE HEAP.
 
+Image
 
+Program : Create a small program to show boxing and unboxing.
+class Program
+{
+    public static void Main()
+    {
+        int i = 24;
+        object obj = i; // Boxing
+        int j = (int)obj; // Unboxing
+    }
+}
+------------------------------------------
+125. GUID IN C#
+• A Guid is a "globally unique identifier".
+• We can use Guid to enforce uniqueness.
+• This means the value will not conflict with another Guid.
+• We find that databases can use Guids to provide a unique identifier for a row of data.
+• A GUID is a 128-bit (16 bytes) that you can use across all
+computers and networks wherever a unique identifier is
+required.
+• Without getting into detail, let me tell you there are
+5,316,911,983,139,663,491,615,228,241,121,400,000 possible combinations.
+• It has 36 characters including hyphens.
 
+Create a simple program to generate a guid and print it in console.
+class Program
+{
+    public static void Main()
+    {
+        Guid guid = Guid.NewGuid();
+        Console.WriteLine(guid.ToString());
+        Console.WriteLine(guid.ToString().Replace("-",String.Empty));
+        Console.WriteLine(guid.ToString("N"));
+        Console.WriteLine(guid.ToString("N").Substring(15));
+    }
+}
+---------------------------------------
+126. "IS" VS "AS" KEYWORD IN C#
+IS KEYWORD
+• 1) 'is' keyword is used to check the data type of an object.
+• 2) 'is' keyword checks whether the conversion from one object
+type to another object type is compatible or not.
+• 3) It returns boolean
+• 4) It returns true if the conversion is compatible, else returns false
 
+AS KEYWORD
+• In the development of the software, typecasting is a common
+thing. In many cases, developer need to convert a Type into
+another Type and sometimes he/she may get
+InvalidCastException. So, to overcome such types of exception C#
+provides "as" operator keyword.
+• 'as' is a keyword used for conversion from one type to another. The
+type can be a reference or nullable.
+• 'as' keyword checks the compatibility of one object type with
+another object type. In case of compatible, it will return the value
+of the new object type otherwise, null will be returned.
+• If the conversion from one type to another type fails, then it will
+return a null value instead of raising an exception. So, the return
+value can be null also
 
+DIFFERENCE BETWEEN IS AND AS
+• The difference between is and as operators are as
+follows:
+The "is" operator is used to check if the run-time type of an object
+is compatible with the given type or not whereas "as" operator is
+used to perform conversion between compatible reference types
+or Nullable types.
+• The "is" operator is of boolean type whereas "as" operator is not
+of boolean type.
+• The "is" operator returns true if the given object is of the same
+type whereas "as" operator returns the object when they are
+compatible with the given type.
+• The "is" operator returns false if the given object is not of the
+same type whereas "as" operator return null if the conversion is
+not possible.
+• The "is" operator is used for only reference, boxing, and unboxing
+conversions whereas "as" operator is used only for nullable,
+reference and boxing conversions
 
+Program : Create a sample program to show the use case of is and as.
+class Program
+{
+    public static void Main()
+    {
+        object obj = "Kumar";
+        bool check = obj is string;
+        Console.WriteLine(check);
 
+        string str = obj as string;
+        Console.WriteLine(str);
+    }
+}
 
+---------------------------------------
+127. NULL COALESCE OPERATOR IN C#
+NULL COALESCE 
+- The ?? operator is also known as the null-coalescing operator.
+- It returns the left side operand if the operand is not null else it
+returns the right side operand.
+- Coalescing operator returns the first non null value from the chain. 
 
+Program : Create a program to print a string value after checking null with and without null coalising operator.
+class Program
+{
+    public static void Main()
+    {
+        string name = "Kumar";//null;
+        if (name != null)
+        {
+            Console.WriteLine("Hello, {0}",name);
+        }
+        else
+        {
+            Console.WriteLine("Hello, Annonymous");
+        }
 
+        string result = name ?? "Annonymous";
+        Console.WriteLine("Hello, {0}", result);
+    }
+}
 
+Program : Create a program to print a fruit among three if it not null with and without null coalising operator.
+class Program
+{
+    public static void Main()
+    {
+        string fruit1 = null;
+        string fruit2 = null;
+        string fruit3 = "Banana";
+        string result=null;
+        if (fruit1 != null)
+        {
+            result = fruit1;
+        }
+        if (fruit2 != null)
+        {
+            result = fruit2;
+        }
+        if (fruit3 != null)
+        {
+            result = fruit3;
+        }
+        Console.WriteLine("fruit is : "+result);
 
+        string result1= fruit1 ?? fruit2 ?? fruit3;
+        Console.WriteLine("fruit is : " + result1);
 
+    }
+}
+-------------------------------------------
+#128. SERIALIZATION IN C#.NET
+Image
+Image
+• Serialization is the process of converting an object into a stream
+of bytes to store the object or transmit it to memory, a database,
+or a file.
+• Its main purpose is to save the state of an object in order to be
+able to recreate it when needed.
+• The reverse process is called "De-Serialization".
 
+THE GENERAL STEPS FOR SERIALIZING ARE
+- Create an instance of File that will store serialized object.
+- Create a stream from the file object.
+- Create an instance of BinaryFormatter.
+- Call serialize method of the instance passing it stream and object to serialize.
 
+HOW SERIALIZATION WORKS
+• The object is serialized to a stream that carries the data.
+• The stream may also have information about the object's type,
+such as its version, culture, and assembly name.
+• From that stream, the object can be stored in a database, a file, or
+memory.
 
+USES FOR SERIALIZATION
+• Serialization allows the developer to save the state of an object and re
+create it as needed, providing storage of objects as well as data
+exchange.
+• Through serialization, a developer can perform actions such as:
+• Sending the object to a remote application by using a web service
+• Passing an object from one domain to another
+• Passing an object through a firewall as a JSON or XML string
+• Maintaining security or user-specific information across applications
 
+IMPORTANT POINTS
+• If you want to make a class Serializable then you have to use
+[Serializable] attribute on top of your class.
+• If you have applied [Serializable] attribute to the class then that
+class will not be inherited.
+• Namespace used for this purpose
+System.Runtime.Serialization.Formatters.Binary
+• We can serialize data in XML and JSON as well.
+• TYPES OF SERIALIZATION
+Serializing In Binary
+Serializing In XML
+Serializing In JSON
 
+Create a Employee Class and store Employee information in a .txt file using serialization.
+using System.Runtime.Serialization.Formatters.Binary;
+
+class Program
+{
+    public static void Main()
+    {
+        string path = @"C:\data\Sample.txt";
+        Employee emp = new Employee(101, "Kumar");
+        FileStream fs = new FileStream(path, FileMode.OpenOrCreate);
+        BinaryFormatter bf = new BinaryFormatter();
+        bf.Serialize(fs, emp);
+        fs.Close();
+        Console.WriteLine("File Created Successfully -> "+path);
+    }
+}
+[Serializable]
+class Employee
+{
+    private int Id;
+    private string Name;
+    public Employee(int Id,string Name)
+    {
+        this.Id = Id;
+        this.Name = Name;
+    }
+}
 
 
 

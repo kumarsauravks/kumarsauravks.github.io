@@ -36,7 +36,22 @@
                           </li>   
                           <li class="nav-item w-100" role="presentation">
                             <a class="nav-link" id="git-tab" data-bs-toggle="tab" data-bs-target="#git" type="button" role="tab" aria-controls="git" aria-selected="false">Git Setup</a>
-                          </li>                     
+                          </li>   
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="nvm-tab" data-bs-toggle="tab" data-bs-target="#nvm" type="button" role="tab" aria-controls="nvm" aria-selected="false">NVM Setup</a>
+                          </li>  
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="node-tab" data-bs-toggle="tab" data-bs-target="#node" type="button" role="tab" aria-controls="node" aria-selected="false">NodeJS Setup</a>
+                          </li>    
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="ts-tab" data-bs-toggle="tab" data-bs-target="#ts" type="button" role="tab" aria-controls="ts" aria-selected="false">TypeScript Setup</a>
+                          </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="prettier-tab" data-bs-toggle="tab" data-bs-target="#prettier" type="button" role="tab" aria-controls="prettier" aria-selected="false">Prettier Setup</a>
+                          </li>      
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="eslint-tab" data-bs-toggle="tab" data-bs-target="#eslint" type="button" role="tab" aria-controls="eslint" aria-selected="false">Eslint Setup</a>
+                          </li>        
                           <!-- <li class="nav-item w-100" role="presentation">
                             <a class="nav-link" id="setup-tab" data-bs-toggle="tab" data-bs-target="#setup" type="button" role="tab" aria-controls="setup" aria-selected="false">Setup and Installation</a>
                           </li> -->
@@ -154,7 +169,7 @@
                         <h5>Checklist</h5>
                         <ol>
                             <li>Git setup</li>
-                            <li>Node version managager setup</li>
+                            <li>Node version manager(nvm) setup</li>
                             <li>NodeJS project setup</li>
                             <li>TypeScript setup</li>
                             <li>Prettier setup</li>
@@ -203,9 +218,148 @@
                         </ul>
                         <div>
                             <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('checklist-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('nvm-tab')" >Next </button>
+                        </div>
+                    </div>  
+                    <div class="tab-pane" id="nvm" role="tabpanel" aria-labelledby="nvm-tab">
+                        <h1 class="fw-light py-2 text-danger">Node version managager(nvm)</h1>
+                        <h5>NVM Setup</h5>
+                        <ul>
+                            <li>With the use of nvm we can use multiple node verison. We can switch to different node version of node at any point of time.</li>
+                            <li>Install for Windows -> https://github.com/coreybutler/nvm-windows - Click on downlad now button below.</li>
+                            <li>Check nvm version -> nvm -v</li>
+                            <li>Check available node version -> nvm list</li>
+                            <li>Install particular version -> nvm install 20.11.0</li>
+                            <li>Use a particular version -> nvm use 20.11.0</li>
+                        </ul>
+                        <h5>Include node version for project</h5>
+                        <ul>
+                            <li>Create a file inside project -> .nvmrc </li>
+                            <li>Write the version in this file like v20.11.0 -> nvm use</li>
+                        </ul>
+                        <h5>Commit changes through vs code</h5>
+                        <ul>
+                            <li>Click on pending changes button.</li>
+                            <li>Click on Add icon</li>
+                            <li>Write the message for commit -> Click on commit</li>
+                            <li>Publish Branch</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('git-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('node-tab')" >Next </button>
+                        </div>
+                    </div> 
+                    <div class="tab-pane" id="node" role="tabpanel" aria-labelledby="node-tab">
+                        <h1 class="fw-light py-2 text-danger">NodeJS Project Setup</h1>
+                        <h5>NodeJS Project Setup</h5>
+                        <ul>
+                            <li>npm init</li>
+                            <li>Testing -> create a src folder and inside it create server.js</li>
+                            <li>In server.js -> console.log("Hello World");</li>
+                            <li>In package.json -> add a script -> "dev": "node src/server.js"</li>
+                            <li>npm run dev</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('nvm-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('ts-tab')" >Next </button>
+                        </div>
+                    </div>  
+                    <div class="tab-pane" id="ts" role="tabpanel" aria-labelledby="ts-tab">
+                        <h1 class="fw-light py-2 text-danger">TypeScript setup</h1>
+                        <h5>TypeScript</h5>
+                        <ul>
+                            <li>Typescrips run time k errors ko kam krne k liye use krenge. Compile time errors mil jaye to jada problem nhi hoti. Sirf dev me hi typescript chaiye because finally sab kuch javascript me hi convert hoga to production me jarurat nhi iski.</li>
+                            <li>npm i -D typescript</li>
+                            <li>npx tsc --init</li>
+                            <li>In tsconfig.json ->  "rootDir": "./src",  "outDir": "./dist",</li>
+                        </ul>
+                        <h5>Run typescript code</h5>
+                        <ul>
+                            <li>As we have given rootDir as src. We can create our ts files in this directory. Create server.ts which include a function login(user) </li>
+                            <li>To complile it to js use command -> npx tsc</li>
+                            <li>Run the comiled code -> node ./dist/server</li>
+                            <li>Install types for node -> npm i -D @types/node</li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('node-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('prettier-tab')" >Next </button>
+                        </div>
+                    </div>   
+                    <div class="tab-pane" id="prettier" role="tabpanel" aria-labelledby="prettier-tab">
+                        <h1 class="fw-light py-2 text-danger">Prettier setup</h1>
+                        <h5>Prettier</h5>
+                        <ul>
+                            <li>Prettier ek tool hai jo code k formatting and spacing ko manage krta hai. As a developer code pe focus jada important naki formatting and spacing isliye we use prettier</li>
+                        </ul>
+                        <h5>Installing Prettier</h5>
+                        <ul>
+                            <li>npm install --save-dev --save-exact prettier</li>
+                            <li>--save-exact -> because installation and uninstallation me same version rhe.</li>
+                            <li>command to check the file is formatted properly -> npx prettier . --check</li>
+                            <li>command to format files -> npx prettier . --write</li>
+                            <li>In packge.json add commands for prettier 
+                            <li><code>"scripts": { <br>
+                                "dev": "node src/server.js", <br>
+                                "format:check": "npx prettier . --check", <br>
+                                "format:fix": "npx prettier . --write" <br>
+                            }
+                            </code></li>
+                            <li>After setting script run script <br>
+                                To check -> npm run format:check <br>
+                                To fix -> npm run format:fix
+                            </li>
+                        </ul>
+                        <h5>Setup prettier auto formatter on save of any file</h5>
+                        <ul>
+                            <li>Install extention - Prettier </li>
+                            <li>Go to settings - Ctrl + ,</li>
+                            <li>Search - format on save </li>
+                            <li>Check - Editor: Format On Save</li>
+                        </ul>
+                        <h5>Setting rules for prettier</h5>
+                        <ul>
+                            <li>Create a .prettierrc.json file in root <br>
+                                <code>
+                                { <br>
+                                    "printWidth": 60, <br>
+                                    "tabWidth": 4, <br>
+                                    "semi": true, <br>
+                                    "singleQuote": true <br>
+                                }
+                                </code>
+                            </li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('ts-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('eslint-tab')" >Next </button>
+                        </div>
+                    </div>   
+                    <div class="tab-pane" id="eslint" role="tabpanel" aria-labelledby="eslint-tab">
+                        <h1 class="fw-light py-2 text-danger">Eslint Setup</h1>
+                        <h5>Eslint</h5>
+                        <ul>
+                            <li>Eslist is a static code annalyser which annalyses our code in development and help us to use best practices to make our code better.</li>
+                            <li>Prettier is use to format the style of code and add it to file whereas eslist enhances the quality of our code.</li>
+                            <li>Installing type script eslint package </li>
+                            <li>Step #1 -> npm install --save-dev eslint typescript typescript-eslint</li>
+                            <li>Step #2 -> Create a file eslint.config.js</li>
+                            <li>Step #3 -> Paste this code <br>
+                                <code>
+                                import eslint from '@eslint/js'; <br>
+                                import tseslint from 'typescript-eslint'; <br> <br>
+
+                                export default tseslint.config( <br>
+                                eslint.configs.recommended, <br>
+                                ...tseslint.configs.recommended, <br>
+                                );
+                                </code>
+                            </li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('prettier-tab')" >Previous </button>
                             <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('babel-tab')" >Next </button>
                         </div>
-                    </div>               
+                    </div>     
                     <!-- <div class="tab-pane" id="setup" role="tabpanel" aria-labelledby="babel-tab">
                         <h1 class="fw-light py-2 text-danger">React Setup and Installation</h1>
                         <h5>History Of JavaScript, ES5 & ES6</h5>

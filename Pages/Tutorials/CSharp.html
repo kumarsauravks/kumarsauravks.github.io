@@ -313,6 +313,9 @@
                           <li class="nav-item w-100" role="presentation">
                             <a class="nav-link" id="extension-tab" data-bs-toggle="tab" data-bs-target="#extension" type="button" role="tab" aria-controls="extension" aria-selected="false">Extension Method</a>
                           </li>
+                          <li class="nav-item w-100" role="presentation">
+                            <a class="nav-link" id="struct-tab" data-bs-toggle="tab" data-bs-target="#struct" type="button" role="tab" aria-controls="struct" aria-selected="false">Structure</a>
+                          </li> 
                           <!-- <li class="nav-item w-100" role="presentation">
                             <a class="nav-link" id="setup-tab" data-bs-toggle="tab" data-bs-target="#setup" type="button" role="tab" aria-controls="setup" aria-selected="false">Setup and Installation</a>
                           </li> -->
@@ -7119,9 +7122,89 @@
                         </div>
                         <div>
                             <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('thread-tab')" >Previous </button>
-                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('babel-tab')" >Next </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('struct-tab')" >Next </button>
                         </div>
                     </div> 
+                    <div class="tab-pane" id="struct" role="tabpanel" aria-labelledby="struct-tab">
+                        <h1 class="fw-light py-2 text-danger">STRUCTURES IN C#</h1>
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp113.png" alt="">
+                        <img class="img_screenshot" src="../../Images/CSharp/CSharp113_1.png" alt="">
+                        <h5>STRUCTURES</h5>
+                        <ul>
+                            <li>Structure is a user-defined data type.</li>
+                            <li>Class is also a user-defined data type.</li>
+                            <li>Structures are introduced first before classes.</li>
+                            <li>Structures are first introduced in procedural language called C Programming language.</li>
+                            <li>Classes are introduced after Structures in OOP language.</li>
+                        </ul>
+                        <h5>Syntax:</h5>
+                        <ul>
+                            <li>&lt;Access_Specifiers&gt; struct &lt;struct_name&gt; <br>
+                                { <br>
+                                 Members here... <br>
+                                }</li>
+                        </ul>
+                        <h5>Class vs Structure</h5>
+                        <ul>
+                            <li>Structures belongs to procedural language.</li>
+                            <li>Classes belongs to OOP language.</li>
+                            <li>Structures in C Programming Language can contain only fields / variables.</li>
+                            <li>Structures in C# Programming Language can contain most of the members that a class can contain like Methods, Fields, Constructors, Properties, Indexers etc.</li>
+                            <li>In C#, classes and structs are blueprints that are used to create instance of a class.</li>
+                            <li>Structure is a value type.</li>
+                            <li>Structures are stored in stack memory.</li>
+                            <li>Class is a reference type and it is stored in Heap memory.</li>
+                            <li>Stack memory is small in size.</li>
+                            <li>While Heap memory is big in size.</li>
+                            <li>Class and Structures both are used to represent entities like student, employee, customer etc.</li>
+                            <li>We can use class for representing large amount of data.</li>
+                            <li>On the other hand we can use structures for representing small amount of data.</li>
+                            <li>Structs are used for lightweight objects such as Color, Rectangle, Point etc.</li>
+                            <li>string is a class, reference type.</li>
+                            <li>int is a struct, value type.</li>
+                            <li>Pre-defined reference types are big in size.</li>
+                            <li>Pre-defined value types are small in size.</li>
+                        </ul>
+                        <h5>Differences between Class & Structure</h5>
+                        <ul>
+                            <li>In case of a class "new" keyword is compulsory while creating the object / instance, on the other hand "new" is not compulsory while working with structures.</li>
+                            <li>In case of structures, if you don't specify new keyword and constructor then you have to explicitly initialize the field.</li>
+                            <li>In case of classes, if you don't specify new keyword and constructor then you cannot the explicitly initialize the field.</li>
+                            <li>Because "new" keyword is compulsory while creating instance of a class.</li>
+                            <li>In case of classes, if we don't create a constructor then a default constructor comes into place.</li>
+                            <li>In case of classes, we can explicitly create default constructor / parameterless constructor and parameterized constructor.</li>
+                            <li>But if we create any constructor in class then default constructor will be gone.</li>
+                            <li>In case of structure, if we don't create a constructor then a default constructor comes into place.</li>
+                            <li>In case of structure, we cannot explicitly create default constructor / parameterless constructor because it is always pre-defined, we can create only parameterized constructor in structures.</li>
+                            <li>Class support inheritance whereas structures don't support inheritance.</li>
+                            <li>Class can implement interfaces as well as structures can implement interfaces.</li>
+                        </ul>
+                        <h5><span class="text-success">Program :</span> Create a struct Sample with a Print method just like a class and call it in Main method.</h5>
+                        <h6 class="text-primary">Program.cs</h6>
+                        <div class="codeBox border border-2 rounded my-2 px-2">
+                            <code>
+                                struct Sample  <br>
+                                {  <br>
+                                    public void Print()  <br>
+                                    {  <br>
+                                        Console.WriteLine("Print Function Called.");  <br>
+                                    }  <br>
+                                }  <br>
+                                class Program  <br>
+                                {  <br>
+                                    public static void Main()  <br>
+                                    {  <br>
+                                        Sample sample;  <br>
+                                        sample.Print();  <br>
+                                    }  <br>
+                                }  <br>
+                            </code>
+                        </div>
+                        <div>
+                            <button class="btn btn-success text-white px-4 py-2" onclick="navigateTo('extension-tab')" >Previous </button>
+                            <button class="btn btn-success text-white px-4 py-2 float-end" onclick="navigateTo('babel-tab')" >Next </button>
+                        </div>
+                    </div>
                     <!-- <div class="tab-pane" id="setup" role="tabpanel" aria-labelledby="babel-tab">
                         <h1 class="fw-light py-2 text-danger">React Setup and Installation</h1>
                         <h5>History Of JavaScript, ES5 & ES6</h5>
