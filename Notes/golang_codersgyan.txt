@@ -1,0 +1,73 @@
+5 Reasons to choose Golang
+l. Build Time - Deploy k Pehle hum build bnate hai. Build time fast hai compared to other language.
+2. Fast startup - Compile under machine code 
+3. Performance and Efficiency - Due to concurrency model
+4. Concurrency model - several light weight threads run parallel
+5. Static typing and compilation - type checking, we have to define type 
+
+Installation
+- goto - go.dev
+- Donload Setup - Install
+- Check version - go version
+- In vs code - Download Extension - Go(Go team at Google)
+
+Hello World Program
+- Create a folder - 1_hello_world
+- Create a file inside folder - main.go
+- Program
+package main
+func main(){
+ fmt.Println("Hello World")
+}
+
+Run Program
+go build 1_hello_world/main.go
+./main
+
+go run 1_hello_world/main.go
+
+Simple values
+package main
+import "fmt"
+func main() {
+	// int
+	fmt.Println(1 + 1)
+	// string
+	fmt.Println("Hello Golang")
+	// bool
+	fmt.Println(true)
+	fmt.Println(false)
+	//floats
+	fmt.Println(10.5)
+	fmt.Println(7.0 / 3.0)
+}
+
+Variables
+package main
+import "fmt"
+func main() {
+	// var name string = "golang"
+	var name = "Kumar"
+	fmt.Println(name)
+
+	var IsAdult = true
+	fmt.Println(IsAdult)
+
+	var age int = 30
+	fmt.Println(age)
+
+	// shorthand
+	lname := "Saurav"
+	fmt.Println(lname)
+	// If we want only declaration then we have to define type
+	var myName string
+	myName = "KS"
+	fmt.Println(myName)
+}
+
+
+
+
+
+
+

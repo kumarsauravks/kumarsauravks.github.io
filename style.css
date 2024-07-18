@@ -118,4 +118,14 @@ table th {
     padding: 1rem 0;
 }
 
+.cmd_prompt{
+    font-weight: 700;
+    background: #010101;
+    color: grey;
+    border: 2px solid grey;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: consolas;
+}
+
   
