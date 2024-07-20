@@ -64,6 +64,188 @@ func main() {
 	myName = "KS"
 	fmt.Println(myName)
 }
+-----------------------------
+Constants
+package main
+
+import "fmt"
+
+const name = "Kumar Saurav"
+
+func main() {
+	const age = 30
+	fmt.Println(name, age)
+
+	const (
+		port = 5000
+		host = "localhost"
+	)
+	fmt.Println(port, host)
+}
+-------------------------------
+For
+
+package main
+import (
+	"fmt"
+)
+
+func main() {
+	// for -> only construct in go for looping
+	//while loop
+	i := 1
+	for i <= 3 {
+		fmt.Println(i)
+		i = i + 1
+	}
+
+	// classic for loop
+	for i := 0; i <= 3; i++ {
+		fmt.Println(i)
+	}
+
+	//break and continue
+	for i := 0; i <= 3; i++ {
+		//break
+		if i == 2 {
+			continue
+		}
+		fmt.Println(i)
+	}
+
+	//range
+	for i := range 5 {
+		fmt.Println(i)
+	}
+}
+------------------------
+If Else
+
+package main
+
+import "fmt"
+
+func main() {
+	age := 10
+	if age >= 18 {
+		fmt.Println("You are an adult.")
+	} else {
+		fmt.Println("You are not an adult")
+	}
+
+	//if elseif
+	if age >= 18 {
+		fmt.Println("You are an adult")
+	} else if age > 12 {
+		fmt.Println("You are a teenager")
+	} else {
+		fmt.Println("You are a kid")
+	}
+
+	//logical operator
+	var role = "admin"
+	var hasPermission = false
+	if role == "admin" && hasPermission {
+		fmt.Println("Welcome")
+	} else {
+		fmt.Println("Sorry")
+	}
+
+	//declare variable inside if construct
+	if age := 14; age >= 18 {
+		fmt.Println("Person is an adult")
+	} else if age > 12 {
+		fmt.Println("Person is a teenager")
+	}
+
+	// go does not have ternary, you will have to use normal if else
+}
+------------------------------
+Switch
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	num := 10
+	switch num {
+	case 1:
+		fmt.Println("One")
+	case 2:
+		fmt.Println("Two")
+	case 3:
+		fmt.Println("Three")
+	case 4:
+		fmt.Println("Four")
+	case 5:
+		fmt.Println("Five")
+	default:
+		fmt.Println("Other")
+	}
+
+	//multiple condition switch
+	switch time.Now().Weekday() {
+	case time.Saturday, time.Sunday:
+		fmt.Println("Its a Weekday.")
+	default:
+		fmt.Println("Its a Working Day")
+	}
+
+	//type switch
+	whoAmI := func(i interface{}) {
+		switch t := i.(type) {
+		case int:
+			fmt.Println("Its a Integer")
+		case string:
+			fmt.Println("Its a string")
+		case bool:
+			fmt.Println("Its a boolean")
+		default:
+			fmt.Println("Other", t)
+		}
+	}
+	whoAmI(12)
+	whoAmI("Kumar")
+	whoAmI(true)
+	whoAmI(12.4)
+}
+------------------------
+Arrays
+package main
+
+import "fmt"
+
+func main() {
+	var nums [4]int
+	//array length
+	fmt.Println(len(nums))
+
+	//Insert values in array
+	nums[0] = 1
+	fmt.Println(nums[0])
+	fmt.Println(nums)
+
+	var vals [4]bool
+	fmt.Println(vals)
+
+	var names [3]string
+	names[0] = "golang"
+	fmt.Println(names)
+
+	//declare array values in single line
+	numbers := [3]int{1, 2, 3}
+	fmt.Println(numbers)
+
+	// 2d arrays
+	numbs := [2][2]int{{3, 4}, {5, 6}}
+	fmt.Println(numbs)
+}
+
+
+
 
 
 
